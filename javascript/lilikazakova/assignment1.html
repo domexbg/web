@@ -26,6 +26,7 @@ $("#3").css("border-color",hue() );
 
 $("#1").hover( change_text() );    */
 
+// IMPROVE: repetative actions as those blow can be optimized using a loop
 $("#1").hover(function(){
    	$("#1").text("Changed text 1");
 });
@@ -54,12 +55,14 @@ function btn_change(button, p) {
 var clicks = true;
     $(button).click(function() {
         if (clicks) {
+            // TODO: text 'Show 1' has to change for each corresponding button 1, 2, 3
             $(button).val("Show 1");
             $(p).hide();
             
             clicks = false;
         } else {
                 $(p).show();
+                 // TODO: text 'Hide 1' has to change for each corresponding button 1, 2, 3
                 $(button).val("Hide 1");
                 clicks = true;
           }  
