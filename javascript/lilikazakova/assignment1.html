@@ -1,21 +1,34 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
+<!-- 
+Here IDs should be beanigful indentifiers not just numbers e.g. text1 or txt1 or pra1 or line1
+-->
+
 <p id="1"style="border: 5px solid"> Initial Text 1</p>
 <p id="2"style="border: 5px solid"> Initial Text 2</p>
 <p id="3"style="border: 5px solid"> Initial Text 3</p>
+
+<!-- 
+Same thing as above e.g. btn1 or button1 ot btn-1
+-->
 <input id="b1" type="button" value="Hide 1">
 <input id="b2" type="button" value="Hide 2">
 <input id="b3" type="button" value="Hide 3">
 
 <script>
 function hue() {
+    // Here you can use underscorejs library for 
+    // shorter random calls => http://underscorejs.org/#random
     return 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
 }
 
+// Here first function argument is not needed because you can build it 
+// using the second one as both of them contain the same number however the ID has a prefix => # 
 function change_text(p, num) {
    $(p).text('Changed text ' + num);
 }
 
+// Same thing as above
 function reset(p, num) {
    $(p).mouseleave( function () { $(p).text('Initial text ' + num);
                                });
@@ -36,12 +49,15 @@ function btn_change(button, p, num) {
     });
 }
 
+// Not needed you can build it on the fly with the counter concatenating # as prefix
 var text_id = ["#1", "#2", "#3"];
+
 var i = 0;
 for (; i < 3; i++) {
     $(text_id[i]).css("border-color", hue());
 }
 
+// These here can be grouped in a loop 
 $("#1").hover(function () {
     change_text( $("#1"), 1 )
 });
@@ -58,9 +74,11 @@ for (; x < 3; x++) {
     $(text_id[x]).mouseleave( reset( $(text_id[x]), s ) );
 }
 
+//This is not needed you can create button IDs on the fly concatenating the number n and the prefix "#b" 
 var btn_id = ["#b1", "#b2", "#b3"];
 var n = 0;
 for (; n < 3; n++) {
+    // You do not need "y" because you use it just once so you can simply use "n+1"
     var y = n + 1;
     $(btn_id[n]).click(btn_change($(btn_id[n]), $(text_id[n]), y));
 }
