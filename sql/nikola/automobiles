@@ -1,0 +1,53 @@
+-- phpMyAdmin SQL Dump
+-- version 4.1.12
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jun 21, 2014 at 01:01 PM
+-- Server version: 5.6.16
+-- PHP Version: 5.5.11
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `mydomex`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `automobiles`
+--
+
+CREATE TABLE IF NOT EXISTS `automobiles` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Brand` varchar(255) NOT NULL,
+  `Model` varchar(255) NOT NULL,
+  `Year` int(11) NOT NULL,
+  `Fuel` varchar(255) NOT NULL,
+  `Modification` varchar(255) NOT NULL,
+  `Extras` varchar(255) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+--
+-- Dumping data for table `automobiles`
+--
+
+INSERT INTO `automobiles` (`ID`, `Brand`, `Model`, `Year`, `Fuel`, `Modification`, `Extras`) VALUES
+(1, 'Mercedes', 'S500', 2005, 'Petrol', 'Sedan', 'Climatronic, Heated seats'),
+(2, 'Mercedes', 'A100', 2010, 'Petrol', 'Hatchback', 'Electric windows'),
+(3, 'Mazda', 'Mazda6', 2013, 'Diesel', 'Sedan', 'Navigation'),
+(4, 'Opel', 'Insignia', 2011, 'Diesel', 'Combi', 'Climatronic, Navigation'),
+(5, 'BMW', '520', 1996, 'Petrol', 'Sedan', 'Airbag');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
