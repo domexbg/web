@@ -1,0 +1,71 @@
+-- SELECT * FROM automobiles;
+
+-- INSERT INTO automobiles (Brand, Model, Fuel, Year, Extras, Modification)
+-- VALUES ('Renault','Clio2', 'Gasoline', 2002, 'Climatic, Electric windows', 'Sedan');
+
+
+-- DELETE FROM automobiles WHERE ID >= 8;
+-- SELECT * FROM automobiles;
+
+-- UPDATE automobiles SET Model='Clio3', year=2005, Fuel='Diesel' WHERE ID=7;
+-- SELECT * FROM automobiles;
+
+-- UPDATE automobiles SET Brand='Mercedes-Bentz' WHERE Brand='Mercedes';
+-- SELECT * FROM automobiles;
+
+-- SELECT COUNT(*) AS BroiNaDiesel FROM automobiles
+-- WHERE Fuel LIKE 'D%';
+-- SELECT * FROM automobiles;
+
+
+-- SELECT * FROM automobiles
+-- WHERE Fuel LIKE 'D%' AND Extras='';
+
+
+-- SELECT * FROM automobiles WHERE DATE_FORMAT(NOW(), '%Y')-Year < 10;
+
+/* CREATE TABLE IF NOT EXISTS owners (
+ID int NOT NULL AUTO_INCREMENT,
+Name VARCHAR(255),
+auto_id int,
+PRIMARY KEY(ID)
+);
+*/
+-- INSERT INTO owners (Name, auto_id) VALUES ('Marina Rokanova', 5);
+
+
+/*
+SELECT ID FROM automobiles
+UNION
+SELECT auto_id FROM owners;
+*/
+
+SELECT * FROM owners;
+SELECT * FROM automobiles;
+
+/*SELECT Owners.Name, automobiles.Brand, automobiles.Year
+FROM Owners
+INNER JOIN automobiles
+ON Owners.auto_id=automobiles.ID;
+*/
+
+/*SELECT *
+FROM Owners
+RIGHT JOIN automobiles
+ON Owners.auto_id=automobiles.ID WHERE Name IS NULL;
+*/
+
+/*SELECT Owners.Name, count(*) as Num FROM Owners INNER JOIN automobiles
+ON Owners.auto_id=automobiles.ID
+GROUP BY Name
+HAVING COUNT(Owners.auto_id) > 1;
+*/
+
+/*
+SELECT Owners.Name, automobiles.Fuel
+FROM Owners
+INNER JOIN automobiles
+ON Owners.auto_id=automobiles.ID
+WHERE automobiles.Fuel='Diesel'
+GROUP BY Name
+*/
