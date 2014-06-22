@@ -1,0 +1,59 @@
+/*
+--insert into automobiles (brand,model,fuel,year,extras,modification)
+--values ("opel","kadet","disel","1989","","hechbag");
+
+select * from automobiles where id>8
+delete  from automobiles where id>=8
+update automobiles set year=1994, fuel="petrol"where id=7
+update automobiles set brand="mercedes benz" where brand="mercedes"
+select count(*) as broidizel  from automobiles where fuel="disel",extras;
+select * from automobiles where fuel = "disel" and  extras="";
+
+select * from automobiles where DATE_FORMAT(NOW(),'%Y')-year < 10;
+
+
+CREATE TABLE owner(
+id int NOT NULL AUTO_INCREMENT,
+name varchar(100),
+auto_id int, 
+PRIMARY KEY (id)
+);
+
+insert into owner  (name,auto_id) values ("nikola pavlov","1")
+
+select a.brand ,a.year,o.name  from  automobiles as a
+left join  owner as o 
+on a.id=o.auto_id where name is null
+
+select *  from  automobiles as a
+left join  owner as o 
+on a.id=o.auto_id where name is null
+
+select o.name, count(*) as broi  from  automobiles as a
+inner join  owner as o 
+on a.id=o.auto_id 
+group by o.name
+having broi>1;
+
+select o.name,a.fuel, count(*) as broi  from  automobiles as a
+inner join  owner as o 
+on a.id=o.auto_id 
+group by o.name
+having a.fuel="disel";
+*/
+select o.name from automobiles as a inner join owner as o 
+where a.fuel="petrol"
+
+/*
+select w.TOWN, count(*) as pro from workers as w 
+where w.EMPLOYED/(w.employed + w.UNEMPLOYED + w.INACTIVE)
+group by w.TOWN 
+having pro<=10
+select town,employed/(employed+unemployed+inactive)*100 as procent from workers
+order by procent desc limit 10
+*/
+
+select * from workers as w where w.INACTIVE>w.EMPLOYED+w.UNEMPLOYED
+
+
+
