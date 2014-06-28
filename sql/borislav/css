@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+body {}
+
+#wrapper {
+	width:950px;
+	height:600px;	
+	}
+#logo {
+	width:300px;
+	height:200px;	
+	float:left;
+	background-color:#0FF;
+	}
+#menu {
+	width:600px;
+	height:200px;
+	float:left;
+	background-color:#f00;
+	}
+.post {
+	width:250px;
+	height:250px;
+	float:left;
+	background-color:#F06;
+		}
+		
+#baner {
+	width:450px;
+	height:250px;	
+	float:left;
+	background-color:#0F0;
+	}
+#footer {
+	width:950px;
+	height:150px;	
+	float:left;
+	background-color:#0FF;
+	}
+	
+.menu-buton {
+	width:120px;
+	height:50px;
+	float:left;
+	font-size:16px;
+	background-color:#CCC;
+	margin-top:150px;
+	text-align:center;
+	padding-top:15px;
+	}
+a:link {
+	font-size:14px;
+	color:#fff;
+	text-decoration:none;
+	font-family:"Courier New", Courier, monospace;
+	
+	}
+a:vizitet{
+	font-size:14px;
+	color:#fff;
+	text-decoration:none;
+	font-family:"Courier New", Courier, monospace;
+	}
+a:hover {}
