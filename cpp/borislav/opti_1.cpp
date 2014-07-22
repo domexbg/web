@@ -34,5 +34,7 @@ for (int i=0;i<d;i++){
 		if (mas[i][j]==1) 
 		cout << "*";
 }
+	for (int i=0;i<d;i++)
+	cout <<mas[10][i];
 	return 0;
 }
