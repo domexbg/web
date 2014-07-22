@@ -5,35 +5,33 @@
 using namespace std;
 int main() {
 
-int mas[10][11];
+int mas[11][10];
 int d;
 cout << "Vuvedete broi na chislata=";
 cin >> d;
 
-for (int i=0;i<d;d++){
+for (int i=0;i<d;i++){
         // Cannot use index "11" as you have declared indexes from 
         // 0 to 10
-	cin >>	mas[i][11] ;
+	cin >>	mas[10][i] ;
 }
 	// Error -- you should not increase "d" as your
 	// counter is "i"
-	for (int i=0 ; i<d ; d++){
+	for (int i=0 ; i<d ; i++){
 		for (int j=0 ; j<10; j++){
 	        
 		// Cannot use index "11" you sould either
 		// redeclar the array "mas[10][12]" or use smaller index
-		if (mas[i][11]<10-j) 
-		mas[i][j]=1;
-	
+		if (mas[10][j]<10-j) mas[i][j]=1;
 		else
 		mas[i][j]=0;
 	}
 	}
-	 for (int j=0 ; j<10 ; j++){
-		for (int i=0 ; i<d; i++)
+	 for (int i=0 ; i<10 ; i++){
+		for (int j=0 ; j<d; j++)
 		// Error "=" means assignment not comparison 
 		// here you obviously want "=="
-		if (mas[i][j]=1) 
+		if (mas[i][j]==1) 
 		cout << "*";
 }
 	return 0;
