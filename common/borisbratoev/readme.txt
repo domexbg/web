@@ -1,5 +1,7 @@
+
 probvame otnovo
 
-// Tova ne se pravi taka !!
+// Tova ne se pravi taka 111!!
+
 
 training
