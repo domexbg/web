@@ -1,0 +1,5 @@
+#!/bin/bash
+for i in A B C D ; do
+
+echo > t0$i.txt
+done
