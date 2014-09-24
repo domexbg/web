@@ -1,0 +1,15 @@
+﻿Create a wildcard command that will remove all files but those with index 5xx.
+
+Hint:
+http://www.codecoffee.com/tipsforlinux/articles/26-1.html
+
+Example:
+
+You will only see after the “rm” command files
+
+proba500
+proba501
+--------
+--------
+proba599
+
