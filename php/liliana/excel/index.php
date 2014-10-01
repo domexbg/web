@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
 	<title>Envelop application</title>
 </head>
@@ -45,8 +46,8 @@ if($_POST){
     }
     if(!$error)
     {
-        $result= $homePhone.'!'.$address.'!'.$firstName.'!'.$lastName.'!'.$bDate.'!'.$relationship.'!'.$cellPhone.'!'.$provider."\r\n";
-        if(file_put_contents('depenses.txt', $result,FILE_APPEND))
+        $result= $homePhone.';'.$address.';'.$firstName.';'.$lastName.';'.$ddate.';'.$relationship.';'.$cellPhone.';'.$provider."\r\n";
+        if(file_put_contents('information.csv', $result,FILE_APPEND))
         {
             echo '<p>Succesfull entry.</p>';
         }
@@ -88,5 +89,9 @@ if($_POST){
 		<label> Cell Number: </label><input type="text" name="cellPhone" /> <br />
 		<label> Provider (At&t, Sprint, Verizon..Etc): </label> <input type="text" name="provider" /> <br />
 		<input type="submit" value="Send" />
-	</form>
+	</form> <br />
+    <form action="sendEmail.php" method="POST" >
+        <input type="submit" value="Send email" />
+    </form>
 </body>
+</html>
