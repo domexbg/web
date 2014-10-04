@@ -4,5 +4,5 @@ git config --global user.name "YOUR NAME"
 git config --global user.email "YOUR EMAIL ADDRESS"
 ssh keygen
 clip < ~/.ssh/id_rsa.pub
-git clone git@github.com:domexbg/web.gitx
+git clone git@github.com:domexbg/web.git  
 
