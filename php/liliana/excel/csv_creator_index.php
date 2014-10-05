@@ -39,7 +39,7 @@ if ($_POST) {
     }
     if (!$error) {
         $result = array($homePhone, $address, $firstName, $lastName, $ddate, $relationship, $cellPhone, $provider);
-        $fp   = fopen('information.csv', 'w');
+        $fp   = fopen('information.csv', 'a');
 		if ( fputcsv($fp, $result) ) {
             echo '<p>Successful entry.</p>';
         }
@@ -83,8 +83,9 @@ for ($yearCounter = 1920; $yearCounter <= 2014; $yearCounter++) {
 		<label> Provider (At&t, Sprint, Verizon..Etc): </label> <input type="text" name="provider" /> <br />
 		<input type="submit" value="Send" />
 	</form> <br />
-    <form action="sendEmail.php" method="POST" >
-        <input type="submit" value="Send email" />
-    </form>
+    <a href="sendEmail.php">
+        <input type="button" value="Send email" />
+    </a>
+	
 </body>
 </html>
