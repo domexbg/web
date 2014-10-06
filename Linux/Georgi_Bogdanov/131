@@ -1,8 +1,11 @@
-apt-get update
-apt-get install git-core
-git config --global user.name "YOUR NAME"
-git config --global user.email "YOUR EMAIL ADDRESS"
-ssh keygen
-clip < ~/.ssh/id_rsa.pub
-git clone git@github.com:domexbg/web.gitx
+setting network interfaces
 
+ifconfig -a                       -look for interfaces
+nano /etc/network/interfaces      -change auto eth...
+                                          iface eth... inet dhcp
+ctr O
+entr
+ctr X
+ifdown eth<changed>
+ifup eth<changed>
+ifconfig                          -look changed setting eth 
