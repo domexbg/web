@@ -1,0 +1,9 @@
+comands for publication in git hub:
+
+git pull --rebase
+git status
+git add <file name>
+git status
+git commit -m "phrase for new chanche in my file" -a
+git log --stat
+git push origin HEAD
