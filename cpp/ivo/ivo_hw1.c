@@ -12,6 +12,8 @@ int max2(int a, int b)
     if(a>=b)
     x=a;
     else x=b;
+    /* You have to use the keyword 'return' to 
+    throw back as a returlt the biggest integer 'x' */
     
 }
 int main()
