@@ -8,24 +8,8 @@
 
 int max3(int a, int b, int c)
 {
-<<<<<<< HEAD:cpp/Tamara/hw2/hw2_solve.c
 	/* Write your code here*/
-	if (a > b && a>c)
-		return a;
-	else if (b>a && b>c )
-		return b;
-	else
-		return c;
 
-=======
-	/* 
-	Let's see if you can figure out how to do this
-	look much more slick using short IF operator: 
-	http://www.c4learn.com/c-programming/c-conditional-operators/
-	*/
-	if (a > b) return a;
-	else return b;
->>>>>>> origin/master:cpp/Tamara/hw1/solve_hw1.c
 }
 
 int main(int argc, char** argv) 
