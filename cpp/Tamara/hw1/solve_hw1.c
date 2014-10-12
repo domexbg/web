@@ -8,11 +8,13 @@
 
 int max2(int a, int b)
 {
-	/* Write your code here*/
-	if (a > b)
-	return a;
-	else 
-	return b;
+	/* 
+	Let's see if you can figure out how to do this
+	look much more slick using short IF operator: 
+	http://www.c4learn.com/c-programming/c-conditional-operators/
+	*/
+	if (a > b) return a;
+	else return b;
 }
 
 int main() 
