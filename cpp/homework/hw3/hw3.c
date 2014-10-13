@@ -3,14 +3,16 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define W_MAX 100
+
 /*
   This function will reverse the letters of a word
   Hello => olleH
 */
 
-char *rev_w(const char w[])
+char *rev_w(const char *w)
 {
-	/* Write your code here*/
+	/* Write your code here */
 
 }
 
