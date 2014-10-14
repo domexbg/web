@@ -7,6 +7,11 @@
 
 /*
   This function will reverse the letters of a word
+
+  INFO: 
+  http://programming-bg.com/%D1%83%D1%80%D0%BE%D1%86%D0%B8/C++/%D0%BD%D0%B8%D0%B7%D0%BE%D0%B2%D0%B5
+  
+  Example:
   Hello => olleH
 */
 
