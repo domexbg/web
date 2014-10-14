@@ -11,9 +11,9 @@ int max3(int a, int b, int c)
 	/* Write your code here*/
  
 
-if (a>=b);
+if (a>=b); /* you can change the IF condition (a<b) so that ELSE will be needless */
 else a=b;
-if (a>=c);
+if (a>=c); /* same as above */
 else a=c;
 return a;
 
