@@ -12,6 +12,7 @@ int max2(int n, int m)
    if(n>=m)
    y=n;
    else y=m;
+   return y;
 }
 int main() 
 {
