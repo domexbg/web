@@ -1,0 +1,27 @@
+
+        	
+        #include<stdio.h>
+        #include<string.h>
+         
+        void rev_str(char *string, size_t length)
+        {
+           int start, end;
+         
+           for (start = 0, end = length-1; start < end; start++, end--)
+           {
+               char swap = string[start];
+               string[start] = string[end];
+               string[end] = swap;
+           }
+        }
+         
+        char *rev_words(char *str)
+        {
+           int length;
+           char *p = str, *next;
+         
+           for (p = str; p != 0; p = strpbrk(p, " "))
+           {
+               if (*p == ' ')
+               {
+   Dat    2
