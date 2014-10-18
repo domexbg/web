@@ -1,3 +1,9 @@
 SELECT * FROM Customers
 WHERE City in ("paris", "portland" ) and address LIKE "[1234567890]%";
 
+SELECT * FROM customers
+WHERE country BETWEEN 'C' AND 'E';
+
+SELECT * FROM customers
+WHERE country LIKE '[C-E]%';
+
