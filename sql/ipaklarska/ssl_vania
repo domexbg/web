@@ -1,0 +1,15 @@
+CREATE TABLE cars (
+ car_id int Auto_Increment Primary KEY,
+ make varchar(20),
+ model varchar (20),
+ engine_type varchar(20),
+ color varchar(20),
+  year int,
+  price int,
+  milage int
+);
+insert into cars(make,model,engine_type,color,year,price,milage)values
+("Mercedes","clk","petrol","white",2010,45000,50000),
+("Mercedes","300","petrol","black", 1997,5000,35000),
+("Audi","A8","petrol","pink", 2007,2000,10000),
+("Audi","A8","petrol","red", 1997,5000,35000);
