@@ -1,1 +1,19 @@
-fdafqw
+CREATE TABLE cars
+(
+  car_id int AUTO_INCREMENT,
+  make varchar (20),
+  model varchar (20),
+  engine_type varchar (20),
+  color varchar (20),
+  year int,
+  price int,
+  mileage int,
+  PRIMARY KEY(car_id)
+ );
+INSERT INTO cars (make, model, engine_type, 
+ color, year, price, mileage) VALUES ("Mercedes", "CLK",
+  "disel", "white", 2010, 45000, 50000),
+("Mercedes", "300", "perol", "black", 1997, 5000, 35000),
+("AUDI", "A8", "disel", "white", 2007, 20000, 100000),
+("AUDI", "A8", "disel", "red", 2012, 70000, 10000)
+
