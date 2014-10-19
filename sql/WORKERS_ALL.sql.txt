@@ -1,4 +1,4 @@
-/* Create a table called WORKERS */
+---Create a table called WORKERS */
 
 CREATE TABLE WORKERS(
   ID integer NOT NULL AUTO_INCREMENT PRIMARY KEY,
