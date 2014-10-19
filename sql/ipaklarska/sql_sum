@@ -1,0 +1,3 @@
+select sum(employed + unemployed + inactive) from workers
+where town like "% %";
+
