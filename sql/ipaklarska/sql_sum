@@ -1,3 +1,8 @@
 select sum(employed + unemployed + inactive) from workers
 where town like "% %";
 
+
+select * from  workers
+where (employed + unemployed) < inactive;
+select town ,inactive/(employed + unemployed+inactive)*100 as procent_inactive from  workers
+order by procent_inactive;
