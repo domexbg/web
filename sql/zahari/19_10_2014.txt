@@ -1,1 +1,3 @@
-123
+SELECT * FROM Customers
+WHERE Country LIKE 'U%' AND city LIKE '% %';
+
