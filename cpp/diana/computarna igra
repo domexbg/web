@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int x;
+	int n;
+	for(int x=0;x>=5;x++);
+	cout<<"Poznai chisloto"<<endl<<endl;
+do
+ {
+cout<<"Dai svoeto predlojenie:";
+cin >> n;
+if(n > x);
+{
+cout<<"Tvarde Golqmo Chislo!"<< endl <<endl;
+}
+if(n< x)
+ {
+cout<<"Tvarde Malko Chislo!"<< endl <<endl;
+ }
+}while(n > x || n < x);
+
+cout <<"Bravo ti pozna chisloto!!!"<< endl;
+return 0;
+}
