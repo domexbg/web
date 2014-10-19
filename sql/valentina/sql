@@ -1,0 +1,11 @@
+select town, employed as total from workers where town like "% %"
+select town, SUM(employed+unemployed+inactive) as total from workers where town like "% %"
+select town, employed+unemployed+inactive as total from workers where town like "% %"
+select town,inactive/(employed+unemployed+inactive)*100 as total from workers 
+select*from workers 
+
+/*UPDATE WORKERS SET employed=employed+unemployed+inactive,unemployed=0,inactive=0 where id = 3;*/
+select*from workers
+
+/*UPDATE WORKERS SET employed=employed+unemployed+inactive,unemployed=0,inactive=0 where (employed+unemployed+inactive)>1000*/
+select * from workers
