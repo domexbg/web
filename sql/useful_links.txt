@@ -1,0 +1,2 @@
+http://sourceforge.net/projects/xampp/files/XAMPP%20Windows/1.8.1/xampp-portable-win32-1.8.1-VC9-installer.exe/download
+http://www.w3schools.com/sql/
