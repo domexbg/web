@@ -21,3 +21,15 @@ INSERT INTO cars (make, model, engine_type,
 ("Opel", "Insignia", "disel", "gray", 2012, 70000, 70000),
 ("Opel", "Corsa", "petrol", "white", 2005, 180000, 2000),
 ("Opel", "Kadet", "disel", "red", 2001, 1500, 190000),
+
+
+select make, sum(price) 
+from cars 
+group by make;   /grupirane na modelite s obshta cena/
+
+select * from cars 
+order by year desc limit 1
+\(default vyzhodia6t) desc- za nizhodiasht, limit 1- za 1 rezultat\
+
+select * from cars
+where color IN ("red", "white")  \za filtur cvetove\ 
