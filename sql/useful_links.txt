@@ -9,3 +9,7 @@ http://www.heidisql.com/installers/HeidiSQL_8.3.0.4694_Setup.exe
 SQL tutorial:
 --------------
 http://www.w3schools.com/sql/
+
+MySQL demo server with phpmyadmin:
+------------------------------------
+http://demo.phpmyadmin.net/master-config/
