@@ -1,4 +1,0 @@
-select * from workers
-where town like "% %";
-select sum(employed + unemployed + inactive) AS Total_Workers from workers where town like "% %";
-
