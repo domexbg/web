@@ -12,16 +12,16 @@ char *rev_w(const char w[])
 {
 	/* Write your code here*/
 	int i;
-
-   char res[100]="";
-	 int x = strlen (w);
+	int p;
+   	static char res[100]="";
+	int x = strlen (w);
 	
 	for (i = x - 1; i >= 0; i--)
 	{
  		res[x-i-1] = w[i];
  		
  	}
- 	
+ 	res[x--] = w[i];
 	return res;
 }
 
