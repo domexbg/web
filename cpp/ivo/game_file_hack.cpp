@@ -16,18 +16,19 @@ int main()
     
     {    cout<<"Dai svoeto predlojenie:";
         cin >> n;
-        if(x > x)
+        if(x > x) // <==== you have to compare X and N
             cout<<"Tvarde Golqmo Chislo!"<<endl;
         else
-        if (x< x)
+        if (x< x) // <==== you have to compare X and N
             cout<<"Tvarde Malko Chislo!"<< endl; 
-        else    
+        else    // The three lines below have to be in curly brakets so they execute all in the 
+                //ELSE clause
         	 cout<<"Razpolagash s broi tochki:"<< 100-(cnt+1)*20 <<endl;
         	 
              cout <<"Bravo ti pozna chisloto!!!"<< endl;
              break;
        }
-          cnt++;   
+          cnt++; // <====== counter must be in the WHILE loop body not outside 
     
         if (cnt==5)
              cout<<"no more check";
