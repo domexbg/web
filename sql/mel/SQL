@@ -1,5 +1,6 @@
 update workers set employed=employed+unemployed+inactive, unemployed=0, inactive=0 where id=3;
 
+For interview:
 
 a. Bob and Ken
 
