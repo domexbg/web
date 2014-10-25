@@ -6,6 +6,10 @@ MySQL client fro Windows:
 ---------------------------
 http://www.heidisql.com/installers/HeidiSQL_8.3.0.4694_Setup.exe
 
+Online SQL test platform:
+--------------------------
+http://sqlfiddle.com/
+
 SQL tutorial:
 --------------
 http://www.w3schools.com/sql/
