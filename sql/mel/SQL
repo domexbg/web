@@ -1,1 +1,15 @@
 update workers set employed=employed+unemployed+inactive, unemployed=0, inactive=0 where id=3;
+
+
+a. Bob and Ken
+
+b. Abe, Chris, Dan and Joe
+
+c. Bob, Dan
+
+d. Write a SQL statement to insert rows into a table called highAchiever(Name, Age), 
+where a salesperson must have a salary of 100,000 or greater to be included in the table. 
+
+INSERT INTO `customer` highachiever Name - Varchar - 30 and Age =INT
+
+Abe and Ken as result...
