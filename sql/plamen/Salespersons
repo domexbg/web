@@ -1,0 +1,8 @@
+create table Salesperson (ID int, Name Varchar(10), Age int, Salary int);
+
+insert into Salesperson (ID, Name, Age, Salary) values (1, "Abe", 61, 160000);
+insert into Salesperson (ID, Name, Age, Salary) values (2, "Bob", 34, 44000);
+insert into Salesperson (ID, Name, Age, Salary) values (5, "Chris", 34, 40000);
+insert into Salesperson (ID, Name, Age, Salary) values (7, "Dan", 41, 52000);
+insert into Salesperson (ID, Name, Age, Salary) values (8, "Ken", 57, 115000);
+insert into Salesperson (ID, Name, Age, Salary) values (11, "Joe", 38, 38000);
