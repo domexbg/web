@@ -10,10 +10,11 @@ SQL tutorial:
 --------------
 http://www.w3schools.com/sql/
 
-Smal online SQL test platform:
+Online SQL test platform:
 --------------------------
 http://sqlfiddle.com/
 
-Bigger MySQL online server with phpmyadmin:
+Online MySQL server with phpmyadmin:
 ------------------------------------
 http://www.db4free.net/signup.php
+http://www.freemysqlhosting.net/
