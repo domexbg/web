@@ -52,6 +52,9 @@ VALUES (60,str_to_date("3/2/98","%c/%e/%y"),6,7,720);
 INSERT INTO Orders (Number, Order_date, cust_id,salesperson_id, Amount) 
 VALUES (70,str_to_date("5/6/98","%c/%e/%y"),9,7,150);
 
+create table not_jackson as select name, city from customer
+where city <> "jackson";
+
 
 a. The names of all salespeople that have an order with Samsonic
 
@@ -59,7 +62,7 @@ select sp.name from Salesperson as sp, Customer as cm,
 orders as od where od.cust_id=cm.id
 and od.salesperson_id=sp.id and cm.name<>"Samsonic";
 
-
+b. The names of all salespeople that do not have any order with Samsonic. 
 
 
 
