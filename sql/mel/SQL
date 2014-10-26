@@ -23,6 +23,13 @@ GROUP BY sp.name
 LIMIT 0 , 30
 
 c. Bob, Dan
+SELECT sp.name, count( cm.name )
+FROM salesperson AS sp, customer AS cm, orders AS od
+WHERE od.cust_id = cm.id
+AND od.salesperson_id = sp.id
+GROUP BY sp.name
+LIMIT 0 , 30
+
 
 d. Write a SQL statement to insert rows into a table called highAchiever(Name, Age), 
 where a salesperson must have a salary of 100,000 or greater to be included in the table. 
