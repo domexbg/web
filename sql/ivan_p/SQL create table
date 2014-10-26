@@ -1,0 +1,14 @@
+CREATE TABLE Salesperson
+(
+ID integer NOT NULL AUTO_INCREMENT PRIMARY KEY,
+Name varchar(50),
+Age integer,
+Salary integer
+);
+
+INSERT INTO Salesperson2 (Name, Age, Salary) VALUES ('Abe',61,140000);
+INSERT INTO Salesperson2 (Name, Age, Salary) VALUES ('Bob',34,44000);
+INSERT INTO Salesperson2 (Name, Age, Salary) VALUES ('Chris',34,40000);
+INSERT INTO Salesperson2 (Name, Age, Salary) VALUES ('Dan',41,52000);
+INSERT INTO Salesperson2 (Name, Age, Salary) VALUES ('Ken',57,115000);
+INSERT INTO Salesperson2 (Name, Age, Salary) VALUES ('Joe',38,38000);
