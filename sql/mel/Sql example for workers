@@ -1,0 +1,13 @@
+SELECT `EMPLOYED` , `UNEMPLOYED` , `INACTIVE` , `TOWN`
+FROM workers
+WHERE (
+`EMPLOYED` + `INACTIVE` + `UNEMPLOYED`
+) >20000
+
+
+UPDATE workers SET employed = employed + unemployed + inactive,
+inactive =0,
+unemployed =0 WHERE (
+employed + unemployed + inactive
+) <1000;
+
