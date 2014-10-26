@@ -22,15 +22,15 @@
 SELECT make, unix_timestamp () from cars 
 
 SELECT time_stamp, time_stamp, FORMAT( Now( ) , 'YYYY-MM-DD' ) AS PerDate
-FROM Cars2
+FROM Cars
 LIMIT 0 , 30
 
 SELECT time_stamp, date_FORMAT( Now( ) , '%W %M %Y' ) AS PerDate
-FROM Cars2
+FROM Cars
 LIMIT 0 , 30
 
 SELECT (
 current_timestamp( ) - time_stamp
 ) /60
-FROM cars2
+FROM cars
 LIMIT 0 , 30
