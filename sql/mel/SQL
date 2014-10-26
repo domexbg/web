@@ -14,6 +14,14 @@ AND od.salesperson_id = sp.id
 AND cm.name != "Samsonic"
 LIMIT 0 , 30
 
+SELECT sp.name, count( cm.name )
+FROM salesperson AS sp, customer AS cm, orders AS od
+WHERE od.cust_id = cm.id
+AND od.salesperson_id = sp.id
+AND cm.name <> "Samsonic"
+GROUP BY sp.name
+LIMIT 0 , 30
+
 c. Bob, Dan
 
 d. Write a SQL statement to insert rows into a table called highAchiever(Name, Age), 
