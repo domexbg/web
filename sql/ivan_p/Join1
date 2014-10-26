@@ -1,0 +1,3 @@
+select sp.name from salesperson as sp, Customer as cm,
+orders as od where od.cust_id=cm.id and 
+od.salesperson_id=sp.id and cm.name="Samsonic";
