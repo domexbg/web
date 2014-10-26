@@ -1,0 +1,6 @@
+create table Customer (ID int, Name Varchar(10), City varchar(10), Industry_Type varchar(1));
+
+insert into Customer (ID, Name, City, Industry_Type) values (4, "Samsonic", "pleasant", "J"),
+(6, "Panasung", "oaktown", "J"),
+(7, "Samony", "Jackson", "B"),
+(9, "Orange", "Jackson", "B");
