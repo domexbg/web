@@ -53,7 +53,9 @@ INSERT INTO Orders (Number, Order_date, cust_id,salesperson_id, Amount)
 VALUES (70,str_to_date("5/6/98","%c/%e/%y"),9,7,150);
 
 
-
+select sp.name from Salesperson as sp, Customer as cm, 
+orders as od where od.cust_id=cm.id
+and od.salesperson_id=sp.id and cm.name<>"Samsonic";
 
 
 
