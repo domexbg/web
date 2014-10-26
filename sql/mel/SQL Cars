@@ -28,3 +28,9 @@ LIMIT 0 , 30
 SELECT time_stamp, date_FORMAT( Now( ) , '%W %M %Y' ) AS PerDate
 FROM Cars2
 LIMIT 0 , 30
+
+SELECT (
+current_timestamp( ) - time_stamp
+) /60
+FROM cars2
+LIMIT 0 , 30
