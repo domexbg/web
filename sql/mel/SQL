@@ -6,7 +6,7 @@ a. Bob and Ken
 select sp.name from salesperson as sp, customer as cm, orders as od where od.cust_id=cm.id and 
 od.salesperson_id=sp.id and cm.name="Samsonic"
 
-b. Abe and Dan
+b. Abe, Dan and Joe
 SELECT Distinct sp.name
 FROM salesperson AS sp, customer AS cm, orders AS od
 WHERE od.cust_id = cm.id
