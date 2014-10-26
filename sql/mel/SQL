@@ -7,7 +7,7 @@ select sp.name from salesperson as sp, customer as cm, orders as od where od.cus
 od.salesperson_id=sp.id and cm.name="Samsonic"
 
 b. Abe and Dan
-SELECT sp.name
+SELECT Distinct sp.name
 FROM salesperson AS sp, customer AS cm, orders AS od
 WHERE od.cust_id = cm.id
 AND od.salesperson_id = sp.id
