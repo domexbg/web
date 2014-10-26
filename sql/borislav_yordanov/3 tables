@@ -1,0 +1,49 @@
+CREATE TABLE Salesperson
+(
+ID integer,
+Name varchar(50),
+Age integer,
+Salary integer
+);
+INSERT INTO Salesperson (ID, Name, Age, Salary) VALUES (1,'Abe',61,140000);
+INSERT INTO Salesperson (ID, Name, Age, Salary) VALUES (2,'Bob',34,44000);
+INSERT INTO Salesperson (ID, Name, Age, Salary) VALUES (5,'Chris',34,40000);
+INSERT INTO Salesperson (ID, Name, Age, Salary) VALUES (7,'Dan',41,52000);
+INSERT INTO Salesperson (ID, Name, Age, Salary) VALUES (8,'Ken',57,115000);
+INSERT INTO Salesperson (ID, Name, Age, Salary) VALUES (11,'Joe',38,38000);
+
+select * from Salesperson
+-------------------------------------------------------------------------------------------------
+
+CREATE TABLE Customer
+(
+ID integer,
+Name varchar(15),
+City varchar(10),
+Industry_Type varchar(10)
+);
+INSERT INTO Customer (ID, Name, City, Industry_Type) VALUES (4,'Samsonic','pleasant','J');
+INSERT INTO Customer (ID, Name, City, Industry_Type) VALUES (6,'Panasung','oaktown','J');
+INSERT INTO Customer (ID, Name, City, Industry_Type) VALUES (7,'Samony','jackson','B');
+INSERT INTO Customer (ID, Name, City, Industry_Type) VALUES (9,'Orange','Jackson','B');
+
+..................................................................................................
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
