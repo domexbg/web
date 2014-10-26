@@ -3,7 +3,7 @@ update workers set employed=employed+unemployed+inactive, unemployed=0, inactive
 For interview:
 
 a. Bob and Ken
-select sp.name from salesperson as sp, customer as cm, ordersas od where od.cust_id=cm.id and 
+select sp.name from salesperson as sp, customer as cm, orders as od where od.cust_id=cm.id and 
 od.salesperson_id=sp.id and cm.name="Samsonic"
 
 b. Abe, Chris, Dan and Joe
