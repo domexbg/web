@@ -1,2 +1,3 @@
 select sp.name from salesperson as sp, customer as cm, orders as od where od.cust_id=cm.ID and od.salesperson_id=sp.id and cm.name='samsonic';
 
+create table not_jackson as select name, city from customerwhere city<> 'jackson'
