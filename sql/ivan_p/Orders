@@ -1,0 +1,22 @@
+CREATE TABLE Orders
+(
+Number integer,
+Order_date date,
+cust_id integer,
+salesperson_id integer,
+Amount integer
+);
+INSERT INTO Orders (Number, Order_date, cust_id,salesperson_id, Amount)
+VALUES (10,str_to_date("8/2/96","%c/%e/%y"),4,2,540);
+INSERT INTO Orders (Number, Order_date, cust_id,salesperson_id, Amount)
+VALUES (20,str_to_date("1/30/99","%c/%e/%y"),4,8,1800);
+INSERT INTO Orders (Number, Order_date, cust_id,salesperson_id, Amount) 
+VALUES (30,str_to_date("7/14/95","%c/%e/%y"),9,1,460);
+INSERT INTO Orders (Number, Order_date, cust_id,salesperson_id, Amount) 
+VALUES (40,str_to_date("1/29/98","%c/%e/%y"),7,2,2400);
+INSERT INTO Orders (Number, Order_date, cust_id,salesperson_id, Amount)
+VALUES (50,str_to_date("2/3/98","%c/%e/%y"),6,7,600);
+INSERT INTO Orders (Number, Order_date, cust_id,salesperson_id, Amount) 
+VALUES (60,str_to_date("3/2/98","%c/%e/%y"),6,7,720);
+INSERT INTO Orders (Number, Order_date, cust_id,salesperson_id, Amount) 
+VALUES (70,str_to_date("5/6/98","%c/%e/%y"),9,7,150);
