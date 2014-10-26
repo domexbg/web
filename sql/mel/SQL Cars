@@ -17,3 +17,6 @@
 +("AUDI", "A8", "disel", "white", 2007, 20000, 100000),
 +("AUDI", "A8", "disel", "red", 2012, 70000, 10000)
 +
+
+
+SELECT make, unix_timestamp () from cars 
