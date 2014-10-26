@@ -34,6 +34,6 @@ LIMIT 0 , 30
 d. Write a SQL statement to insert rows into a table called highAchiever(Name, Age), 
 where a salesperson must have a salary of 100,000 or greater to be included in the table. 
 
-INSERT INTO `customer` highachiever Name - Varchar - 30 and Age =INT
+create table highAchiever as select name, age from salesperson where salary>100000
 
 Abe and Ken as result...
