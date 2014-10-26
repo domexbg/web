@@ -29,6 +29,11 @@ select make, DATE_FORMAT (NOW(), "%W %M %Y") from cars;
 
 select (CURRENT_TIMESTAMP() -time_stamp)/60 from cars
 
+select time_stamp, CURRENT_TIMESTAMP(),(CURRENT_TIMESTAMP() -time_stamp)/60 from cars
+
+select time_stamp, CURRENT_TIMESTAMP(), FORMAT( (CURRENT_TIMESTAMP() -time_stamp)/60, 2) from cars
+                                                                          deli se na 60 (sec), 2 zakruglenie sled zapetaja 
+
 
 
 
