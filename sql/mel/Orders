@@ -7,16 +7,16 @@ salesperson_id integer,
 Amount integer
 );
 INSERT INTO Orders (Number, Order_date, cust_id,salesperson_id, Amount)
- VALUES (10,str_to_date("8/2/96,%e,%c,%y"),4,2,540);
+ VALUES (10,str_to_date("8/2/96","%e/%c/%y"),4,2,540);
 INSERT INTO Orders (Number, Order_date, cust_id,salesperson_id, Amount)
- VALUES (20,str_to_date("1/30/99,%e,%c,%y"),4,8,1800);
+ VALUES (20,str_to_date("1/30/99","%e/%c/%y"),4,8,1800);
 INSERT INTO Orders (Number, Order_date, cust_id,salesperson_id, Amount) 
-VALUES (30,str_to_date("7/14/95,%e,%c,%y"),9,1,460);
+VALUES (30,str_to_date("7/14/95","%e/%c/%y"),9,1,460);
 INSERT INTO Orders (Number, Order_date, cust_id,salesperson_id, Amount) 
-VALUES (40,str_to_date("1/29/98,%e,%c,%y"),7,2,2400);
+VALUES (40,str_to_date("1/29/98","%e/%c/%y"),7,2,2400);
 INSERT INTO Orders (Number, Order_date, cust_id,salesperson_id, Amount)
- VALUES (50,str_to_date("2/3/98,%e,%c,%y"),6,7,600);
+ VALUES (50,str_to_date("2/3/98","%e/%c/%y"),6,7,600);
 INSERT INTO Orders (Number, Order_date, cust_id,salesperson_id, Amount) 
-VALUES (60,str_to_date("3/2/98,%e,%c,%y"),6,7,720);
+VALUES (60,str_to_date("3/2/98","%e/%c/%y"),6,7,720);
 INSERT INTO Orders (Number, Order_date, cust_id,salesperson_id, Amount) 
-VALUES (70,str_to_date("5/6/98,%e,%c,%y"),9,7,150);
+VALUES (70,str_to_date("5/6/98","%e/%c/%y"),9,7,150);
