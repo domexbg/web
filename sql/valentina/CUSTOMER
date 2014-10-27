@@ -1,0 +1,11 @@
+CREATE TABLE Customer
+(
+ID integer,
+Name varchar(20),
+City varchar(20),
+Industry_type
+);
+INSERT INTO  Customer (ID, Name, City, Industry_Type) VALUES ('4','Samsonic',pleasant','J');
+INSERT INTO Customer (ID, Name, City, Industry_Type) VALUES ('6','Panasung','oaktown','J');
+INSERT INTO Customer (ID, Name, City, Industry_Type) VALUES ('7','Samony','jackson','B');
+INSERT INTO Customer (ID, Name, City, Industry_Type) VALUES ('9',Órange','Jackson','B');
