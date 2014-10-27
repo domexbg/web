@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS census2011 (
+﻿CREATE TABLE IF NOT EXISTS census2011 (
 	id int NOT NULL AUTO_INCREMENT /*IDENTITY(1,1)*/ PRIMARY KEY,
 	PLACE varchar(50), MUNICIPALITY varchar(50), DISTRICT varchar(50), TOTAL int, 
 	G0_4 int, G5_9 int, G10_14 int, G15_19 int, G20_24 int, G25_29 int, G30_34 int, 
