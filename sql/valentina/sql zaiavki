@@ -1,0 +1,1 @@
+ select * from salespeople where city =any (select city from customers );
