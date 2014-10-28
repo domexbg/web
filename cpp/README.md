@@ -11,7 +11,7 @@ Useful links
 
 [Code::Blocks] (http://sourceforge.net/projects/codeblocks/)
 
-[Microsoft Visual C++ 2010 Express] (http://go.microsoft.com/?linkid=9709949)
+[Microsoft Visual C++ 2008 Express] (http://www.microsoft.com/en-us/download/details.aspx?id=29)
 
 
 ### Console C/C++ compilers for Windows
