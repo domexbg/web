@@ -11,8 +11,8 @@ Useful links
 
 [Code::Blocks] (http://sourceforge.net/projects/codeblocks/)
 
-[Microsoft Visual C++ 2008 Express] (http://www.microsoft.com/en-us/download/details.aspx?id=29)
-[Microsoft .NET framework 4.0] (http://download.microsoft.com/download/1/B/E/1BE39E79-7E39-46A3-96FF-047F95396215/dotNetFx40_Full_setup.exe)
+
+[QT Creator v5.3.2 with MinGW 4.8.0] (http://download.qt-project.org/official_releases/qt/5.3/5.3.2/qt-opensource-windows-x86-mingw482_opengl-5.3.2.exe)
 
 
 ### Console C/C++ compilers for Windows
@@ -24,3 +24,5 @@ Useful links
 
 [Digital Mars C/C++ v8.57] (http://ftp.digitalmars.com/Digital_Mars_C++/Patch/dm857c.zip)
 
+
+[Borland C++ v5.5] (http://altd.embarcadero.com/download/bcppbuilder/freecommandLinetools.exe)
