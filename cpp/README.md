@@ -1,0 +1,10 @@
+Useful links
+------------
+
+### Bulgarian C++ programming tutorial
+[BG C++ tutorial] (http://programming-bg.com/%D1%83%D1%80%D0%BE%D1%86%D0%B8/C++/)
+
+
+### Dev-Cpp C/C++ compiler for Windows
+[Dev-Cpp v5.7.1] (http://downloads.sourceforge.net/project/orwelldevcpp/Setup%20Releases/Dev-Cpp%205.7.1%20TDM-GCC%20x64%204.8.1%20Setup.exe?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Forwelldevcpp%2Ffiles%2FSetup%2520Releases%2F&ts=1414323812&use_mirror=heanet)
+
