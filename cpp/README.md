@@ -9,7 +9,9 @@ Useful links
 [Dev-Cpp v5.7.1] (http://downloads.sourceforge.net/project/orwelldevcpp/Setup%20Releases/Dev-Cpp%205.7.1%20TDM-GCC%20x64%204.8.1%20Setup.exe?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Forwelldevcpp%2Ffiles%2FSetup%2520Releases%2F&ts=1414323812&use_mirror=heanet)
 
 
-[LCC C 32bit] (http://www.cs.virginia.edu/~lcc-win32/lccwin32.exe)
+[Code::Blocks] (http://sourceforge.net/projects/codeblocks/)
+
+[Microsoft Visual C++ 2010 Express] (http://go.microsoft.com/?linkid=9709949)
 
 
 ### Console C/C++ compilers for Windows
