@@ -12,6 +12,7 @@ Useful links
 [Code::Blocks] (http://sourceforge.net/projects/codeblocks/)
 
 [Microsoft Visual C++ 2008 Express] (http://www.microsoft.com/en-us/download/details.aspx?id=29)
+[Microsoft .NET framework 4.0] (http://download.microsoft.com/download/1/B/E/1BE39E79-7E39-46A3-96FF-047F95396215/dotNetFx40_Full_setup.exe)
 
 
 ### Console C/C++ compilers for Windows
