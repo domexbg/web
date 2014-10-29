@@ -22,6 +22,9 @@ Useful links
 [Tiny C] (http://download.savannah.gnu.org/releases/tinycc/)
 
 
+[TDM-GCC 32bit] (http://tdm-gcc.tdragon.net/download)
+
+
 [Digital Mars C/C++ v8.57] (http://ftp.digitalmars.com/Digital_Mars_C++/Patch/dm857c.zip)
 
 
