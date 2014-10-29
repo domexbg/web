@@ -4,7 +4,8 @@ CREATE TABLE Customers (
 	Customer_VAT VARCHAR(255) NULL,
 	Addres VARCHAR(255) NOT NULL ,
 	City VARCHAR(255) NOT NULL , 
-	Country VARCHAR(255) NOT NULL
+	Country VARCHAR(255) NOT NULL,
+	PRIMARY KEY (ID)
 )
 COLLATE='utf8_general_ci'
 ENGINE=MyISAM;
@@ -37,7 +38,7 @@ INSERT INTO Orders (
 	Customer_Order_ID,
 	Order_Date,
 	Quantity ,
-	Price ,
+	Price)
 VALUES (1,'M098_2014',NOW(),200000,20.098),
 (2,'123_2014',NOW(),1000000,0.005),
 (3,'2014_WE',NOW(),5000,1.05),
