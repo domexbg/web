@@ -1,0 +1,3 @@
+select *from  salesperson as sp,customer as cust,orders as ord where 
+ord.cust_id=cust.id and ord.salesperson_id=sp.id and cust.name='Samsonic';
+a) Bob i Ken
