@@ -11,3 +11,7 @@ select*from workers
 select * from workers
 select town ,(employed+unemployed+inactive) as total from workers
 order by total desc limit 10
+select town ,inactive/(employed+unemployed+inactive) *100 as total from workers
+order by total desc
+select town ,inactive/(employed+unemployed+inactive) *100 as total from workers
+where (employed+unemployed+inactive) > 10000 order by total desc
