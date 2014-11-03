@@ -9,3 +9,5 @@ select*from workers
 
 /*UPDATE WORKERS SET employed=employed+unemployed+inactive,unemployed=0,inactive=0 where (employed+unemployed+inactive)>1000*/
 select * from workers
+select town ,(employed+unemployed+inactive) as total from workers
+order by total desc limit 10
