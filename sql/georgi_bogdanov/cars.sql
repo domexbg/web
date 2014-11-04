@@ -1,5 +1,5 @@
 create table cars (
-cars_ID int not null,
+cars_ID int not null auto_increment,
 marka varchar(255) not null,
 model varchar(255) not null,
 first_reg_year int not null,
