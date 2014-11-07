@@ -1,3 +1,38 @@
-select *from  salesperson as sp,customer as cust,orders as ord where 
++ select *from  salesperson as sp,customer as cust,orders as ord where 
 ord.cust_id=cust.id and ord.salesperson_id=sp.id and cust.name='Samsonic';
-a) Bob i Ken
+
++ select salesperson.NAME from salesperson,customer,orders 
+where orders.cust_id=customer.id 
+and orders.salesperson_id=salesperson.id 
+and customer.name='Samsonic' ;
+
++select * from salesperson ,customer,orders 
+where orders.cust_id=customer.id 
+and orders.salesperson_id=salesperson.id 
+and customer.name='Samsonic' ;
+     a) Bob i Ken
+
++ select salesperson.NAME from salesperson  where name not in 
+(select  salesperson.NAME  from salesperson ,customer ,orders 
+ where orders.cust_id=customer.id
+ and orders.salesperson_id=salesperson.id
+ and customer.name='Samsonic')
+     b)Abe,chris,Dan i Joe
+ 
+ + select name from salesperson inner join orders on
+ orders.salesperson_id=salesperson.id
+ GROUP BY Name HAVING COUNT(Salesperson.name) >= 2;
+ c)Bob i Dan
+ 
+ +create table highAchiever select Name, Age from salesperson
+where salary >100000;
+d) Abe i Ken
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
