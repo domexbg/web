@@ -1,8 +1,8 @@
 create table USER 
 (
-user_id integer NOT NULL,
-name varchAr(50) NOT NULL,
-phone_num  varchar (20) NOT NULL
+user_id integer ,
+name varchAr(50) ,
+phone_num  varchar (20) 
 );
 
 INSERT INTO USER ('user_id', 'name', 'phone_num') VALUES ('12', 'Valia', '087458963541');
@@ -14,10 +14,10 @@ INSERT INTO USER ('user_id', 'name', 'phone_num') VALUES ('89', 'Bebe', '0899568
 
 create table USERHISTORY
 (
-user_id integer NOT NULL,
-date date NOT NULL,
-action varchar NOT NULL,
-histiry_id integer NOT NULL
+user_id integer ,
+date date ,
+action varchar ,
+histiry_id integer
 );
 
 INSERT INTO USERHISTORY ('user_id','date','action','histiry_id ')  VALUES ('12', '9/10/2014', ' ', ' ');
