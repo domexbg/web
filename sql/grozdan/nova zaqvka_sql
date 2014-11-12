@@ -1,0 +1,3 @@
+select power_kw,model from car_grozdan 
+ ORDER BY  power_kw DESC limit 1;
+select max( power_kw) as  Highestpower_kw from car_grozdan;
