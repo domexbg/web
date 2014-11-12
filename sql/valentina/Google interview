@@ -1,0 +1,29 @@
+create table USER 
+(
+user_id integer NOT NULL,
+name varchAr(50) NOT NULL,
+phone_num  varchar (20) NOT NULL
+);
+
+INSERT INTO USER ('user_id', 'name', 'phone_num') VALUES ('12', 'Valia', '087458963541');
+INSERT INTO USER ('user_id', 'name', 'phone_num') VALUES ('56', 'Groshi', '09856213595');
+INSERT INTO USER ('user_id', 'name', 'phone_num') VALUES ('32', 'Mili', '08789654258');
+INSERT INTO USER ('user_id', 'name', 'phone_num') VALUES ('21', 'Shishi', '088956415895');
+INSERT INTO USER ('user_id', 'name', 'phone_num') VALUES ('89', 'Bebe', '089956864412');
+
+
+create table USERHISTORY
+(
+user_id integer NOT NULL,
+date date NOT NULL,
+action varchar NOT NULL,
+histiry_id integer NOT NULL
+);
+
+INSERT INTO USERHISTORY ('user_id','date','action','histiry_id ')  VALUES ('12', '9/10/2014', ' ', ' ');
+INSERT INTO USERHISTORY ('user_id','date','action','histiry_id ')  VALUES ('56', '8/11/2014', ' ', ' ');
+INSERT INTO USERHISTORY ('user_id','date','action','histiry_id ')  VALUES ('12', '10/11/2014', ' ', ' ');
+INSERT INTO USERHISTORY ('user_id','date','action','histiry_id ')  VALUES ('32', '11/11/2014', ' ', ' ');
+INSERT INTO USERHISTORY ('user_id','date','action','histiry_id ')  VALUES ('21', '10/11/2014', ' ', ' ');
+INSERT INTO USERHISTORY ('user_id','date','action','histiry_id ')  VALUES ('56', '12/11/2014', ' ', ' ');
+INSERT INTO USERHISTORY ('user_id','date','action','histiry_id ')  VALUES ('12', '12/11/2014', ' ', ' ');
