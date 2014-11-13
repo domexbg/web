@@ -1,0 +1,60 @@
+a. The names of all salespeople that have an order with Samsonic. 
+
+SELECT t1.Name, t2.Name
+FROM Salesperson t1
+INNER JOIN
+Orders t2
+ON t1.ID = t2.salesperson_id
+INNER JOIN
+Customer t3
+ON t2.ID = t3.cust_id
+WHERE t2.Name LIKE '%Samsonic%'
+ORDER BY 1 ASC
+
+b. The names of all salespeople that do not have any order with Samsonic. 
+SELECT t1.Name, t2.Name
+FROM Salesperson t1
+INNER JOIN
+Orders t2
+ON t1.ID = t2.salesperson_id
+INNER JOIN
+Customer t3
+ON t2.ID = t3.cust_id
+WHERE t2.Name NOT LIKE 'Samsonic%' AND t1.Name NOT LIKE 'Bob%'
+ORDER BY 1 ASC
+
+c. The names of salespeople that have 2 or more orders. 
+SELECT t2.Name, t1.Amount
+FROM orders t1
+INNER JOIN
+salesperson t2
+ON t1.salesperson_id = t2.Name
+WHERE t1.Amount >= 2
+GROUP BY t2.Name 
+ORDER BY t2.Name
+
+А ако ти се наложи, да броиш колко са поръчките (защото тук са дадени, но може и да не бъдат) може приемрно така (като тук съм ги написала ако и служителя и поръчката са в една таблица, ако не са в една, пак с INNER JOIN във вътрешния SELECT:) ):
+SELECT vt.EmployeeID, vt.numorders
+FROM
+(
+SELECT COUNT(*) numorders, t1.EmployeeID 
+FROM orders t1
+GROUP BY EmployeeID
+)vt
+WHERE vt.numorders < 100
+GROUP BY vt.EmployeeID
+ORDER BY vt.EmployeeID
+
+
+d. Write a SQL statement to insert rows into a table called highAchiever(Name, Age), where a salesperson must have a salary of 100,000 or greater to be included in the table.
+Така както го разбирам аз: явно има готова таблица, празна, с две колони Име и Възраст, в която трябва да налеем имената и възрастта от вече съществуващата таблица Salesperson.
+При това положение, моето предложение е следното :) :
+INSERT INTO highAchiever (Name, Age)
+SELECT Salesperson.Name, Salesperson.Age
+FROM Salesperson
+WHERE Salesperson.Salary >= 100000
+ORDER BY Salesperson.Name ASC 
+
+Ако не мине WHERE клаузата, можем спокойно да създадем витуална таблица, където съществуват служители само със заплата от 100 000 нагоре и от тази таблица да дръпнем записите  .
+
+
