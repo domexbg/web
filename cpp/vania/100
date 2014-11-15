@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+	int i;
+	int sum =0;
+	i=0;
+	
+	while (i<100) {
+	
+	i=i+1;
+	sum=sum + i;
+}
+fprintf(stdout,"%d\n",sum);
+return 0;
+}
