@@ -36,3 +36,16 @@ int main()
 	return 0;
  }
 
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+{
+	char ch = '@' + 10;
+	int chislo = 11;
+	cout <<"Hello!Mel"
+	<< endl << (int) ch << endl << (chislo+200)*16 <<endl;
+	return 0;
+ }
