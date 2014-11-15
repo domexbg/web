@@ -49,3 +49,21 @@ int main()
 	<< endl << (int) ch << endl << (chislo+200)*16 <<endl;
 	return 0;
  }
+ 
+
+
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+
+{
+	char ch = '@' + 10;
+	int chislo = 11;
+	cout <<"Hello!Mel"
+	<< endl << (1 << chislo + 200);
+	return 0;
+ }
+ 
