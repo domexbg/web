@@ -21,4 +21,8 @@ int main()
     return 0;
 }
 
-/5050/
+/5050/   
+ pri "%d\n%d" result 50
+                     50
+
+
