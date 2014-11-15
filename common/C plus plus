@@ -24,5 +24,37 @@ int main()
 /5050/   
  pri "%d\n%d" result 50
                      50
+                     
 
+
+//Title of this code
+
+#include <studio.h>
+
+int main() {
+    int age;
+    
+    for (;;) {
+    fprintf(stdout, "Type Your Age: ");
+    fscanf(stdin, "%d",&age);
+    }
+    
+    if (age>=0 && age<=3) {
+    fprintf(stdout, "Baby\n");
+    }
+
+    else if (age>=4 && <=7){
+    fprintf(stdout, "Kindergarden\n");
+    }
+    else if (age>7 && <=18){
+    fprintf(stdout, "School\n");
+    }
+    else if (age>18 && <=25){
+    fprintf(stdout, "Uni\n");
+    }
+    else if (age>25){
+    fprintf(stdout, "Work\n");
+    }
+ return 0;
+}
 
