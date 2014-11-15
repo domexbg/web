@@ -16,7 +16,7 @@ int main()
     else if ( chislo >=0 && chislo <= 15 ) cout << "Chilly\n";
          else if ( chislo > 15 && chislo <= 25 ) cout << "Wormy\n";
               else if ( chislo > 25 && chislo <= 35 ) cout << "Hot\n";
-                   else ( chislo > 35 ) cout << "Super hot\n";
+                   else if ( chislo > 35 ) cout << "Super hot\n";
               
 	return 0;
 }
