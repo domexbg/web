@@ -25,7 +25,23 @@ int main()
  pri "%d\n%d" result 50
                      50
                      
-
+#include <studio.h>
+int main() {
+    
+    int i;
+    int sum=0;
+    
+    i=0;
+    while (i<100){
+        
+        i=i+1;
+        sum=sum+i;
+    }
+    
+    fprintf(stdout,"%d\n", sum);
+    
+ return 0;
+}
 
 //Title of this code
 
