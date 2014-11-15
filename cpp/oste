@@ -1,0 +1,86 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+
+{
+	char ch = '@' + 20;
+	int chislo = 11;
+	cout <<"Hello word"
+	<< endl << (1 << chislo + 2);
+	//cout << "\nEnter temperature :";
+   //cin>>chislo;
+  /* cout << "Number" << chislo << "^2 =" << chislo*chislo <<endl;*/
+ /*  if ( chislo < 0 ) cout << "Freezing\n";
+   else if (chislo >=0  && chislo <= 15) cout << "Chilly\n";
+        else if (chislo > 15 && chislo <= 25) cout << "Wormy\n";
+              else if (chislo > 25  && chislo <= 35) cout << "Hot\n";
+                  else if (chislo > 35) cout << "Super hot\n";*/
+    int i=0;
+	for ( i =0; i < 35 ; i ++ ) 
+	 cout << i << "\t"; 
+            
+	return 0;
+ }
+ 
+ #include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+
+{
+	char ch = '@' + 20;
+	int chislo = 11;
+	cout <<"Hello word"
+	<< endl << (1 << chislo + 2);
+	//cout << "\nEnter temperature :";
+   //cin>>chislo;
+  /* cout << "Number" << chislo << "^2 =" << chislo*chislo <<endl;*/
+ /*  if ( chislo < 0 ) cout << "Freezing\n";
+   else if (chislo >=0  && chislo <= 15) cout << "Chilly\n";
+        else if (chislo > 15 && chislo <= 25) cout << "Wormy\n";
+              else if (chislo > 25  && chislo <= 35) cout << "Hot\n";
+                  else if (chislo > 35) cout << "Super hot\n";*/
+    int i=0;
+	for ( i =0; i < 35 ; i +=5) 
+	 cout << i << "\t"; 
+            
+	return 0;
+ }
+ 
+ #include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+
+{
+	char ch = '@' + 20;
+	int chislo = 11;
+	cout <<"Hello word"
+	<< endl << (1 << chislo + 2);
+	//cout << "\nEnter temperature :";
+   //cin>>chislo;
+  /* cout << "Number" << chislo << "^2 =" << chislo*chislo <<endl;*/
+ /*  if ( chislo < 0 ) cout << "Freezing\n";
+   else if (chislo >=0  && chislo <= 15) cout << "Chilly\n";
+        else if (chislo > 15 && chislo <= 25) cout << "Wormy\n";
+              else if (chislo > 25  && chislo <= 35) cout << "Hot\n";
+                  else if (chislo > 35) cout << "Super hot\n";*/
+    int i=0;
+	for ( i =0; i < 35 ; i++) {
+	
+	 cout << i << "\t"; 
+          i+=3 ; 
+     }
+	return 0;
+ 
+ }
+ 
+ 
+ 
