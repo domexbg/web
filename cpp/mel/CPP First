@@ -67,3 +67,21 @@ int main()
 	return 0;
  }
  
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+
+{
+	char ch = '@' + 20;
+	int chislo = 11;
+	cout <<"Hello, Mel!"
+	<< endl << (1 << chislo + 2);
+	cout << "Vavedete stoynost";
+	cin >> chislo;
+	cout << "Number" << chislo << "^2 =" << chislo*chislo << endl;
+	return 0;
+ }
+ 
