@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main() {
+    int chislo1 = 10;
+    
+    fprintf(stdout, "     1\n    21\n   321\n  4321\n 54321");
+    
+    
+    
+    return 0;
+}
