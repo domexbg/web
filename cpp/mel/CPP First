@@ -8,3 +8,17 @@ int main()
 	cout<< "Hello, Mel!" << endl;
 	return 0;
  }
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+{
+	char ch = '@' + 10;
+	cout <<"Hello!Mel"
+	<< endl << (int) ch << endl;
+	return 0;
+ }
