@@ -140,3 +140,33 @@ cout << i << "\n";
 }
 
 
+
+=========
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  // declare two loop variables
+	int i, sum;
+
+	// initialize two variables
+	sum = 0;
+	i = 1;
+
+	// begin do-while loop from 1 to 100
+	do 
+	{
+		sum = sum + i;
+		i = i + 1;
+	} while (i <= 100);
+	// print result
+	cout << "The sum from 1 to 100 = " << sum;
+	// wait for any key pressing
+	cin.get();
+  return 0;
+}
+
+=====
+
