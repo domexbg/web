@@ -1,0 +1,24 @@
+//Title of this code
+
+#include <iostream>
+
+int main()
+{
+    int chislo1=10;
+    fprintf(stdout,"%d",chislo1*5);
+    return 0;
+}
+  /vednuj 50/
+
+//Title of this code
+
+#include <iostream>
+
+int main()
+{
+    int chislo1=10;
+    fprintf(stdout,"%d%d",chislo1*5,chislo1*5);
+    return 0;
+}
+
+/5050/
