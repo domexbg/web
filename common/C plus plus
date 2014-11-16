@@ -73,4 +73,48 @@ int main() {
     }
  return 0;
 }
+----------------------------------------------------------------------------------------------------------------
+16 11 
+--------------------------------------------------------------------------------
+//Title of this code
 
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main(int argc, char **argv)
+{
+    int i = 0;
+    
+    srand(time(NULL));
+    //cout << time(NULL) << "\n";
+    for (;i < 5; i++) cout << rand() % 100 + 1 << "\t";
+    
+    return EXIT_SUCCESS;
+}
+
+//Title of this code
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main(int argc, char **argv)
+{
+    int i = 0;
+    int rand_num; //slu4aino 4islo
+    int ans_num; // 4islo koeto nie predlopagame
+    
+    srand(time(NULL));
+    
+    /*
+    cout << time(NULL) << "\n";
+    */
+    rand_num=rand()%100 + 1;
+    for (i=0, i < 5; i+=1) {
+        cout << "Please input a number ";
+    
+    return EXIT_SUCCESS;
+}
