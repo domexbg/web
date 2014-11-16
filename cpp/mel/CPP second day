@@ -309,6 +309,6 @@ return EXIT_SUCCESS;
 
 }
 
-/* Make a gues 5 times next Congratulations!You win */
+/* Make a gues 5 times next Congratulations!You win after 5 times not resulta to wost cust Go up*/
 
 
