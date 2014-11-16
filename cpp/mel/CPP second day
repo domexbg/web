@@ -279,4 +279,26 @@ fprintf(stdout,"%d",(time(NULL)));
 %50 dawa rezultata 2 cifri, no nai golqmoto e 49 nai malkoto e 0
 zatowa prawim + 1 za da nqmame nula w rezultata i da e istina.
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
+int main ()
+
+{
+int r_number;
+int guess;
+int i;
+
+srand(time(NULL));
+
+r_number = rand()%100 +1;
+
+for (i=0; i<5; i++){ 
+
+
+
+}
+
+
+}
