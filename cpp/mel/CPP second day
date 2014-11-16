@@ -17,7 +17,7 @@ fprintf(stdout,"OK");
 
 }
 
-/* proba s ne e ravno na 0*/
+/* chaka */
 
 #include <iostream>
 #include <stdio.h>
@@ -37,7 +37,7 @@ while (i);
 fprintf(stdout,"OK");
 
 }
-/* ne se poluchava s 5 */
+/* chaka */
 
 
 #include <iostream>
@@ -58,7 +58,7 @@ while (i-5);
 fprintf(stdout,"OK");
 
 }
-/* taka se izpylnawa i dava 0k */
+/* dava 0k */
 
 
 #include <iostream>
@@ -79,6 +79,26 @@ while (i);
 fprintf(stdout,"OK");
 
 }
-/* taka se izpylnawa i dava 0k */
+/* dava 0k */
+
+#include <iostream>
+#include <stdio.h>
+#include <math.h>
+
+using namespace std;
+
+int main ()
+
+{
+int i;
+
+i=5;
+
+while (i=0);
+
+fprintf(stdout,"OK");
+
+}
+/* dava 0k */
 
 
