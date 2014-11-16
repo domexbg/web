@@ -211,7 +211,7 @@ fprintf(stdout,"OK");
 /* O48 koda na 0 */
 
 
-Random number generator CPP use 'rand' +  #include <stdlib.h>
+Random number generator CPP use 'rand' +  #include <stdlib.h> i #include <time.h> za time
 
 
 
@@ -253,3 +253,24 @@ fprintf(stdout,"%d",rand);
 
 /* 4281768 */
 
+#include <iostream>
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#include <time.h>
+
+using namespace std;
+
+int main ()
+{
+int chislo, i;
+
+srand(time(NULL));
+
+rand()%100;
+
+fprintf(stdout,"%d",(time(NULL)));
+
+}
+
+/* sekundite rastqt vseki pyt  */
