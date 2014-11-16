@@ -1,0 +1,19 @@
+#include<iostream>
+#include <stdlib.h>
+#include <time.h>
+ 
+ int main() 
+{
+   
+    int i = 1 + 100;
+     
+    srand( time(NULL) );
+     
+	i= 1 + rand() % 100;
+	 
+	 fprintf (stdout,"%d", time(NULL) );
+    
+
+	 return 0;
+	 
+}
