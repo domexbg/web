@@ -101,4 +101,23 @@ fprintf(stdout,"OK");
 }
 /* dava 0k */
 
+#include <iostream>
+#include <stdio.h>
+#include <math.h>
 
+using namespace std;
+
+int main ()
+
+{
+int i;
+
+i=5;
+
+while (i!=0);
+
+fprintf(stdout,"OK");
+
+}
+
+/* cikli */
