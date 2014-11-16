@@ -282,6 +282,7 @@ zatowa prawim + 1 za da nqmame nula w rezultata i da e istina.
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <iostream>
 
 int main ()
 
@@ -298,12 +299,16 @@ for (i=0; i<5; i++){
 
 puts("Make a guess:");
 
-cin>>guess; /* fscanf(stdin,"%d",&) without <iostream> */
-
+fscanf(stdin,"%d",&guess);
 if(r_number>guess) puts ("Go up");
 else if (r_number<guess) puts ("Go doun");
 else fprintf(stdout,"Congratulations!You win. [%d]", r_number);
+
 }
 return EXIT_SUCCESS; 
 
 }
+
+/* Make a gues 5 times next Congratulations!You win */
+
+
