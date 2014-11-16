@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main () {
+
+int i=6;
+if (i-6) {
+	cout << i<< endl;
+}
+else {cout << i*i;
+}
+return 0;
+
+}
