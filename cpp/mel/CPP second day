@@ -214,3 +214,22 @@ fprintf(stdout,"OK");
 Random number generator CPP use 'rand' +  #include <stdlib.h>
 
 
+
+#include <iostream>
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+
+using namespace std;
+
+int main ()
+
+{
+int chislo, i;
+
+1 + rand()%101;
+
+fprintf(stdout,"%d",rand);
+}
+
+/* 4281800 */
