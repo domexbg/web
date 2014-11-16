@@ -378,3 +378,35 @@ fprintf(stdout,"Neizvestnoto chislo e %d. Opitaite pak", r_number);
 }
 
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <iostream>
+
+int main ()
+
+{
+int r_number;
+int guess;
+int i;
+
+srand(time(NULL));
+
+r_number = rand()%100 +1;
+
+for (i=0; i<10; i++){ 
+
+puts("Make a guess:");
+
+fscanf(stdin,"%d",&guess);
+if(r_number>guess) puts ("Go up");
+else if (r_number<guess) puts ("Go doun");
+
+else {fprintf(stdout,"Congratulations!You win. [%d]", r_number); break;}
+
+
+}
+
+fprintf(stdout,"Neizvestnoto chislo e %d . Opitaite pak.", r_number);
+
+}
