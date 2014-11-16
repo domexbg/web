@@ -274,3 +274,9 @@ fprintf(stdout,"%d",(time(NULL)));
 }
 
 /* sekundite rastqt vseki pyt  */
+
+% 100 dava rezultat poslednite 2 cifri, kato nai -golqmoto e 99, nai malkoto e 0
+%50 dawa rezultata 2 cifri, no nai golqmoto e 49 nai malkoto e 0
+zatowa prawim + 1 za da nqmame nula w rezultata i da e istina.
+
+
