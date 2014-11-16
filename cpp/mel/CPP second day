@@ -300,8 +300,10 @@ puts("Make a guess:");
 
 cin>>guess; /* fscanf(stdin,"%d",&) without <iostream> */
 
-
+if(r_number>guess) puts ("Go up");
+else if (r_number<guess) puts ("Go doun");
+else fprintf(stdout,"Congratulations!You win. [%d]", r_number);
 }
-
+return EXIT_SUCCESS; 
 
 }
