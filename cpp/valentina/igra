@@ -1,0 +1,33 @@
+#include <iostream>
+#include <stdio.h> /* fprintf() */
+#include <stdlib.h> /* rand( ) srand( ) NULL*/
+#include <time.h> /* time () */   
+ 
+ int main() 
+{
+   
+    int r_number;
+     int guess;
+    int i;
+    srand( time(NULL) );
+   
+	 r_number = rand() % 100 +1;
+	 for(i =0; i < 5; i++) {
+	 
+	   puts("Meke a guess:");
+	    fscanf(stdin, "%d", &guess);  /*cin >>guess; */
+	   if (r_number > guess ) puts(" Go up!");
+	       else if (r_number < guess ) puts(" Go down!");
+	          else {
+	            fprintf (stdout,
+	                "Congratulations! You win. [%d]",
+	                        r_number);
+	                      break;;;;;;;
+                 }
+	 }
+	
+    
+
+	 return EXIT_SUCCESS; /* stdlib,h */
+	 
+}
