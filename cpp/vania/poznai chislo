@@ -1,0 +1,31 @@
+#include <iostream>
+#include <stdlib.h>
+#include <ctime>
+using namespace std;
+
+int main( int argc, char **argv) {
+int i = 0;
+int rand_num; //random number
+int ans_num; //answering number - predpolojenie
+srand(time(NULL));
+//cout << time(NULL) << "\n";
+rand_num = rand() % 100 + 1;
+for (i = 0;i < 5; i+=1 ) {
+cout << "Please input number: ";
+cin >> ans_num;
+if (i==5) {
+    cout << "Game over! The number was: " << rand_num;
+}
+else if (ans_num == rand_num) {
+    cout << "You guessed the number, it is: " << rand_num << "\n";
+    break;
+}
+else if (ans_num < rand_num) {
+cout << "Go UP\n";
+}
+else if (ans_num > rand_num) {
+cout << "Go DOWN\n";
+}
+}
+return EXIT_SUCCESS;
+}
