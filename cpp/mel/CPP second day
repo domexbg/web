@@ -211,5 +211,6 @@ fprintf(stdout,"OK");
 /* O48 koda na 0 */
 
 
+Random number generator CPP use 'rand'
 
 
