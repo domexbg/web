@@ -6,7 +6,7 @@ int main() {
   fprintf(stdout, "Enter age: ");
   fscanf(stdin, "%d", &age);
   
-  if ( age >= 0 && age <= 3) {
+  if ( age >= 0 && age <= 3) {  //Da sa izpalneni i dvete usloviq (&&) log and
     fprintf(stdout, "Baby\n");
   } 
   else if ( age >= 4 && age <= 7) {
