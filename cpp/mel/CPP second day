@@ -143,3 +143,73 @@ fprintf(stdout,"OK");
 /* OK -greshka.... */
 
 
+#include <iostream>
+#include <stdio.h>
+#include <math.h>
+
+using namespace std;
+
+int main ()
+
+{
+int i;
+
+i=5;
+
+while (i='0');
+
+fprintf(stdout,"OK");
+
+}
+
+/* _ raboti.. */
+
+
+#include <iostream>
+#include <stdio.h>
+#include <math.h>
+
+using namespace std;
+
+int main ()
+
+{
+int i;
+
+i=5;
+
+fprintf(stdout, "%d\n", i = 0);
+
+while (i=0);
+
+fprintf(stdout,"OK");
+
+}
+/* 0 i OK  */
+
+
+#include <iostream>
+#include <stdio.h>
+#include <math.h>
+
+using namespace std;
+
+int main ()
+
+{
+int i;
+
+i=5;
+
+fprintf(stdout, "%d\n", i = '0');
+
+while (i='0');
+
+fprintf(stdout,"OK");
+
+}
+/* O48 koda na 0 */
+
+
+
+
