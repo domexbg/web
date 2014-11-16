@@ -336,11 +336,11 @@ puts("Make a guess:");
 fscanf(stdin,"%d",&guess);
 if(r_number>guess) puts ("Go up");
 else if (r_number<guess) puts ("Go doun");
-else if i>5 fprintf(stdout,"You wose. May be another time. BUY [%d]", r_number);
+else if (i>5) fprintf(stdout,"You wose. May be another time. BUY [%d]", r_number);
 else fprintf(stdout,"Congratulations!You win. [%d]", r_number);
 
 }
 
-fprintf(stdout,'r_number', r_number);
+fprintf(stdout,"%d", r_number);
 
 }
