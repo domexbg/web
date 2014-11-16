@@ -410,3 +410,43 @@ else {fprintf(stdout,"Congratulations!You win. [%d]", r_number); break;}
 fprintf(stdout,"Neizvestnoto chislo e %d . Opitaite pak.", r_number);
 
 }
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <iostream>
+
+#define MAX_TRY 10
+
+int main ()
+
+{
+int r_number;
+int guess;
+int i;
+
+srand(time(NULL));
+
+r_number = rand()%100 +1;
+
+for (i=0; i< MAX_TRY; i++){ 
+
+puts("Make a guess:");
+
+fscanf(stdin,"%d",&guess);
+if(r_number > guess) 
+        fprintf(stdout,"%s",(i==MAX_TRY-1)? "":"Go up!\n");
+else if (r_number<guess)
+        fprintf(stdout, "%s" ,(i==MAX_TRY-1)? "":"Go down!\n");
+
+else {
+
+  fprintf(stdout,"Congratulations!You win. [%d]", r_number); break;}
+
+}
+if (r_number!= guess) fprintf (stdout, "You lost! The nember was %d. Play agayn/n",r_number);
+
+return EXIT_SUCCESS;
+}
+
+
