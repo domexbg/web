@@ -296,6 +296,9 @@ r_number = rand()%100 +1;
 
 for (i=0; i<5; i++){ 
 
+puts("Make a guess:");
+
+cin>>guess; /* fscanf(stdin,"%d",&) without <iostream> */
 
 
 }
