@@ -373,7 +373,7 @@ else fprintf(stdout,"Congratulations!You win. [%d]", r_number);
 
 }
 
-fprintf(stdout,"%d", r_number);
+fprintf(stdout,"Neizvestnoto chislo e %d", r_number);
 
 }
 
