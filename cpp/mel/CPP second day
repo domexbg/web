@@ -485,7 +485,7 @@ else {
   fprintf(stdout,"Congratulations!You win. [%d] (%d) Point", r_number, 100-(i*10)); break;}
 
 }
-if (r_number!= guess) fprintf (stdout, "You lost! 0 point .The nember was %d. Play agayn/n",r_number);
+if (r_number!= guess) fprintf (stdout, "You lost! 0 point .The nember was %d. Play agayn\n",r_number);
 
 return EXIT_SUCCESS;
 }
