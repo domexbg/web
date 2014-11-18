@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<style>
+.likeabutton {
+    text-decoration: none; font: menu;
+    display: inline-block; padding: 2px 8px;
+	background: yellow; color: black;
+	border-style: solid; border-width: 2px;
+	}
+.space{
+margin: 20px;
+}
+</style>
+<body>
+ <h2>Spectacular </h2>
+ <img src="Close-up-Nature-Flowers-Macro-Dendelions-Depth-of-Field1.jpg" alt="Mountain View" style="width:304px;height:228px">
+ <div class="space">
+ <a class="likeabutton" href="table.html" target="_blank"> <h2>Table 17.11.2014</h2> </a>
+ </div>
+ <div class="space">
+ <a href="table.html" target="_blank"> <button>Table 17.11.2014</button> </a>
+ </div>
+</body>
+
+</html>
