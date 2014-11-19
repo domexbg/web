@@ -1,7 +1,7 @@
 create table USER 
 (
 user_id integer ,
-name varchAr(50) ,
+name varchar(50) ,
 phone_num  varchar (20) 
 );
 
