@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Free Css Layout</title>
+<meta http-equiv="content-type" content="text/html"; charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+<div id="container">
+<div id="header"><h1><a href="http://www.free-css.com/free-css-layouts.php">Free CSS Layouts</a></h1></div>
+  <div id="wrapper">
+    <div id="content">
+       <table border=0 >
+  <tr><td colspan="2" class  ="bold_text menu_taital"><big> МЕНЮ ЗА ДЕНЯ </big></td></tr>  
+  <tr> <td class ="bold_text">АСОРТИМЕНТ</td> <td> ЛВ</td> </tr>
+   <tr><td class ="bold_text">СУПА 300 гр </td></tr>
+   <tr><td> Рибена чорба </td> <td>2,00</td></tr>
+
+   <tr> <td>Супа пиле с застройка</td> <td>2,10</td></tr>
+ <tr><td>Заленчукова бистра супа</td> <td>2,00 </td></tr>
+<tr> <td>Таратор </td><td> 1,70</td> </tr>
+<tr><td class ="bold_text"> ОСНОВНИ ЯСТИЯ 350 гр</td> </tr>
+ <tr><td>Яхния от картофи и зелен фасул </td><td> 3,60</td></tr> 
+  <tr><td>Орис с гъби и домати на фурна </td> <td> 3,40</td></tr> 
+<tr><td> Кашкафал на фурна с гарнитура по избор  </td><td> 4,60</td> </tr>
+ <tr><td>Чушки  бюрек с млечна заливка </td> <td>3,80</td> </tr>
+ <tr><td> Овчарски гювеч </td> <td>3,40 </td></tr>
+<tr><td> Пържен патладжан с доматен сос </td><td>3,60 </td></tr>
+<tr><td> Зеленчуков шницел </td><td> 3,40 </td></tr>
+ <tr> <td>  Картофени кюфтета с млечен сос  </td><td> 3,60</td> </tr>
+<tr><td>  Пангасиус пане с гарнитура по избор </td><td> 4,60 </td></tr>
+ <tr><td> Пиле Кордон бльо с гарнитура по избор </td><td> 5,40 </td></tr>
+ </table>
+    </div>
+  </div>
+  <div id="navigation">
+    
+  </div>
+  <div id="extra">
+  <p class ="bold_text"> Къде сме ние:<br></p>    	
+    <p class ="bold_text">  Бул.Христофор Колумб<br>
+    64,SAC.логостичен<br> център</p>    
+   <p class ="bold_text">Доставки 02/403 5000<br>
+    Безплатна доставка на </p>
+	<p><br>заявки направени до <br> 11:00 над 25 лв.</p>
+	<p class ="bold_text">Минимална заявка </p>
+	<p>10 лв.</p>
+    <p class ="bold_text">Работно време:<br>Понеделник-Петък<br>08.00-18.00</p>
+  </div>
+  <div id="footer">
+    <p>Footer</p>
+  </div>
+</div>
+</body>
+</html>
