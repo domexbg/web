@@ -1,0 +1,33 @@
+#include <iostream>
+
+
+using namespace std;
+
+int main()
+{
+ int n,count=0;
+ 
+ do
+{
+cout<<"n=";
+cin>>n;
+}
+while (n<=0);
+
+while (n>0);
+{
+n=n/10;
+count++;
+}
+
+cout<<"count="<<count<<endl;
+return 0;
+}
+
+
+
+
+
+
+
+
