@@ -4,7 +4,7 @@ INSTRUCTIONS
 Using CSS properties alone, recreate this button: 
 
 	
-<img src="http://i.imgur.com/gnZnY.png"/>
+<img src="button.png"/>
 	
 
 #### [CodePen IDE](http://codepen.io/mobify/pen/GtqKj)
