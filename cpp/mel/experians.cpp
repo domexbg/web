@@ -8,7 +8,7 @@
 int main(int argc, char** argv) 
 {
 
-     char s1[]= "Hello, Mel. Todey is sunday. Let's go party!";
+     char s1[]= "Hello, Mel. Today is sunday. Let's go party!";
 fprintf (stdout,"%s -> %d/n",s1,strlen(s1) );
 
 	
