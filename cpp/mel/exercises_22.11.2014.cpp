@@ -182,4 +182,26 @@ fprintf(f, "Hello!\n");
 fclose(f);
 
 ============================================
+#include <stdio.h>
+#include <iostream>
+#include <assert.h>
+#include <stdlib.h>
+#include <string.h>
+
+using namespace std;
+
+int main()
+
+{
+
+
+FILE *f = fopen("out.txt", "w");
+
+fprintf (f,"hello!\n");
+fclose(f);
+}
+
+изкарва файл на десктопа, с текста, който е въведен в него
+=====================================
+
 
