@@ -160,13 +160,18 @@ for(i=0; i<4; i++)
  	fprintf(stdout,"Enter a Number:");
  	fscanf(stdin,"%f",&arr_f[i]);
 }
-max = arr_f[i];
+
+max = arr_f[0];
+
 for(i=0; i<4; i++)
  {
- 	if (max<arr_f[i])
-	 fprintf(stdout,"MAX=%f",max);
+ 	if (max<arr_f[i]) max =arr_f[i];
+	 
 }
+fprintf(stdout,"MAX=%f",max);
 return 0;
 }
-не изкарва резултат само вкарваш данни
-===================================
+
+дава резултат
+============================================
+
