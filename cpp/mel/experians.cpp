@@ -34,3 +34,6 @@ fprintf (stdout,"%s -> %d/n",s1,strlen(s1) );
 }
 
 
+strcmp("Hello", "Hello") = 0
+strcmp(s1, "Hello") = 1
+strcmp("Hello", s1) = -1
