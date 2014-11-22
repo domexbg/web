@@ -77,6 +77,11 @@ fprintf (stdout,"strlen -> %s -> %d\n",s1,strlen(s1) );
 	return 0;
 }
 ================================================
+адрес за обръщане на масив в обратен ред
+
+http://www.introprogramming.info/intro-csharp-book/read-online/glava7-masivi/
+
+================================================
 
 
 
