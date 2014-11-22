@@ -140,4 +140,33 @@ for (i=0;i<10;i++) {
 }
 =====================================
 
+#include <stdio.h>
+#include <iostream>
+#include <assert.h>
+#include <stdlib.h>
+#include <string.h>
 
+using namespace std;
+
+int main() 
+
+{
+
+float arr_f[5], max;
+int i; 
+
+for(i=0; i<4; i++)
+ {
+ 	fprintf(stdout,"Enter a Number:");
+ 	fscanf(stdin,"%f",&arr_f[i]);
+}
+max = arr_f[i];
+for(i=0; i<4; i++)
+ {
+ 	if (max<arr_f[i])
+	 fprintf(stdout,"MAX=%f",max);
+}
+return 0;
+}
+не изкарва резултат само вкарваш данни
+===================================
