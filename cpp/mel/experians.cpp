@@ -15,3 +15,4 @@ fprintf (stdout,"%s -> %d/n",s1,strlen(s1) );
 	return 0;
 }
 
+
