@@ -33,7 +33,12 @@ fprintf (stdout,"%s -> %d/n",s1,strlen(s1) );
 	return 0;
 }
 
+Добавя "strcat":
+strcat(s1, "- From team! :)");
 
+Сравнява "strcmp":
 strcmp("Hello", "Hello") = 0
 strcmp(s1, "Hello") = 1
 strcmp("Hello", s1) = -1
+
+
