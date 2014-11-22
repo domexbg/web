@@ -5,10 +5,18 @@
 
 using namespace std;
 
-int check_dig( string duma )
+/*
+@duma: string
+@return: 
+  0 - if @duma not a numer
+  1 - if @duma is a number 
+*/
+int check_dig( const string duma )
 {
 	int cnt = 0;
 	
+	if ( duma.size() > 2 && duma != "100") return 0;
+	 
 	for (cnt = 0; cnt < duma.size(); cnt+=1) {
 		//        FALSE              TRUE
 		if ( duma[cnt]  < '0' || duma[cnt] > '9' )
@@ -40,7 +48,20 @@ int main( int argc, char **argv) {
 		  cout << "Please input number: ";
 	      cin >> ans;
 	    } while ( check_dig(ans) == 0 );
-		//rand_num = ans_num;
+		
+		switch (  ans.size() ) {
+		    case 1:
+		    	ans_num = (ans[0] - '0');
+		    	break;
+	    	case 2:
+			    ans_num = (ans[0] - '0') * 10 + (ans[1] - '0');
+			    break;
+		    case 3:
+		    	ans_num = 100;
+	    	default:
+	    		cout << "Cannot happen!\n";
+	    		return -1;
+	    }
 		if ( i == 9 ) {
 			cout << "Game over! Looser. " << rand_num;
 		}
