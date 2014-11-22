@@ -1,24 +1,26 @@
 #include <stdio.h>
+#include <iostream>
+#include <math.h>
 #include <assert.h>
 #include <stdlib.h>
 
-/*
-  This function will find the biggest of two integers
-*/
 
-int max2(int a, int b)
+int max2(int a, int b) 
+
 {
-	/* Write your code here*/
+if (a > b) {
+	return a;
+}
+return b;
 
 }
-
 int main() 
 {
 	int i = 1;
 	
-	fprintf(stdout, "Test %d: ", i++);
-	assert( max2(0, 0) == 0);
-	fprintf(stdout, "OK\n");
+	fprintf(stdout, "Test %d: ", i++); /* izwavda chislo i go sybitra s 1 */
+	assert( max2(0, 0) == 0);  /* bydi siguren, podsigurqwane, che funkcion is correct */
+	fprintf(stdout, "OK\n");  /*  */
 	
 	fprintf(stdout, "Test %d: ", i++);
 	assert( max2(1, 0) == 1);
@@ -44,6 +46,6 @@ int main()
 	assert( max2(-139, -139) == -139);
 	fprintf(stdout, "OK\n");
 	
-	return 0;
+	return 0; 
 }
 
