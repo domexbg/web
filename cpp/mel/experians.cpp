@@ -9,7 +9,7 @@ int main(int argc, char** argv)
 {
 
      char s1[]= "Hello, Mel. Today is sunday. Let's go party!";
-fprintf (stdout,"%s -> %d/n",s1,strlen(s1) );
+fprintf (stdout,"%s -> %d\n",s1,strlen(s1) );
 
 	
 	return 0;
@@ -30,7 +30,7 @@ int main(int argc, char** argv)
      char s1[]= "Hello, Mel. Today is sunday. Let's go party!";
 
 	strcat(s1, "Melaniya!");
-fprintf (stdout,"%s -> %d/n",s1,strlen(s1) );
+fprintf (stdout,"%s -> %d\n",s1,strlen(s1) );
 	return 0;
 }
 
