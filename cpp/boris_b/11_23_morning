@@ -1,0 +1,28 @@
+#include "bitmap_image.hpp"
+
+int main() {
+	unsigned char r, g, b;
+	int x, y;
+	
+	bitmap_image img("girl1.bmp");  // zarejdane na kartinka .bmp format
+	
+	for(x=0;x<img.width(); x++) { 
+		for(y=0; y<img.height(); y+=1){
+			img.get_pixel(x,y,r,g,b);
+			//fprintf(stdout, "(%d, %d) => rgb(%d, %d, %d)\n", x,y,r,g,b);
+			//system("pause");
+			if (x<10) {
+				r=g=b=0;	
+			}
+			img.set_pixel(x,y,r,g,b);
+			
+		}
+		
+	}
+	
+	img.save_image("output.bmp");
+	
+	
+	
+	return 0;
+}
