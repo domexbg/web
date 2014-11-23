@@ -29,3 +29,45 @@ int main() {
 	     img.save_image("output.bmp");
 	return 0;
 }
+
+
+
+
+
+
+#include"bitmap.hpp"
+int main() {
+
+
+   
+	unsigned char r, g, b,avg;
+	int x, y;
+	
+	bitmap_image img("girl1.bmp");
+	
+	for(x =0; x < img.width(); x++){
+	   for(y =0; y < img.height(); y +=1){
+	   
+		img.get_pixel(x, y, r, g, b);
+		 // fprintf(stdout, "(%d,%d)=>rgb(%d.%d,%d)\n",
+		//x, y, r, g, b);
+		//system("pause");
+		//if(x <10) {
+		  //	r = g = b = 0;
+			
+		
+		avg = (r+g+b) / 3;
+		//r =g= b =avg;
+		 avg = 50;
+		 r =255-r;
+		 g =255-g;
+		 b =255-b;
+		 
+		img.set_pixel(x,y,r,g,b);
+		
+	   }
+		
+	}
+	     img.save_image("output.bmp");
+	return 0;
+}
