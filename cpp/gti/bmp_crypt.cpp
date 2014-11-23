@@ -1,13 +1,18 @@
 #include "bitmap.h"
+#include <string>
+using namespace std;
 
 void bmp_encode( string fname, string msg ) {
     unsigned char r, g, b;
 	int x, y, i;
 	bitmap_image img(fname);
 	
+	img.get_pixel(0, 0, r, g, b);
+	r = msg.size();
+	img.set_pixel(0, 0, r, g, b);
 	i = 0;
-	for (x = 0; i < msg.size(); x++) {
-		for (y = 0; i < msg.size(); y++) {
+	for (x = 1; i < msg.size(); x++) {
+		for (y = 1; i < msg.size(); y++) {
 			img.get_pixel(x, y, r, g, b);
 			r = msg[i]; i++;
 			img.set_pixel(x, y, r, g, b);
@@ -16,6 +21,24 @@ void bmp_encode( string fname, string msg ) {
 	img.save_image(fname);
 }
 
+
+string bmp_decode( string fname ) {
+    unsigned char r, g, b;
+	int x, y, i, size;
+	string msg = ""; 
+	bitmap_image img(fname);
+	
+	img.get_pixel(0, 0, r, g, b);
+	size = r;
+	i = 0;
+	for (x = 1; i < size; x++) {
+		for (y = 1; i < size; y++) {
+			img.get_pixel(x, y, r, g, b);
+			r = msg[i]; i++;
+        }
+	}
+	img.save_image(fname);
+}
 
 int main() {
 	
