@@ -1,0 +1,18 @@
+# include "BMP.h"
+
+int main() {
+	int x, y;
+	unsigned char r, g, b;
+	bitmap_image img("girl1.bmp");
+	for (x = 0; x < img.width(); x++) {
+		for (y=0 ; y < img.height(); y++) {
+			img.get_pixel(x, y, r, g, b);
+			r/=2;
+			g/=2;
+			b/=2;
+			img.set_pixel(x, y, r, g, b);
+		}
+	}
+	img.save_image("result.bmp");
+	return 0;
+}
