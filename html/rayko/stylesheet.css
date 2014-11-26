@@ -1,0 +1,10 @@
+tr,td {font-family: Verdana; font-size: 12px; color: #000000;}
+h1 {font-family: Verdana; font-size: 14px; color: #000000; font-weight: none;}
+.small {font-family: Verdana; font-size: 10px; color: #000000; font-weight: none;}
+a:link { font-family: Verdana; color: #5B8B8B; font-size: 12px; font-weight: bold; text-decoration : none; }
+a:visited { font-family: Verdana; color: #5B8B8B; font-size: 12px; font-weight: bold; text-decoration : none; }
+a:hover { font-family: Verdana; color: #B2B2B2; font-size: 12px; font-weight: bold; text-decoration : none; }
+
+p.centered {font-family: Verdana; font-size: 12px; color: #000000; background-color: #ffffff; width: 400px; padding-left: 100px;}
+
+body {font-family: Verdana; font-size: 12px; color: #000000; background-color: #ffffff; margin-top: 40px; margin-left: 40px;}
