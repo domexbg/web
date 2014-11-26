@@ -3,48 +3,45 @@
 #include <stdlib.h>
 
 /*
-  This function will find the biggest of two integers
+  This function will find the biggest of three integers
 */
 
-int max2(int a, int b)
+int max3(int a, int b, int c)
 {
-	if (a>b)
-	return a;
-	else
-	return b;
+	/* Write your code here*/
 
 }
 
-int main() 
+int main(int argc, char** argv) 
 {
 	int i = 1;
 	
 	fprintf(stdout, "Test %d: ", i++);
-	assert( max2(0, 0) == 0);
+	assert( max3(0, 0, 0) == 0);
 	fprintf(stdout, "OK\n");
 	
 	fprintf(stdout, "Test %d: ", i++);
-	assert( max2(1, 0) == 1);
+	assert( max3(0, 1, 0) == 1);
 	fprintf(stdout, "OK\n");
 	
 	fprintf(stdout, "Test %d: ", i++);
-	assert( max2(-1, 10) == 10);
+	assert( max3(100, -1, 10) == 100);
 	fprintf(stdout, "OK\n");
 	
 	fprintf(stdout, "Test %d: ", i++);
-	assert( max2(-5, -1) == -1);
+	assert( max3(-40, -5, -1) == -1);
 	fprintf(stdout, "OK\n");
 	
 	fprintf(stdout, "Test %d: ", i++);
-	assert( max2(-100, 0) == 0);
+	assert( max3(60, -100, 70) == 70);
 	fprintf(stdout, "OK\n");
 	
 	fprintf(stdout, "Test %d: ", i++);
-	assert( max2(9, 9) == 9);
+	assert( max3(0, 9, 9) == 9);
 	fprintf(stdout, "OK\n");
 	
 	fprintf(stdout, "Test %d: ", i++);
-	assert( max2(-139, -139) == -139);
+	assert( max3(-139, -139, -139) == -139);
 	fprintf(stdout, "OK\n");
 	
 	return 0;

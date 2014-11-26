@@ -1,0 +1,26 @@
+/*
+    INSTRUCTIONS
+
+    Using CSS properties alone, recreate this button: 
+
+        http://i.imgur.com/gnZnY.png
+
+    Spend no longer than 45 minutes on it, we don't 
+    expect it to be a perfect match. It's open book, 
+    feel free to hit Google but be prepared to 
+    explain your solution.
+*/
+
+body {
+text-align: center;
+	
+}
+.btn {
+	margin: 300px 50px 30px 60px;
+    
+    padding: 2px 8px;
+	background: lightblue; 
+	border: 2px;
+	
+  
+}
