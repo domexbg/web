@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script-->
+<script src="jquery.js"></script>
+<script language="javascript">
+
+	//var color_digits=function()
+	function color_digits()
+	{
+		var colors = ["red", "green", "blue", "purple", "pink","brown","yellow","grey","black","lightgreen"];
+		var tag1="<span id=\"sp";
+		var tag2="\">";
+		var tag3="</span>"
+		for(var i=1;i<=10;i++) 
+		{
+    		document.write(tag1 + i + tag2 +i+ tag3);
+			document.getElementById("sp" +i ).style.fontSize = i*100 + "%";
+			document.getElementById("sp" +i).style.color = colors[i-1];
+			$("#sp" +i).css("margin-left", "15px");
+			// document.writeln("<br>");
+		}
+	}
+	$(document).ready( 
+		color_digits()
+	);
+
+</script>
+</head>
+</html>
