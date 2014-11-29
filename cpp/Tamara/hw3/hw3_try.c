@@ -22,6 +22,9 @@ char *rev_w(const char w[])
  		
  	}
  	
+ 	/* There has to be a string 'terminating character' at the end of 
+ 	each char array that had been built element by element*/
+ 	
 	return res;
 }
 
