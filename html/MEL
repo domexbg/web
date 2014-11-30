@@ -215,3 +215,69 @@
 		  
 		     </body>
 			 </html>
+============================================
+<head>
+  <title> Tablica </title>
+
+
+  <meta http-equiv="conteny-type" content="text/html";
+	       charset="utf-8"/> 
+		   </head> 
+
+
+<table border="1" style="width:25%">
+
+
+  <tr>
+
+
+<tr>
+    <td>  Degree <select name="Degree">
+<option value="Master">Master</option>
+<option value="Batcheler">Batceler</option>
+</td>
+ </tr>
+    <td>Student ID<input type = "textarea"></td> 
+  </tr>
+<tr>
+    <td>   Classes attended
+<select name="class">
+<option value="Geography">Geography</option>
+<option value="Math">Mathematics</option>
+<option value="Biology">Biolodgy</option>
+<option value="English">English</option>
+</td>
+    
+  </tr>
+<tr>
+    <td> Furst name<input type = "textarea"></td> 
+  </tr>
+<tr>
+    <td>  Last name<input type = "textarea"></td> 
+  </tr>
+
+
+<tr>
+<td> Gender: <input type="radio" name="sex" value="male" checked>Male
+<input type="radio" name="sex" value="female">Female
+</td>
+
+<tr>
+    <td>  Email <input type = "textarea"></td> 
+  </tr>
+
+<tr>
+    <td><input type = "button" value ="Send Form"> <input type = "button" value ="Clear Form"> </td> 
+  </tr>
+
+  </tr>
+</table>
+
+
+
+		  
+		     </body>
+		      </html>
+=============================================
+
+
