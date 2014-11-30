@@ -105,3 +105,66 @@
 			 </html>
 			 
 ============================================================
+<head>
+  <title> ВХОД </title>
+
+
+  <meta http-equiv="conteny-type" content="text/html";
+	       charset="utf-8"/> 
+		   </head> 
+		  <body bgcolor="violet" text="#FF0000">
+		  <center><h1> ВХОД </h1></center>
+		  <p> <font size="4" face="Arial" color="Black" align="justify"></p>
+		  <hr width="180" aling="center" size="4" color="purple">
+
+
+
+<table border="1" style="width:25%">
+
+
+  <tr>
+    
+<td>Please Enter the Following Details </td>
+  </tr>
+
+<tr>
+    <td>  User ID*</td>
+ <td> <input type = "textarea"></td>
+ </tr>
+    <td>Password*</td>
+ <td><input type = "textarea"></td> 
+  </tr>
+<tr>
+    <td>   Email </td>
+<td><input type = "textarea"></td>
+    
+  </tr>
+<tr>
+    <td> Address</td>
+ <td><input type = "textarea"></td> 
+  </tr>
+<tr>
+    <td>  Phone No.</td>
+<td><input type = "textarea"></td> 
+  </tr>
+
+<tr>
+    <td><input type = "button" value ="Save"> </td> 
+  </tr>
+
+  </tr>
+</table>
+
+
+<tr>
+    <td> I want to receive promotional materials <input type = "checkbox"> </td> 
+  </tr>
+
+
+  </tr>
+		  
+		     </body>
+		      </html>
+		     
+=========================================================================
+
