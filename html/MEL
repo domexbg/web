@@ -97,7 +97,7 @@
 <p> Email: <input type = "textarea"> * reg </p>
 <p> School: <input type = "textarea"> * reg </p>
 
-
+ <input type = "Submit">  
 
 	
 		  
