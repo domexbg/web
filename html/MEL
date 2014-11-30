@@ -267,7 +267,7 @@
   </tr>
 
 <tr>
-    <td>  <textarea> Terms AND Conditions </textarea> </td> 
+    <td>  <textarea size=10> Terms AND Conditions.... </textarea> </td> 
   </tr>
 
 <tr>
@@ -275,12 +275,8 @@
   </tr>
 
 
-
   </tr>
 </table>
-
-
-
 		  
 		     </body>
 		      </html>
