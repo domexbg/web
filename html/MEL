@@ -283,7 +283,6 @@ THERMS AND CONDITIONS...
 		     </body>
 		      </html>
 =============================================
-
 <head>
   <title> Tablica </title>
 
@@ -293,7 +292,7 @@ THERMS AND CONDITIONS...
 		   </head> 
 
 
-<table border="1" style="width:25%">
+<table border="1" style="width:30%">
 
 
   <tr>
@@ -315,7 +314,11 @@ THERMS AND CONDITIONS...
 <option value="Biology">Biolodgy</option>
 <option value="English">English</option>
 </td>
-    
+    </table>
+	
+
+<table border="2" style="width:30%">
+
   </tr>
 <tr>
     <td> Furst name<input type = "textarea"></td> 
@@ -334,10 +337,25 @@ THERMS AND CONDITIONS...
     <td>  Email <input type = "textarea"></td> 
   </tr>
 
+</table>
+
+<table border="3" style="width:30%">
+
+
 <tr>
     <td> <textarea name="message" rows="10" cols="30">
 THERMS AND CONDITIONS...
 </textarea>  </td> 
+  </tr>
+
+
+<tr>
+    <td> Ghoice <br>
+<input type="checkbox" name="info" value="Sofia"> glass <br>
+<input type="checkbox" name="info" value="Sofia"> pen <br>
+<input type="checkbox" name="info" value="Varna"> ball
+
+</td> 
   </tr>
 
 <tr>
@@ -350,3 +368,4 @@ THERMS AND CONDITIONS...
 		  
 		     </body>
 		      </html>
+ ==============================================================
