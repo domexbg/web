@@ -241,7 +241,7 @@
   </tr>
 <tr>
     <td>   Classes attended
-<select name="class">
+<select name="class" size=4>
 <option value="Geography">Geography</option>
 <option value="Math">Mathematics</option>
 <option value="Biology">Biolodgy</option>
@@ -267,8 +267,14 @@
   </tr>
 
 <tr>
+    <td>  <textarea> Terms AND Conditions </textarea> </td> 
+  </tr>
+
+<tr>
     <td><input type = "button" value ="Send Form"> <input type = "button" value ="Clear Form"> </td> 
   </tr>
+
+
 
   </tr>
 </table>
