@@ -1,0 +1,129 @@
+<html>
+<head>
+<meta http-equiv="conteny-type" content="text/html";
+charset="utf-8"/>
+<title> ГЕРМАНИЯ </title>
+</head>
+<body>
+<h1 align="center"> Германия </h1><hr color= "black">
+<p><h3> Географско положение </h3>
+Германия е разположена в Средна Европа между 47°16'15 и 
+55°03'33 северна ширина и 5°52'01 и 15°02'37 източна дължина. На север граничи с 
+Дания (дължина на границата 67 km),на североизток с Полша (442 km), на изток с Чехия (811 km), 
+на югоизток с Австрия (815 km, без границата в Боденското езеро), на юг с Швейцария
+(316 km, без границите на ексклавa Бюзинген (Büsingen) и по Боденското езеро), на югозапад 
+с Франция (448 km), на запад с Люксембург (135 km) и Белгия (156 km) и на северозапад с Холандия 
+(567 km). Дължината на границите възлиза общо на 3757 km. Докато на северозапад бреговете на Северно море, 
+а на североизток – на Балтийско море образуват естествени държавни граници, на юг Германия има гранична 
+част на Алпите.
+<a href="http://bg.wikipedia.org/wiki/%D0%93%D0%B5%D1%80%D0%BC%D0%B0%D0%BD%D0%B8%D1%8F#.D0.93.D0.B5.D0.BE.D0.B3.D1.80.D0.B0.D1.84.D1.81.D0.BA.D0.BE_.D1.80.D0.B0.D0.B7.D0.BF.D0.BE.D0.BB.D0.BE.D0.B6.D0.B5.D0.BD.D0.B8.D0.B5L"
+target="blank"> <img src="Germany.png" align="right"></a></p>
+<ul type="disk">
+<b><li> Столица: Берлин </li>
+<li> Население:80 716 000</li>
+<li> Забележителности:</li></u></b>
+<i> <ol>
+<li>Берлинската стена</li>
+<li>Бранденбургска врата</li>
+<li>Райхстаг</li>
+<li>Пергамски музей</li>
+<li>Берлинска телевизионна кула</li>
+</ol></i><br>
+
+<form>
+Member name:<br>
+<input type="text" name="Member name:" maxlength="20"><br>
+Email:<br>
+<input type="text" name="Email:" maxlength="20"><br>
+School:<br>
+<input type="text" name="School:" maxlength="20"><br>
+</form>
+
+<br>
+<br>
+<br>
+<form>	
+<table border="6">
+<caption align="center">Please Enter the Following Details</caption>
+
+<tr>
+<th>User ID</th>
+<th><input type="text" name="User ID" maxlength="20"></th>
+</tr>
+<tr>
+<th>Password</th>
+<th><input type="text" name="Password" maxlength="20"></th>
+</tr>
+<tr>
+<th>Email</th>
+<th><input type="text" name="Email" maxlength="20"></th>
+</tr>
+<tr>
+<th>Address</th>
+<th><input type="text" name="Address" maxlength="20"></th>
+</tr>
+<tr>
+<th>Phone No.</th>
+<th><input type="text" name="Phone No." maxlength="20"></th>
+</tr>
+
+</table>
+</form>
+
+<form>
+<input type="submit" value="Submit">
+</form>
+<br>
+<br>
+
+
+<form>
+<table>
+
+<tr>
+<fieldset>
+<legend>Academic information</legend>
+<form name="academic information">
+Degree <select name="ChooseOne">
+<option value="PhD"> PhD </option>
+<option value="Master"> Master </option>
+<option value="Bachelor"> Bachelor </option></select>
+<br>
+
+Student ID <input type="text" name="Student ID" maxlength="20">
+<br>
+Classes attended <textarea name=“comment” cols=“30”rows=“5”>Geography Mathematics English
+</textarea>
+</fieldset>
+</tr>
+<br>
+<tr>
+<fieldset>
+<legend>Personal Details</legend>
+<form name="personal_data">
+First Name<input type="text" size="15" name="name" /><br/>
+Last Name<input type="text" size="15" name="family" /><br/>
+Gender <input type="radio" name="male" />Male
+<input type="radio" name="female" />Female<br/>
+Email<input type="text" size="15" name="email" /><br/>
+</fieldset>
+</tr>
+<br>
+<tr>
+<textarea name=“comment” cols=“30”rows=“5”> TERMS AND CONDITIONS
+</textarea>
+</tr>
+<br>
+<br>
+<form>
+<input type="button" value="Save Form">
+<input type="button" value="Clear Form">
+</form>
+
+</table>
+</form>
+
+
+</body>
+</html>	
+
