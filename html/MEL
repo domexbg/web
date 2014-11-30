@@ -81,23 +81,23 @@
 			 
 	=================================================
 	
-	<head>
+<head>
   <title> ВХОД </title>
   
   <meta http-equiv="conteny-type" content="text/html";
 	       charset="utf-8"/> 
 		   </head> 
-		  <body bgcolor="grean" text="#FF0000">
+		  <body bgcolor="yellow" text="#FF0000">
 		  <center><h1> ВХОД </h1></center>
-		  <p> <font size="4" face="Arial" color="white" align="justify"></p>
-		  <hr width="150" aling="center" size="4" color="red">
+		  <p> <font size="4" face="Arial" color="blue" align="justify"></p>
+		  <hr width="150" aling="center" size="4" color="purple">
 	
 
   <p> Member name : <input type = "textarea"> * reg </p>
-<p> Email: <input type = "textarea"> * reg </p>
-<p> School: <input type = "textarea"> * reg </p>
+          <p> Email: <input type = "textarea"> * reg </p>
+                    <p> School: <input type = "textarea"> * reg </p>
 
- <input type = "Submit">  
+                             <input type = "Submit">  
 
 	
 		  
