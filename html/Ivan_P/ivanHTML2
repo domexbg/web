@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html";
+charset="windows-1251" />
+<title>First_form</title>
+</head>
+<body>
+<form>
+<fieldset>
+<frame>
+<!--legend>Information</legend-->
+
+Member name :
+<input type="text" name="Member name :">
+*req
+<br>
+Email :
+<input type="text" name="Email :">
+*req
+<br>
+School :
+<input type="text" name="School :">
+*req
+<br>
+<input type="submit" name="submit">
+</frame>
+</fieldset>
+
+</form>
+</body>
+</html>
