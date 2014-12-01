@@ -1,0 +1,26 @@
+<html>
+	<head> 
+		<title>
+		Пример за вмъкване на JavaScript директно в HTML кода
+		</title>
+	</head>
+<body>
+	<!--script language="JavaScript">
+	document.write("Този текст е вмъкнат в HTML - кода на документа")
+	onLoad ="alert('Hello')"
+	</script-->
+	<!--script language="JavaScript">
+var a =23
+var b =3
+document.write("Сумата равна на " +a+ "+" +b+ " e "+(a+b))
+<script language="JavaScript">
+	
+</script-->
+<script language="JavaScript">
+var first_name=prompt("Въведете име")
+var last_name=prompt("Въведете фамилия")
+document.write(first_name +" "+last_name)
+
+</script>
+</body>
+	</html>
