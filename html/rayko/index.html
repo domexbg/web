@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE HTML>
 <HTML>
 <HEAD>
 
@@ -171,7 +171,7 @@ width="24" height="24" name="image_ru"></a>
 <TR><TD ALIGN=RIGHT VALIGN=MIDDLE WIDTH=150><FONT FACE="Verdana" SIZE=2><B>Име:</B></FONT></TD>
 <TD ALIGN=LEFT VALIGN=MIDDLE><input type="Text" name="realname" size=40></TD></TR>
 <TR><TD ALIGN=RIGHT VALIGN=MIDDLE WIDTH=150><FONT FACE="Verdana" SIZE=2><B>Email:</B></FONT></TD>
-<TD ALIGN=LEFT VALIGN=MIDDLE><input type="Text" name="email" size=40></TD></TR>
+<TD ALIGN=LEFT VALIGN=MIDDLE><input type="email" name="email" submit="email"></TD></TR>
 <TR><TD ALIGN=RIGHT VALIGN=MIDDLE WIDTH=150><FONT FACE="Verdana" SIZE=2>Длъжност:</FONT></TD>
 <TD ALIGN=LEFT VALIGN=MIDDLE><input type="Text" name="dlajnost" size=40></TD></TR>
 <TR><TD ALIGN=RIGHT VALIGN=MIDDLE WIDTH=150><FONT FACE="Verdana" SIZE=2><B>Фирма:</B></FONT></TD>
@@ -287,9 +287,6 @@ width="24" height="24" name="image_ru"></a>
 <br />
 <TABLE BORDER=0 CELLPADDING=5 CELLSPACING=0 WIDTH="400">
 <TR><TD ALIGN=CENTER VALIGN=TOP><br /><br />
-<FONT FACE="Verdana" SIZE=2><b>Моля, въведете символите от изображението:</b></FONT>
-<img id="captcha" src="securimage/securimage_show.php" alt="CAPTCHA Image" /><a href="#" onclick="document.getElementById('captcha').src = 'securimage/securimage_show.php?' + Math.random(); return false"><img src="securimage/images/refresh.png" border="0" alt="Ново изображение"></a><br /><br />
-<input type="text" name="captcha_code" size="30" maxlength="6" />
 <br /><br /><br />
 <CENTER><input type="reset" name="reset" value="Изчисти">&nbsp;<input type="Button" name="submitBtn" value="Изпрати" onClick="submitForm1();"></CENTER>
 </form>
