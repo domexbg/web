@@ -9,6 +9,7 @@ var colors = ["red", "green", "blue", "purple", "pink","brown","yellow","grey","
     document.write(tag1 + i + tag2 +i+ tag3);
     document.getElementById("sp" +i ).style.fontSize = i*100 + "%";
     document.getElementById("sp" +i).style.color = colors[i-1];
+	$("#sp" +i).css("margin-left", "15px");
  // document.writeln("<br>");
   }
   

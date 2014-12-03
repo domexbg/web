@@ -3,32 +3,32 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define W_MAX 100
+
 /*
   This function will reverse the letters of a word
+
+  INFO: 
+  http://programming-bg.com/%D1%83%D1%80%D0%BE%D1%86%D0%B8/C++/%D0%BD%D0%B8%D0%B7%D0%BE%D0%B2%D0%B5
+  
+  Example:
   Hello => olleH
 */
 
-char *rev_w(const char w[])
+char *rev_w(const char *w)
 {
-	/* Write your code here*/
-	int i;
-	int p;
-   static char res[100]="";
-	static int x = strlen (w);
-	
-	for (i = x - 1; i >= 0; i--)
-	{
- 		res[x-i-1] = w[i];
- 		
- 	}
- 	
- 	/* There has to be a string 'terminating character' at the end of 
- 	each char array that had been built element by element*/
- 	
-	return res;
+	/* Write your code here */
+int i;
+int p;
+ char res[100]="";
+int len= strlen (w);
+for (i = len - 1; i >= 0; i--)
+{
+res[len -i-1] = w[i];
 }
-
-
+res[len --] = w[i];
+return res;
+}
 
 int main(int argc, char** argv) 
 {

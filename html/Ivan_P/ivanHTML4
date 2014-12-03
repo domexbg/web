@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html";
+charset="windows-1251" />
+<title>second_form</title>
+</head>
+<body>
+<form>
+<fieldset>
+<frame>
+<legend>Academic information</legend>
+Degree
+<select name="Degree" size="1">
+<option value="Master of bussiness administration">Master of bussiness administration</option>
+<option value="Mathematics">Mathematics</option>
+<option value="Economics">Economics</option>
+</select>
+<br>
+Student ID
+<input type="number" name="Student ID">
+<br>
+Classes attended
+<select name="Classes attended" size="4">
+<option value="Geography">Geography</option>
+<option value="Mathematics">Mathematics</option>
+<option value="English">English</option>
+</select>
+</frame>
+</fieldset>
+</form>
+<form>
+<fieldset>
+<legend>Personal details</legend>
+First Name
+<input type="text" name="First Name">
+<br>
+Last Name
+<input type="text" name="Last Name">
+<br>
+Gender:
+<input type="radio" name="Gender" value="man" checked="true"/>Male
+<input type="radio" name="Gender" value="woman" />Female<br/>
+
+Email
+<input type="text" name="Email">
+</fieldset>
+</form>
+<form>
+<frame>
+<textarea name="comment" cols="30" rows="5">TERMS AND CONDITIONS...</textarea>
+</frame>
+<br>
+<input type="submit" name="Send Form" value="Send Form"/>
+<input type="reset" name="Clear Form" value="Clear Form"/>
+</form>
+</body>
+</html>
