@@ -9,7 +9,7 @@ $('#hide1').click( function() {
 	  }
     });
   });
-});
+ });
 $(function() {
 $('#hide2').click( function() {
   $('#p2').toggle(function(){
@@ -21,7 +21,7 @@ $('#hide2').click( function() {
     });
   });
 });
-$(function() {
+ $(function() {
 $('#hide3').click( function() {
   $('#p3').toggle(function(){
 	if ($('#p3').is(':visible')) {
@@ -32,9 +32,6 @@ $('#hide3').click( function() {
     });
   });
 });
-
-
-
 function getRandomColor() {
     var letters = '0123456789ABCDEF'.split('');
     var color = '#';
