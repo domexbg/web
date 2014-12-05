@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main()
+	
+{
+	int a, b;
+	b=3;
+	a=b++;      /*take b first and then add 1 to b*/
+	cout<<a<<" and "<<b<<endl;
+
+	b=3;
+	a=++b;      /*add 1 to b and then a=b */
+	cout<<a<<" and "<<b<<endl;
+		return 0;
+}
