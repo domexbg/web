@@ -1,0 +1,92 @@
+<html>
+  <head>
+  <title>Калкулатор</title>
+  <script language="JavaScript">
+  function calculate() {
+   var ons=document.forms.calculator.osnova.value
+   var stepen=document.forms.calculator.pokazatel.value
+   var result=Math.pow(ons,stepen)
+   
+   document.forms.calculator.rezultat.value=result.toFixed(2)
+   }
+   </script>
+   </head>
+   <body>
+   <form name="calculator">
+   <input type="text"  name="osnova"  maxlength="20"><br>
+   <input type="text"  name="pokazatel" maxlength="20"><br>
+    <input type="button"  name="Equal"  value="Equal" onClick= "calculate()"><br>
+    <input type="text"  name="rezultat">
+  </form>
+  </body>
+  </html>
+  
+  
+  
+  
+  
+  <html>
+  <head>
+   <meta http-equiv="conteny-type" content="type/html" charset="utf-8"/>
+  <title>Валутен калкулатор</title>
+  <script language="JavaScript">
+  function Show() {
+   var rad = document.getElementsByName("group1");
+         var Dollar = false;
+		 var Frank = false;
+		 var Pound = false;
+		 for (var i = 0; i < rad.length; i++)
+		 {
+		    if (rad[i].value == "dollar" && rad[i].checked)
+		    {
+		     Dollar= true;
+             document.forms.exchange.rate.value=0.689579;
+		     break;
+		    }
+		 else{
+		 if (rad[i].value == "frank" && rad[i].checked)
+		  {
+		 Frank = true;
+		 document.forms.exchange.rate.value=0.91234;
+		 break;
+		  }
+		 else{
+		 if (rad[i].value=="pound" && rad[i].checked)
+		   {
+		 Pound = true;
+		 document.forms.exchange.rate.value=0.44843;
+		 break;
+		    }
+		 }
+		    }
+}
+}
+ function calculate()
+         {
+	var rate = parseFloat(document.forms.exchange.rate.value);
+	var oldsum = parseFloat(document.forms.exchange.suma.value);
+	 var finalverse= rate * oldsum;
+	    document.forms.exchange.newsum.value=finalverse.toFixed(2);
+		}
+   </script>	 
+</head>
+   <body>
+   <fieldset><legend>Валутен калкулатор</legend>
+    <form name="exchange">
+      <table border="6">
+ 
+  <tr><td> Въведете сумата в лева<br></td>
+<td><input type="text" name="suma"> </tr>
+<tr><td><input type="radio" name="group1" value="dollar" onchange="Show()">Долари<br>
+<input type="radio" name="group1" value="frank" onchange="Show()">Франка<br>
+<input type="radio" name="group1" value="pound" onchange="Show()">Паунда<br></td>
+ </tr><tr>
+<td colspan=2><input type="button" value="Show me The Money" onclick="calculate()"></td> </tr>
+<tr><td>Обменен курс</td>
+<td><input type ="text" name="rate" ></td></tr>
+<tr><td> Сумата в новата валута</td>
+<td><input type="text" name="newsum"></td></tr>
+</table></fieldset>
+</form>
+ </body>
+</html> 
