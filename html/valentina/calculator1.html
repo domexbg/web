@@ -1,0 +1,56 @@
+html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset="windows-1251">
+<title> Обикновен калкулатор </title>
+<script language="Javascript">
+var sign;
+var result1;
+function show1() {
+var rad = document.getElementsByName("calc1");
+for (var i = 0; i < rad.length; i++)
+{ if(rad[i].value == "multiply" && rad[i].checked)
+{ sign = "*"; break; }
+else {
+if(rad[i].value == "divide" && rad[i].checked)
+{ sign = "/"; break; }
+else {
+if(rad[i].value == "plus" && rad[i].checked)
+{ sign = "+"; break; }
+else {
+if(rad[i].value == "minus" && rad[i].checked)
+{ sign = "-"; break;
+} } } } } document.forms.exchange.sign1.value=sign;}
+function calculate1() {
+var oldsumX = parseFloat(document.forms.exchange.oldsumX.value);
+var oldsumY = parseFloat(document.forms.exchange.oldsumY.value);
+switch (sign) {
+case "+":{ result1 = (oldsumX + oldsumY); break;}
+case "-":{ result1 = (oldsumX - oldsumY); break;}
+case "/":{ result1 = (oldsumX / oldsumY); break;}
+case "*":{ result1 = (oldsumX * oldsumY); break;}
+}
+document.forms.exchange.newsum.value = result1.toFixed(2);
+}
+</script>
+</head>
+<body>
+<fieldset>
+<legend>Валутен калкулатор:</legend>
+<form name="exchange">
+Въведете сума X: <input type="text" name="oldsumX"><br>
+Въведете сума Y: <input type="text" name="oldsumY"><br>
+<input type="radio" name="calc1" value="multiply" onClick="show1()"> * Умножение<br>
+<input type="radio" name="calc1" value="divide" onClick="show1()"> / Делене<br>
+<input type="radio" name="calc1" value="plus" onClick="show1()"> + Събиране<br>
+<input type="radio" name="calc1" value="minus" onClick="show1()"> - Изваждане<br>
+<br>
+Операция: <input type="text" name="sign1" maxlength="2" size="2"><br>
+<br>
+<input type="button" name="equal" value=" = " onClick="calculate1()">
+<br>
+<br>
+Резултат: <input type="text" name="newsum" maxlength="10" size="10">
+</form>
+</fieldset>
+</body>
+</html>
