@@ -1,0 +1,26 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset="windows-1251">
+	<title>
+	Пример за вмъкване на Javascript диретно в HTML кода
+	</title>
+			
+	</head>
+<body>
+	<script language="Javascript">
+		variableDate=new Date();
+		var NameOfDay=new Array("неделя","понеделник","вторник","сряда","четвъртък","петък","събота");
+		document.write("The current time is: "+variableDate.getHours()+"-"+variableDate.getMinutes()+"-"+variableDate.getMinutes()+"-"+variableDate.getSeconds()+"<br>")
+		document.write("The current Date is: "+variableDate.getDate()+"-"+(variableDate.getMonth()+1)+"-"+variableDate.getFullYear()+"<br>")
+		document.write("Днес е: "+NameOfDay[variableDate.getDay()]+"<br>")
+
+		
+		
+		
+<!--		document.write ("Този текста се вмъква в HTML - кода на документа"+"<br>")-->
+<!--var a=23-->
+               <!-- var b=3-->
+                <!--document.write ("Сумата на "+a+" + "+b+" e "+(a+b))-->
+	</script>
+</body>
+</html>
