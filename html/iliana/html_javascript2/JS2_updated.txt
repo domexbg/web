@@ -1,0 +1,11 @@
+<html>
+<head>
+<meta http-equiv="conteny-type" content="text/html";
+charset="utf-8"/>
+<title> Пример Javascript </title>
+</head>
+<body>
+
+<script language="JavaScript"> var a=156,b=26; document.write("Сумата на" +a+ "+" +b+ "е" +(a+b)) </script>
+</body>
+</html>

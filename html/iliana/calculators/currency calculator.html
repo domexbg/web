@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta http-equiv="conteny-type" content="text/html";
+charset="utf-8"/>
+<title> Калкулатор </title>
+<script language="JavaScript">
+function Show()
+{
+var rad=document.getElementsByName("group1");
+var Dollar = false;
+var Frank = false;
+var Paund = false;
+for(var i=0;i<rad.length;i++)
+{
+if(rad[i].value=="Dollar" && rad[i].checked)
+{
+Dollar=true;
+document.forms.calculator.rate.value=0.689579;
+break;
+}
+else{
+if(rad[i].value =="Frank" && rad[i].checked)
+{
+Frank=true;
+document.forms.calculator.rate.value=0.91243;
+break;
+}
+else {
+if(rad[i].value=="Paund" && rad[i].checked)
+{
+Paund=true;
+document.forms.calculator.rate.value= 0.44843;
+break;
+}
+}
+}
+}
+}
+function calculate()
+{
+var rate =parseFloat(document.forms.calculator.rate.value);
+var oldsum =parseFloat(document.forms.calculator.oldsum.value);
+var finalverse = rate*oldsum;
+document.forms.calculator.newsum.value = finalverse.toFixed(2);
+}
+</script>
+</head>
+<body>
+<fieldset>
+<legend>Валутен калкулатор</legend>
+<form name="calculator">
+Въведете сумата в лева <input type="text" name="oldsum" maxlength="20"><br>
+<br>
+<input type="radio" name="group1" value="Dollar" onchange="Show()"> Долари <br>
+<input type="radio" name="group1" value="Frank" onchange="Show()"> Франка<br>
+<input type="radio" name="group1" value="Paund" onchange="Show()"> Паунда<br>
+<br>
+<input type="button" name="" value="Show me the money" onClick="calculate()"><br>
+<br>
+Обменен курс <input type="text" name="rate" maxlength="20"><br>
+<br>
+Сумата в новата валута <input type="text" name="newsum" maxlength="20"><br>
+</form>
+</fieldset>
+</body>
+</html>

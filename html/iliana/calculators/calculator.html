@@ -1,0 +1,25 @@
+<html>
+<head>
+<meta http-equiv="conteny-type" content="text/html";
+charset="utf-8"/>
+<title> Калкулатор </title>
+<script language="JavaScript">
+function calculate() {
+var ons=document.forms.calculator.osnova.value
+var stepen=document.forms.calculator.pokazatel.value
+var result=Math.pow(ons,stepen)
+
+document.forms.calculator.rezultat.value=result.toFixed(2)
+}
+</script>
+</head>
+<body>
+<form name="calculator">
+<input type="text" name="osnova" maxlength="20"><br>
+<input type="text" name="pokazatel" maxlength="20"><br>
+<input type="button" name="Equal" value="Equal" onClick="calculate()"><br>
+<input type="text" name="rezultat" maxlength="20"><br>
+</form>
+
+</body>
+</html>
