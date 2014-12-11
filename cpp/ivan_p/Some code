@@ -1,0 +1,27 @@
+/*Just comment.*/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+{
+	
+int a, b;
+	
+a=20;
+	
+b=9;
+	
+a=b;
+	
+b=10;
+	
+cout<<"a: "<<a<<endl;
+	
+cout<<"b: "<<b<<endl;
+	
+return 0;
+
+}

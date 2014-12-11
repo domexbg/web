@@ -1,0 +1,15 @@
+/*Проверка на стойност с IF*/
+#include <iostream>
+using namespace std;
+int main()
+{
+	int age;
+	cout<<"Enter your age: ";
+	cin>>age;
+     if(age>=18)
+     cout<<"You are alredy an adult. :)";
+     else
+     cout<<"You are still a child.";
+     
+   return 0;
+}

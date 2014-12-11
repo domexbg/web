@@ -1,0 +1,215 @@
+
+Home page	  WebCheatSheet.com
+
+
+
+JavaScript: Form Validation
+
+Any interactive web site has form input - a place where the users input different kind of information. This data is passed to ASP script, or some other technology and if the data contains an error, there will be a delay before the information travels over the Internet to the server, is examined on the server, and then returns to the user along with an error message.
+
+If you run a validation of the user’s form input before the form is submitted, there will be no wait time and redundant load on the server. "Bad data" are already filtered out when input is passed to the server-based program. It also allows to simplify server-based program.
+
+Client side form validation usually done with javascript. For the majority of your users, JavaScript form validation will save a lot of time up front, but double-checking the data on the server remains necessary, in case the user has turned JavaScript off.
+
+Form data that typically are checked by a JavaScript could be:
+
+Required fields
+Valid user name
+Valid password
+Valid e-mail address
+Valid phone number
+validateFormOnSubmit ( )
+
+This is a main function that calls a series of subfunctions, each of which checks a single form element for compliance. If the element complies than sufunction returns an empty string. Otherwise it returns a message describing the error and highlight appropriate element with yellow.
+
+function validateFormOnSubmit(theForm) {
+var reason = "";
+
+  reason += validateUsername(theForm.username);
+  reason += validatePassword(theForm.pwd);
+  reason += validateEmail(theForm.email);
+  reason += validatePhone(theForm.phone);
+  reason += validateEmpty(theForm.from);
+      
+  if (reason != "") {
+    alert("Some fields need correction:\n" + reason);
+    return false;
+  }
+
+  return true;
+}
+validateEmpty ( )
+
+The function below checks if a required field has been left empty. If the required field is blank, we return the error string to the main function. If it’s not blank, the function returns an empty string.
+
+function validateEmpty(fld) {
+    var error = "";
+  
+    if (fld.value.length == 0) {
+        fld.style.background = 'Yellow'; 
+        error = "The required field has not been filled in.\n"
+    } else {
+        fld.style.background = 'White';
+    }
+    return error;   
+}
+Back to top
+
+validateUsername ( )
+
+The function below checks if the user entered anything at all in the username field. If it’s not blank, we check the length of the string and permit only usernames that are between 5 and 15 characters. Next, we use the JavaScript regular expression /\W/ to forbid illegal characters from appearing in usernames. We want to allow only letters, numbers and underscopes.
+
+function validateUsername(fld) {
+    var error = "";
+    var illegalChars = /\W/; // allow letters, numbers, and underscores
+ 
+    if (fld.value == "") {
+        fld.style.background = 'Yellow'; 
+        error = "You didn't enter a username.\n";
+    } else if ((fld.value.length < 5) || (fld.value.length > 15)) {
+        fld.style.background = 'Yellow'; 
+        error = "The username is the wrong length.\n";
+    } else if (illegalChars.test(fld.value)) {
+        fld.style.background = 'Yellow'; 
+        error = "The username contains illegal characters.\n";
+    } else {
+        fld.style.background = 'White';
+    } 
+    return error;
+}
+Back to top
+
+validatePassword ( )
+
+The function below checks the password field for blankness and allow only letters and numbers - no underscopes this time. So we should use a new regular expression to forbid underscopes. This one /[\W_]/ allow only letters and numbers. Next, we want to permit only passwords that contain letters and at least one numeral. For that we use the seacrh() method and two more regular expressions: /(a-z)+/ and /(0-9)/.
+
+function validatePassword(fld) {
+    var error = "";
+    var illegalChars = /[\W_]/; // allow only letters and numbers 
+ 
+    if (fld.value == "") {
+        fld.style.background = 'Yellow';
+        error = "You didn't enter a password.\n";
+    } else if ((fld.value.length < 7) || (fld.value.length > 15)) {
+        error = "The password is the wrong length. \n";
+        fld.style.background = 'Yellow';
+    } else if (illegalChars.test(fld.value)) {
+        error = "The password contains illegal characters.\n";
+        fld.style.background = 'Yellow';
+    } else if (!((fld.value.search(/(a-z)+/)) && (fld.value.search(/(0-9)+/)))) {
+        error = "The password must contain at least one numeral.\n";
+        fld.style.background = 'Yellow';
+    } else {
+        fld.style.background = 'White';
+    }
+   return error;
+}  
+Back to top
+
+validateEmail ( )
+
+Next we want to see if the email address the user entered is real. This means that the input data must contain at least an @ sign and a dot (.). Also, the @ must not be the first character of the email address, and the last dot must at least be one character after the @ sign. 
+
+At first we check if the user entered anything at all in the email field. Next, we use regular expression and the test() method to check the field for a compliance. Also we will use trim() function that will trim leading whitespace off the string. This won’t be perfect validation — it is possible to slip not compliant addresses by it — but it's normally good enough.
+
+
+function trim(s)
+{
+  return s.replace(/^\s+|\s+$/, '');
+} 
+
+function validateEmail(fld) {
+    var error="";
+    var tfld = trim(fld.value);                        // value of field with whitespace trimmed off
+    var emailFilter = /^[^@]+@[^@.]+\.[^@]*\w\w$/ ;
+    var illegalChars= /[\(\)\<\>\,\;\:\\\"\[\]]/ ;
+    
+    if (fld.value == "") {
+        fld.style.background = 'Yellow';
+        error = "You didn't enter an email address.\n";
+    } else if (!emailFilter.test(tfld)) {              //test email for illegal characters
+        fld.style.background = 'Yellow';
+        error = "Please enter a valid email address.\n";
+    } else if (fld.value.match(illegalChars)) {
+        fld.style.background = 'Yellow';
+        error = "The email address contains illegal characters.\n";
+    } else {
+        fld.style.background = 'White';
+    }
+    return error;
+}
+Back to top
+
+validatePhone ( )
+
+The function below checks if the phone number is valid. At first we use regular expression and the replace() method to clear out any spacer characters. Next, we use the isNaN() function to check if the phone number contain only numbers. At last we check the length of the string and permit only phone numbers with 10 digits.
+
+function validatePhone(fld) {
+    var error = "";
+    var stripped = fld.value.replace(/[\(\)\.\-\ ]/g, '');     
+
+   if (fld.value == "") {
+        error = "You didn't enter a phone number.\n";
+        fld.style.background = 'Yellow';
+    } else if (isNaN(parseInt(stripped))) {
+        error = "The phone number contains illegal characters.\n";
+        fld.style.background = 'Yellow';
+    } else if (!(stripped.length == 10)) {
+        error = "The phone number is the wrong length. Make sure you included an area code.\n";
+        fld.style.background = 'Yellow';
+    } 
+    return error;
+}
+HTML Form
+
+This script accompanies an HTML form. When the user clicks the Submit button on the form, the form data is sent to a JavaScript validation function that checks each field to make sure that it is in the appropriate format. The HTML form could look something like this:
+
+<html>
+<head>
+<title>WebCheatSheet - JavaScript Tutorial</title>
+</head>
+<body>
+<h1>WebCheatSheet - JavaScript Tutorial</h1>
+
+<form name="demo" onsubmit="return validateFormOnSubmit(this)" action="test.htm">
+<table summary="Demonstration form">
+  <tbody>
+  <tr>
+    <td><label for="username">Your user name:</label></td>
+    <td><input name="username" size="35" maxlength="50" type="text"></td>
+  </tr>   
+  <tr>
+    <td><label for="pwd">Your password</label></td>
+    <td><input name="pwd" size="35" maxlength="25" type="password"></td>
+  </tr>   
+  <tr>
+    <td><label for="email">Your email:</label></td>
+    <td><input name="email" size="35" maxlength="30" type="text"></td>
+  </tr>   
+  <tr>
+    <td><label for="phone">Your telephone number:</label></td>
+    <td><input name="phone" size="35" maxlength="25" type="text"></td>
+  </tr>   
+  <tr>
+    <td>
+        <label for="from">Where are you :</label></td>
+    <td><input name="from" size="35" maxlength="50" type="text"></td>
+  </tr>   
+  <tr>
+    <td>&nbsp;</td>
+    <td><input name="Submit" value="Send" type="submit" ></td>
+    <td>&nbsp;</td>
+  </tr> 
+  </tbody>
+</table>
+</form> 
+
+
+</body>
+</html>
+Back to top
+
+
+
+
+	Copyright © 2005-2007 www.WebCheatSheet.com All Rights Reserved.

@@ -1,0 +1,34 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset="windows-1251">
+	<title>
+	Калкулатор на степен
+	</title>
+	<script language="Javascript">
+	function calculate() {
+		var osn=document.forms.calculator.osnova.value
+		var stepen=document.forms.calculator.pokazatel.value
+		var result=Math.pow(osn,stepen)
+		
+		document.forms.calculator.resultat.value=result.toFixed(2)
+	}
+	</script>
+	</head>
+<body>
+	<br>
+	<form name="calculator">
+	Основа: <br>
+	<input type="text" name="osnova">
+	<br>
+	Степен: <br>
+	<input type="text" name="pokazatel">
+	<br>
+	<input type="button" value=" Calculate " onClick="calculate()">
+	<br>
+	<input type="text" name="resultat" maxlength="100" size="120">
+	
+	<!--<script language="Javascript">-->
+	<!--welcome()-->
+	<!--</script>-->
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset="windows-1251">
+<title> Валутен калкулатор </title>
+	<script language="Javascript">
+	function show() {
+	var rad = document.getElementsByName("curr1");
+	var dollar = false;
+	var franks = false;
+	var pound = false;
+	for (var i = 0; i < rad.length; i++)
+	{ if(rad[i].value == "dollar" && rad[i].checked)
+	{ dollar = true;
+	document.forms.exchange.rate.value=2; break;
+	}
+	else {
+	if(rad[i].value == "franks" && rad[i].checked)
+	{ franks = true;
+	document.forms.exchange.rate.value=3; break;
+	}
+	else {
+	if(rad[i].value == "pound" && rad[i].checked)
+	{ pound = true;
+	document.forms.exchange.rate.value=4; break;
+	}
+	}
+	}
+	}
+	}
+	function calculate() {
+	var rate = parseFloat(document.forms.exchange.rate.value);
+	var oldsum = parseFloat(document.forms.exchange.oldsum.value);
+	var result1 = rate * oldsum;
+	document.forms.exchange.newsum.value = result1.toFixed(2);
+	}
+	</script>
+	
+</head>
+<body>
+ <fieldset>
+    <legend>Валутен калкулатор:</legend>
+	<form name="exchange"> 
+	Въведете сума в лева: <input type="text" name="oldsum"><br>
+	<input type="radio" name="curr1" value="dollar" onClick="show()"> Долари<br>
+	<input type="radio" name="curr1" value="franks" onClick="show()"> Франкове<br>
+	<input type="radio" name="curr1" value="pound" onClick="show()"> Паунд<br>
+	<br>
+	<input type="button" name="equal" value=" Изчисли резултат " onClick="calculate()">
+	<br>
+	<br>
+	Обменен курс: <input type="text" name="rate" maxlength="10" size="10"><br>
+	Сума в новата валута: <input type="text" name="newsum" maxlength="10" size="10">
+	
+</form> 
+</fieldset>
