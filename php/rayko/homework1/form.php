@@ -1,18 +1,23 @@
-<script>
-</script>
-<style>
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style type="text/css">
 	label {
-    display:inline-block;
-    width:100px;
-    text-align: left;
+      display:inline-block;
+      width:100px;
+	  text-align: left;
+      margin: 5px;
     }
- </style>
+  </style>
+</head>
+<body>
 <form method="post" action="index.php">
-  <label>Item name:</label>
+  <label>Име:</label>
   <input type="text" name="it_name"> <br/>
-  <label>Amount:</label> 
+  <label>Сума:</label> 
   <input type="text" name="it_amount"> <br/>
-  <label>Item group:</label> 
+  <label>Вид:</label> 
    <select name="it_group">
       <option value="food">Храна</option>
       <option value="transport">Транспорт</option>
@@ -22,3 +27,5 @@
    
    <button type="submit">Добави</button>
 </form>
+</body>
+</html>
