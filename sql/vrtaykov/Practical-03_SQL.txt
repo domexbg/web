@@ -1,0 +1,16 @@
+CREATE TABLE Students
+(
+ID int auto_increment primary key,
+Name VARCHAR(20),
+Class INT(10),
+Score FLOAT (3,2)
+);
+
+INSERT INTO Students (Name,Class,Score)
+VALUES ("Petar Ivanov", "10", "5.30"), 
+("Ivan Georgiev", "8", "4.10"),
+("Stoyan Georgiev", "8", "5.95");
+
+>>>>>>>>>>>>>>
+
+select * from Students where class=10
