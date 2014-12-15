@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+  padding: 2%;
+}
+header {
+  background: lightblue;
+}
+section {
+  background: lightgreen;
+  width: 73%;
+  float: left;
+}
+article {
+  background: white;
+  margin: 0 0 1rem 0;
+}
+aside {
+  background: pink;
+  width: 23%;
+  float: right;
+}
+header, article, section, aside {
+  padding: 1%;
+}
