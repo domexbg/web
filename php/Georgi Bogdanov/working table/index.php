@@ -46,7 +46,12 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 			
 			for ( $i=0 ; $i < count($data) ; $i++) 
 			{
-				//if ........
+				
+				$pos = strpos($data[$i], $_GET["filter"]);
+				if ($pos === false) {
+				continue;
+				}
+				
 				echo "<tr>";
 				$line = explode("," , $data[$i]);
 				for ($j = 0; $j < count($line); $j++)
