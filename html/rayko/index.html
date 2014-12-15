@@ -2,6 +2,7 @@
 <HTML>
    <HEAD>
       <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+      <meta name="AUTHOR" content="Dragomir Keranov | http://dragomirkeranov.hit.bg">
       <meta name="language" content="BG">
       <link rel="stylesheet" href="stylesheet.css" type="text/css">
       <script language="JavaScript">
@@ -91,18 +92,24 @@
             }
             // END HIDING FROM OLDER BROWSERS -->
       </script>
-	  <script src="order.js"></script>
-      <script language="JavaScript" type="text/javascript">
+	  <script src="validation.js"></script>
+	  <script language="JavaScript" type="text/javascript">
          function submitForm1() {
          	if(document.theForm1.realname.value.length < 1) {
          		alert("Не сте попълнили всички задължителни полета.");
          		document.theForm1.realname.focus();
          		return;
-         	} else if(!validateEmail (document.theForm1.email)) {
+         	}
+			if(!validateEmail (document.theForm1.email)) {
          		alert("Не сте попълнили валиден email адрес.");
          		document.theForm1.email.focus();
          		return;
-         	}			
+         	}
+			if(!validatePhone(document.theForm1.telefon)) {
+         		alert("Не сте попълнили валиден телефон.");
+         		document.theForm1.telefon.focus();
+         		return;
+			}
          	document.theForm1.submit();
          }
       </script>
