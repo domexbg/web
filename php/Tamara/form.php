@@ -35,9 +35,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		print_r($_POST);
 		echo "</pre>";
 		file_put_contents("data.txt",$today.",".$_POST["it_name"].",".$_POST["it_amount"]."," .$_POST["it_group"].PHP_EOL, FILE_APPEND);
-		
+	header ("Location: index.php");	
 	}
 	
+	
 ?>
+
 </body>
 </html>
