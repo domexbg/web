@@ -109,6 +109,10 @@
          		alert("Не сте попълнили валиден телефон.");
          		document.theForm1.telefon.focus();
          		return;
+			if(!validateFax(document.theForm1.fax)) {
+         		alert("Не сте попълнили валиден факс номер.");
+         		document.theForm1.fax.focus();
+         		return;
 			}
          	document.theForm1.submit();
          }
