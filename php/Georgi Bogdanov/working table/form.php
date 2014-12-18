@@ -40,21 +40,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	
 ?>
 
-<table border=1>
-
-	<?php
-
-		$data = $_POST("data.txt")
-
-			for ( $i=0 ; $i < count($data) ; $i++)
-			{
-				echo "<tr>";
-				for ($j = 0; $j < count($data[0]); $j++)
-			{		
-		echo"<td>".$data[$i][$j]."</td>";
-		}
-	echo "</tr>";
-	}
-</table>
 </body>
 </html>
