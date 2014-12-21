@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Menu</title>
+<style rel="stylesheet" type="text/css">
+     * {
+margin: 0;
+padding: 0;
+}
+     body {
+  font-family: verdana, arial;
+  font-size: 15px;
+  line-height: 22px;
+}
+#content {
+  margin: 0 auto;
+  width: 1200px;
+}
+section {
+  float: left;
+}
+article {
+  width: 100%;
+  overflow: hidden;
+  padding-left: 3%;
+}
+article a{
+  text-decoration: none;
+    font-weight: normal;
+  color: white;
+}
+.logo {
+  width: 230px;
+  height: 30px;
+  background-color:rgba(54,54,54,0.7);
+  text-align: center;
+}
+article a.map {
+  background-color:rgba(54,54,54,0.7);
+}
+article em{
+  margin-left: 90px;
+  margin-top: 10px;
+  color: #39714a;
+  font-family: Segoe Print, arial; 
+  font-size: 13px;
+}
+article span {
+  font-weight: normal;
+}
+article p {
+  margin-top: 25px;
+  width: 210px;
+  font-weight: bold;
+}
+h1 {
+  margin-top: 70px;
+  margin-bottom: 120px;
+  width: 600px;
+  text-align: center;
+  font-size: 25px;
+}
+.menu {
+    width: 500px;
+}
+.dish {
+  overflow: hidden;
+  border-bottom: 1px solid #fff;
+}
+.dish:first-child{
+  border-top: 1px solid #fff;
+}
+.main {
+  font-weight: bold;
+  float: left;
+}
+.name {
+  float: left;
+  font-style: italic;
+}
+.price {
+  float: right;
+}
+.lv {
+  margin-right: 16px; 
+}
+.time {
+  margin-top: 80px;
+  margin-bottom: 30px;
+  width: 110px;
+  background: #000;
+  font-weight: normal;
+  color: white;
+}
+.red {
+  border: 2px solid #9c9a9c;
+  width: 110px;
+  margin-left: 10px;
+  padding: 8px 4px 8px 4px;
+  font-size: 13px;
+  color: red;
+  text-align: center;
+  font-weight: normal;
+}
+</style>
+</head>
+<body bgcolor="#e7efce">
+   <div id="content">
+    <section>
+        <article>
+            <div class="logo">
+            <a href="http://zavedenia.com/">Restaurant Logo</a></div>
+            <em><b>идеи с вкус</b></em>
+
+            <p>Къде сме ние: <br />
+            <a href="#" class="map">View Map</a> <br />
+            Бул. Христофор Колумб 64, SAC логистичен център</p>
+
+            <p>Доставки: 02/403 5000 Безплатна доставка <span>на заявки направени до 11:00 или над 25 лв.</span> &nbsp; Минимална <span>заявка</span> &nbsp; 10лв.</p>
+
+            <p>Работно време: Понеделник-Петък 08:00-18:00 ч.</p>
+        </article>
+    </section>
+    <section>
+        <article>
+          <h1>МЕНЮ ЗА ДЕНЯ</h1>
+          <div class="menu">
+             <div class="dish">
+                 <div class="main">АСОРТИМЕНТ</div>
+                 <div class="price lv">лв</div>
+             </div>
+             <div class="dish">
+                 <div class="main">СУПИ 300гр</div>
+                 <div class="price">&nbsp;</div>
+             </div>
+             <div class="dish">
+                 <div class="name">Рибена чорба</div>
+                 <div class="price">2,00</div>
+             </div>
+             <div class="dish">
+                 <div class="name">Супа пиле със застройка</div>
+                 <div class="price">2,10</div>
+             </div>
+             <div class="dish">
+                 <div class="name">Зеленчукова бистра супа</div>
+                 <div class="price">2,00</div>
+             </div>
+             <div class="dish">
+                 <div class="name">Таратор</div>
+                 <div class="price">1,70</div>
+             </div>
+             <div class="dish">
+                 &nbsp;
+             </div>
+             <div class="dish">
+                 <div class="main">ОСНОВНИ ЯСТИЯ 350гр</div>
+                 <div class="price">&nbsp;</div>
+             </div>
+             <div class="dish">
+                 <div class="name">Яхния от картофи и зелен фасул</div>
+                 <div class="price">3,60</div>
+             </div>
+             <div class="dish">
+                 <div class="name">Ориз с гъби и домати на фурна</div>
+                 <div class="price">3,40</div>
+             </div>
+             <div class="dish">
+                 <div class="name">Кашкавал на фурна с гарнитура по избор</div>
+                 <div class="price">4,60</div>
+             </div>
+             <div class="dish">
+                 <div class="name">Чушки бюрек с млечна заливка</div>
+                 <div class="price">3,80</div>
+             </div>
+             <div class="dish">
+                 <div class="name">Овчарски бюрек</div>
+                 <div class="price">3,40</div>
+             </div>
+             <div class="dish">
+                 <div class="name">Пържен патладжан с доматен сос</div>
+                 <div class="price">3,60</div>
+             </div>
+             <div class="dish">
+                 <div class="name">Зеленчуков шницел</div>
+                 <div class="price">3,40</div>
+             </div>
+             <div class="dish">
+                 <div class="name">Картофени кюфтета с млечен сос</div>
+                 <div class="price">3,60</div>
+             </div>
+             <div class="dish">
+                 <div class="name">Пангасиус пане с гарнитура по избор</div>
+                 <div class="price">4,60</div>
+             </div>
+             <div class="dish">
+                 <div class="name">Пиле Кордон бльо с гарнитура по избор</div>
+                 <div class="price">5,40</div>
+             </div>
+          </div> <!-- menu end -->
+        </article>
+    </section>
+    <section>
+        <article>
+          <div class="time"><p>Current Time</p></div>
+          <div class="red"><span>Неделя 9-ти.</span></div>
+        </article>
+    </section>
+</div>
+</body>
+</html>
