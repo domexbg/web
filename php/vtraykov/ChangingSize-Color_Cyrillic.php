@@ -8,7 +8,7 @@
   #header('Content-Type: text/html; charset=utf-8');
   #<meta http-equiv="Content-type" content="text/html; charset=utf-8">
   $color_arr = array("red", "blue" , "green", "yellow", "purple", "cyan", "magenta");
-  $s = "LATIN- »–»À»÷¿";
+  $s = "LATIN-–ö–ò–†–ò–õ–ò–¶–ê";
   #$s = iconv('windows-1251','UTF-8', $s);
   for ($p = 0; $p < strlen($s); $p += 1) {
       #$size = (10 * $p) % 100;
