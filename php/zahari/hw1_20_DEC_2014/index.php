@@ -50,6 +50,7 @@
             <td>Вид</td>
 		</tr>
     <?php
+	    $total = 0;	
 	    for ($i = 0; $i < count($lines); $i++)
 		{
 			if ( 
@@ -57,6 +58,7 @@
 				   !strpos( $lines[$i] . ";all", ";" . $grp ) 
 			   ) continue;
 			$tin = explode(";", $lines[$i]);
+			$total += floatval($tin[2]);
             echo "<tr>";
 			for ($j = 0; $j < count($tin); $j++)
 			{
@@ -67,6 +69,7 @@
 			}
 			echo "</tr>";
 		}	
+		echo "<tr><td>---</td><td>TOTAL</td><td>" . $total . "</td><td>---</td>";
     ?>
 	</table>
 </body>

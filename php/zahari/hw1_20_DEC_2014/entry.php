@@ -30,7 +30,8 @@
            echo "<pre>";
 		   echo var_dump($_POST);
 		   echo "</pre>";
-		   $line = $_POST["name"] . ";";
+		   $line = date("d.m.Y") . ";";
+		   $line .= $_POST["name"] . ";";
 		   $line .= $_POST["amount"] . ";"; 
 		   $line .= $_POST["group"] . PHP_EOL;
 
