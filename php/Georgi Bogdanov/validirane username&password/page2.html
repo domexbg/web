@@ -1,0 +1,16 @@
+if (isset($_GET['expired']) && $_GET['expired'] == 'true')
+    {
+        setcookie("loggedin", "false", time()+30);
+    }
+elseif (isset($_COOKIE['loggedin']) && $_COOKIE['loggedin'] == 'true')
+    {
+        header("Location: index.php");
+        exit;
+    }
+//log in logic   
+if (isset($_POST['username']) && isset($_POST['pw']) && $_POST['username'] == "session" && $_POST['pw'] == "test")
+    {
+        setcookie("loggedin", "true", time()+30);
+        header("Location: index.php");
+        exit;
+    }
