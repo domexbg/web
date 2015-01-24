@@ -3,14 +3,14 @@
 using namespace std;
 int main()
 {
-int a[10],i,value;
-printf("The program shows the numbers smaller than 7 out of 10 entered\n Enter 10 numbers pressing enter after each\n");
+int a[10],i,m;
+printf("Add value\n");
 for(i=0;i<10;i++)
 {
-scanf("%d",&value);
-a[i]=value;
+scanf("%d",&m);
+a[i]=m;
 }
-printf("The numbers smaller than 7 are\n");
+printf("smaller than 7\n");
 for(i=0;i<10;i++)
 {
 if(a[i]<7)
