@@ -11,3 +11,4 @@ VALUES ('1','Petar Ivanov','10','5.30'),
 ('3','Stoyan Georgiev','8','5.95');
 SELECT * FROM Students
 WHERE Class='10';
+
