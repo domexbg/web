@@ -1,0 +1,8 @@
+create table Students (ID int , Name Varchar(20), Class int, Score float);
+
+insert into Students (Id, Name, Class, Score) values
+(1, "Petar Ivanov", 10, 5.30),
+(2, "Ivan Georgiev", 8, 4.1),
+(3, "Stoyan Georgiev", 8, 5.95);
+
+select * from Students where Class =10;
