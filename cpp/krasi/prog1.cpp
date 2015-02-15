@@ -8,9 +8,7 @@ int main ()
     cout <<endl;
     cout << "Hello World!\n" <<endl;
     cout <<endl;
-    cout << "Hello World!\n" <<endl;
-    cout <<endl;
-    cout << "Hello World!\nHello!\n" <<endl;
+    cout << "Hello World!\tHello!\n" <<endl;
     cout <<endl;
     cout << "Hello World!\nBye!" <<endl;
     cout <<endl;
