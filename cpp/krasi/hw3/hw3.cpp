@@ -19,19 +19,20 @@ char *rev_w(const char *w)
 {
 	/* Write your code here */
 	
-char res[100]="";
-int i;
+static char res[100]="";
+unsigned int i;
 
 for ( i = 0; i < strlen (w); i++ ){
 res[strlen (w)-i-1]=w[i];
 }
+res[strlen (w)] = '\0';
 return res;
 
 }
 
 int main(int argc, char** argv) 
 {
-	int i;
+	unsigned int i;
 	const char *words_in[] = {"hello", "Village", "GitHub", "elephant", "wow", "k", ""};
 	const char *words_out[] = {"olleh", "egalliV", "buHtiG", "tnahpele", "wow", "k", ""};
 	
