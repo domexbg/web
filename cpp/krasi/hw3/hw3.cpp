@@ -18,6 +18,14 @@
 char *rev_w(const char *w)
 {
 	/* Write your code here */
+	
+char res[100]="";
+int i;
+
+for ( i = 0; i < strlen (w); i++ ){
+res[strlen (w)-i-1]=w[i];
+}
+return res;
 
 }
 
