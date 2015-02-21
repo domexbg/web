@@ -20,16 +20,7 @@ using namespace std;
 string rev_sent(const string s)
 {
     /* Write your code here */
-    int i;
-    const string s = string s();
-    h=s.size();
-    for (i = x - 1; i >= 0; i--)
-	{
- 		res[x-i-1] = w[i];
- 		
- 	}
- 	res[x--] = w[i];
-	return res;
+    
     
 }
 
