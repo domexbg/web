@@ -22,8 +22,8 @@ string rev_sent(const string s)
     /* Write your code here */
     
 string res = "";
-string word[j]];
-string revword;
+string word[j];
+string revword[j];
 string rests = s;
 unsigned int i = 0;
 unsigned int j = 0;
