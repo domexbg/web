@@ -27,7 +27,6 @@ res[strlen (w)-i-1]=w[i];
 }
 res[strlen (w)] = '\0';
 return res;
-
 }
 
 int main(int argc, char** argv) 
