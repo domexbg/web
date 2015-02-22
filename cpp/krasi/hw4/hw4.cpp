@@ -22,8 +22,8 @@ string rev_sent(const string s)
     /* Write your code here */
     
 string res = "";
-string word[j];
-string revword[j];
+string word[];
+string revword[];
 string rests = s;
 unsigned int i = 0;
 unsigned int j = 0;
@@ -36,14 +36,14 @@ for(i = s.find(" ", 0); i != string::npos; i = s.find(" ", i)) //count number of
 }
 for (j=0;j<= spaces+1;j++){
 
-word[j] = s.erase (s.find (" ",0), s.find ("\0",0) //separate each word from the beginning
-rests = rests.erase (0, strlen (word[j]+1))
+word[j] = s.erase (s.find (" ",0), s.find ("\0",0)); //separate each word from the beginning
+rests = rests.erase (0, strlen (word[j])+1);
 
 for ( i = 0; i < strlen (word[j]); i++ ){ //reverse each word
 revword[j][strlen (word[j])-i-1]=word[j][i];
 }
 revword[j][strlen (word[j])] = '\0';
-res = res.append (revword[j])// append each reversed word to result
+res = res.append (revword[j]);// append each reversed word to result
 }
 return res;
 }
