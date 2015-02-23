@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
 #include <cassert>
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
 using namespace std;
 
 /*
@@ -17,35 +20,57 @@ using namespace std;
   Example:
   I am born in a village => I ma nrob ni a egalliv
 */
+//int main ()
 string rev_sent(const string s)
-{
-    /* Write your code here */
-    
-string res = "";
-string word[];
-string revword[];
-string rests = s;
-unsigned int i = 0;
-unsigned int j = 0;
-unsigned int spaces = 0;
+{    /* Write your code here */
+	string word;
+	string revword;
+	string rests1 = s;
+	string rests2 = s;
+	string res = "";
+	string sign = "";
+	unsigned int i = 0;
+	unsigned int j = 0;
+	unsigned int k = 0;
+	unsigned int wordnum = 1;
 
-for(i = s.find(" ", 0); i != string::npos; i = s.find(" ", i)) //count number of spaces between words
-{
-	spaces++;
-	i++;  
-}
-for (j=0;j<= spaces+1;j++){
+	for(i = 0; i < s.size(); i++) //count number of words
+	{
+		if (s[i] == ' ') wordnum = wordnum + 1;
+	}
+	
+	for (j = 0;j < wordnum-1;j++)
+	{
+		word = rests1.erase ( rests1.find (' ',0), rests1.size () - 1 ); //separate each word w/o last from the beginning
+		rests1 = rests2.erase (0, word.size ()+1);
+		if (word[word.size ()-1] ==',') //separate sign after each word w/o last
+		{
+			sign = ',' ;
+			word = word.erase(word.size ()-1,1);
+		}
+		revword = word;
+		for ( k = 0; k < word.size () ; k++ )//reverse each word w/o last
+		{ 
+			revword[word.size ()-k-1]=word[k];
+		}
+		revword[word.size ()] = '\0';
+		res = res.append (revword + sign + ' ');// append each reversed word w/o last to result
+		sign = "";
+	}
+	if (rests1[rests1.size ()-1] =='.') //separate sign after last word
+	{
+		sign = '.' ;
+		rests1 = rests1.erase(rests1.size ()-1,1);
+	}
+	revword = rests1;
+	for ( k = 0; k < rests1.size () ; k++ )//reverse last word
+		{ 
+			revword[rests1.size ()-k-1]=rests1[k];
+		}
+		revword[rests1.size ()] = '\0';
+	res = res.append (revword + sign);// append each reversed word to result
 
-word[j] = s.erase (s.find (" ",0), s.find ("\0",0)); //separate each word from the beginning
-rests = rests.erase (0, strlen (word[j])+1);
-
-for ( i = 0; i < strlen (word[j]); i++ ){ //reverse each word
-revword[j][strlen (word[j])-i-1]=word[j][i];
-}
-revword[j][strlen (word[j])] = '\0';
-res = res.append (revword[j]);// append each reversed word to result
-}
-return res;
+	return res;
 }
 
 int main(int argc, char** argv)
