@@ -2,14 +2,17 @@
 #include <assert.h>
 #include <stdlib.h>
 
+
 /*
   This function will find the biggest of two integers
 */
 
 int max2(int a, int b)
 {
-	/* Write your code here*/
-
+	if (a > b)
+	return a;
+	else
+	return b;
 }
 
 int main() 
