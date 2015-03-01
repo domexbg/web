@@ -1,8 +1,7 @@
 // Guess the number game
 #include <iostream>
 #include <ctime>
-#include <stdlib.h>
-#include <cstdio>
+#include <cstdlib>
 using namespace std;
 
 int main ()
