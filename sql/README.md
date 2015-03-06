@@ -5,7 +5,7 @@ Useful links
 [XAMPP v1.8.1] (http://sourceforge.net/projects/xampp/files/XAMPP%20Windows/1.8.1/xampp-portable-win32-1.8.1-VC9-installer.exe/download)
 
 
-### MySQL client fro Windows
+### MySQL client for Windows
 [HeidiSQL] (http://www.heidisql.com/installers/HeidiSQL_8.3.0.4694_Setup.exe)
 
 
