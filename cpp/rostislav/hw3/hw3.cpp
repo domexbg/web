@@ -19,7 +19,7 @@ char *rev_w(const char *w)
 {
 	/* Write your code here */
 	// hints: char*, char [], static, \0
-	static char rev_word[70]; 
+	static char rev_word[70]=""; 
 	/* 
 	  STATIC STRING HAS TO BE INITALIZED WITH A VALUE 
 	  YOU COULD USE strcpy()
@@ -29,15 +29,17 @@ char *rev_w(const char *w)
 		/* FOR TEST 7 THIS LOOP DOES NOT EXECUTE BECAUSE LENTH OF 'w' IS 0 */
 		for (i = 0, p = strlen(w) - 1; i < strlen(w) && p >= 0; i++, p--)
 		{
+			// Correction if length of "w" == 0
+			if (strlen(w) == 0)
+			strcat (rev_word, w);
 			// Insert the chars into rev_word last to first
 			rev_word[i] = w[p];
-		
-			// Insert \0 in the end of rev_word
-			rev_word[strlen(w)] = '\0'; /* THIS HAS TO BE OUTSIDE THE LOOP */
 		}
+	// Insert \0 in the end of rev_word
+		rev_word[strlen(w)] = '\0'; /* THIS HAS TO BE OUTSIDE THE LOOP */
 	// Return rev_word
-	fprintf(stdout, "\n*** [%s] ***\n", rev_word);
-	return rev_word;
+		fprintf(stdout, "\n*** [%s] ***\n", rev_word);
+		return rev_word;
 }
 
 int main() 
