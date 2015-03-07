@@ -1,8 +1,8 @@
 Useful links
 ------------
 
-### XAMPP server for Windows v1.8.1
-[XAMPP v1.8.1] (http://sourceforge.net/projects/xampp/files/XAMPP%20Windows/1.8.1/xampp-portable-win32-1.8.1-VC9-installer.exe/download)
+### XAMPP server for Windows
+[XAMPP v1.7.3] (http://sourceforge.net/projects/xampp/files/XAMPP%20Windows/1.7.3/xampp-win32-1.7.3.exe/download)
 
 
 ### MySQL client for Windows
