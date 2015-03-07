@@ -7,8 +7,6 @@ CREATE TABLE IF NOT EXISTS `persons` (
   PRIMARY KEY (PersonID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table zlat0703.persons: ~1 rows (approximately)
-/*!40000 ALTER TABLE `persons` DISABLE KEYS */;
 INSERT INTO `persons` (`LastName`, `FirstName`, `Address`, `City`) VALUES
 	('Yordanov', 'Zlatko', 'Drujba', 'Sofia'),
 	('Petrov', 'Stefcho', 'Mladost', 'Sofia'),
