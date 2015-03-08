@@ -12,4 +12,7 @@ HAVING ABS(
 	Average - Total
         ) < 2000 LIMIT 5
   
-  SELECT CustomerName,Country,COUNT(Country) AS Country_Count FROM Customers GROUP BY Country;
+SELECT Country,COUNT(Country) AS Cust_Count FROM [Customers] GROUP BY Country ORDER BY Cust_Count DESC;
+
+//SELECT average price for every supplier and round it up to 2nd sign after decimal point
+SELECT SupplierID,ROUND(AVG(Price),2) as Avarage_Price FROM [Products] GROUP BY SupplierID;
