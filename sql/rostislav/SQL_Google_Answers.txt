@@ -1,0 +1,14 @@
+1. Write a SQL query that returns the name, phone number and most recent date for any user that has logged in over the last 30 days (you can tell a user has logged in if the action field in UserHistory is set to "logged_on").
+Every time a user logs in a new row is inserted into the UserHistory table with user_id, current date and action (where action = "logged_on").
+
+SELECT name, phone_num, MAX(date) AS Most_Recent_Date FROM user, userhistory
+WHERE user.user_id = userhistory.user_id AND userhistory.action = "logged on" 
+AND userhistory.date BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE()
+GROUP BY name ORDER BY Most_Recent_Date DESC;
+
+2. Write a SQL query to determine which user_ids in the User table are not contained in the UserHistory table (assume the UserHistory table has a subset of the user_ids in User table). Do not use the SQL MINUS statement. Note: the UserHistory table can have multiple entries for each user_id.
+
+SELECT DISTINCT name, user.user_id FROM user
+LEFT JOIN userhistory
+ON userhistory.user_id = user.user_id
+WHERE userhistory.user_id IS NULL;
