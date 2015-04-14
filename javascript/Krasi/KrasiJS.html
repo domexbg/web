@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Krasi Page</title>
+</head>
+
+<h1 id="demo"> krasi </h1>
+<button id="KrasiButton" > Change Text </button>
+<button id="KrasiButton2" > Change Color </button>
+
+<script>
+element = document.getElementById("KrasiButton");
+element2 = document.getElementById("KrasiButton2");
+element.onclick = function() { document.getElementById("demo").innerHTML=Date(); document.getElementById("demo").style.color = "black"};
+element2.onclick = function() { document.getElementById("demo").style.color = "blue"};
+</script>
+
+</html>
