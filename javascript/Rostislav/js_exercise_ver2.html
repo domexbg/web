@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<title>JS Exercise</title>
+<head>
+
+<script>
+function func_1() { document.getElementById('text').style.color = 'red'; console.log("Changed color to red.") }
+function func_2() { document.getElementById('text').innerHTML = 'Text changed.' }
+function func_3() { document.getElementById('text').innerHTML = 'The buttons below will change this text.'; document.getElementById('text').style.color = 'black' }
+</script>
+
+</head>
+<body>
+
+<p id="text"> The buttons below will change this text.</p>
+<button type="button" id="but1" onclick = func_1()>Turn Red</button>
+<button type="button" id="but2" onclick = func_2()>Change Text</button>
+<button type="button" id="reset_but" onclick = func_3()>Reset</button>
+
+</body>
+</html>
