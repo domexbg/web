@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Krasi Page</title>
-  <script src="KrasiJS2-headlib.js"></script>
+  <script src="KrasiJS4-headlib.js"></script>
 </head>
 
 <body>
@@ -10,7 +10,7 @@
 <button type="button" id="KrasiButton" onclick = ChangeDate()> Change Text </button>
 <button type="button" id="KrasiButton2" onclick = ChangeColor()> Change Color </button>
 <button type="button" id="KrasiButton3" onmouseover = ChangeFontSize300() onmouseout = ChangeFontSize100()> Change Size </button>
-<h1 id="demo" onmouseover =  HideText() onmouseout = ShowText()> krasi </h1>
+<h1 id="demo" onmouseover =  HideText() onmouseout = "setTimeout (function(){ShowText()},3000)"> krasi </h1>
 
 </body>
 
