@@ -1,6 +1,4 @@
 ﻿var users = ["rostislav", "krasi", "zahari", "petar"];
-var users = ["rostislav", "krasi", "zahari", "petar"];
-var specialchars = "!@#$%^&*()+{}?><,.";
 
 function validate() {
     validateUser();
@@ -11,6 +9,7 @@ function reset() {
     document.getElementById("validateMessage").innerHTML = "";
     document.getElementById("validateMessage").style.color = "black";
     document.getElementById("userdiv").style.borderColor = "white";
+    document.getElementById("pwdMessage").innerHTML = "";
 }
 
 function validateUser() {
@@ -47,11 +46,22 @@ function validatePassword() {
     console.log(pwd);
     console.log(pwd2);
     if (pwd !== pwd2) {
-    else if (pwd.length < 8)
-    else if ( specialchars )
-    else if ( 1x CAPS )
-    else if ( 1x small )
-    else
-    return false;        
+        document.getElementById("pwdMessage").style.color = "red";
+        document.getElementById("pwdMessage").innerHTML = "Паролите не съвпадат!";
     }
+    if (pwd.length < 8) {
+        document.getElementById("pwdMessage").style.color = "red";
+        document.getElementById("pwdMessage").innerHTML = "Паролата трябва да съдържа поне 8 символа!";
+        return false;
+    }
+    if (!(pwd.search(/!/) > 0 || pwd.search(/@/) > 0 || pwd.search(/#/) > 0 || pwd.search(/\$/) > 0 
+	|| pwd.search(/\%/) > 0 || pwd.search(/\^/) > 0 || pwd.search(/&/) > 0 || pwd.search(/\*/) > 0 
+	|| pwd.search(/\(/) > 0 || pwd.search(/\)/) > 0 || pwd.search(/\+/) > 0 || pwd.search(/\{/) > 0 
+	|| pwd.search(/\}/) > 0 || pwd.search(/\?/) > 0 || pwd.search(/</) > 0 || pwd.search(/>/) > 0 
+	|| pwd.search(/\./) > 0 || pwd.search(/\,/) > 0)) {
+        document.getElementById("pwdMessage").style.color = "red";
+        document.getElementById("pwdMessage").innerHTML = "Паролата трябва да съдържа поне един специален символ!";
+        return false;
+    }
+    return true;
 }
