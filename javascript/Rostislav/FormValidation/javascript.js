@@ -48,6 +48,7 @@ function validatePassword() {
     if (pwd !== pwd2) {
         document.getElementById("pwdMessage").style.color = "red";
         document.getElementById("pwdMessage").innerHTML = "Паролите не съвпадат!";
+        return false;
     }
     if (pwd.length < 8) {
         document.getElementById("pwdMessage").style.color = "red";
@@ -61,6 +62,21 @@ function validatePassword() {
 	|| pwd.search(/\./) > 0 || pwd.search(/\,/) > 0)) {
         document.getElementById("pwdMessage").style.color = "red";
         document.getElementById("pwdMessage").innerHTML = "Паролата трябва да съдържа поне един специален символ!";
+        return false;
+    }
+	if (pwd.search(/[a-z]/) <0) {
+        document.getElementById("pwdMessage").style.color = "red";
+        document.getElementById("pwdMessage").innerHTML = "Паролата трябва да съдържа поне една малка буква!";
+        return false;
+    }
+    if (pwd.search(/[A-Z]/) <0) {
+        document.getElementById("pwdMessage").style.color = "red";
+        document.getElementById("pwdMessage").innerHTML = "Паролата трябва да съдържа поне една главна буква!";
+        return false;
+    }
+    if (pwd.search(/\d/) <0) {
+        document.getElementById("pwdMessage").style.color = "red";
+        document.getElementById("pwdMessage").innerHTML = "Паролата трябва да съдържа поне една цифра!";
         return false;
     }
     return true;

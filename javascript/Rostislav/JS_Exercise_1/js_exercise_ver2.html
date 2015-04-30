@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
 <title>JS Exercise</title>
 <head>
@@ -6,7 +6,8 @@
 <script>
 function func_1() { document.getElementById('text').style.color = 'red'; console.log("Changed color to red.") }
 function func_2() { document.getElementById('text').innerHTML = 'Text changed.' }
-function func_3() { document.getElementById('text').innerHTML = 'The buttons below will change this text.'; document.getElementById('text').style.color = 'black' }
+function func_3() { document.getElementById('text').innerHTML = 'The buttons below will change this text.'; document.getElementById('text').style.color = 'black'; document.getElementById("text").style.visibility = "visible" }
+function HideText() { document.getElementById("text").style.visibility = "hidden"; timer.start(); setTimeout(timer.stop(),5000)}
 </script>
 
 </head>
@@ -15,7 +16,13 @@ function func_3() { document.getElementById('text').innerHTML = 'The buttons bel
 <p id="text"> The buttons below will change this text.</p>
 <button type="button" id="but1" onclick = func_1()>Turn Red</button>
 <button type="button" id="but2" onclick = func_2()>Change Text</button>
+<button type="button" id="but3" onclick = HideText()>Hide</button>
 <button type="button" id="reset_but" onclick = func_3()>Reset</button>
 
 </body>
+</html>
+  
+</body>
+
+
 </html>
