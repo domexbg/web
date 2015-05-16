@@ -9,24 +9,11 @@ p { color: green; }
 </head>
 <body>
 <?php $success = ""; ?>
-<form id="btn_back" action="index.php">
-    <input type="submit" value="Списък">
-</form>
-<form method= "post" action="
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-     $name = $_POST['name'];
-	 $price = $_POST['price'];
-	 $category = $_POST['category'];
-	 $date = date("d.m.Y");
-	 $result = "\r\n".$date.",".$name.",".$price.",".$category;
-	 $mytable = fopen("table.csv", "a");
-	 fwrite ($mytable, $result);
-	 fclose ($mytable);
-	 $success = "Въвеждането е успешно!";
-}
-?>
-">
+<a id="btn_back" href="index.php">
+    <input type="button" value="Списък">
+</a>
+<form method= "post" action="new.php">
+
 <div>
 	<label for="name">Име:</label>
     <input type="text" name="name"></input>
@@ -51,6 +38,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <p><b><?php echo $success; ?></b><p>
 </div>
 </form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+     $name = $_POST['name'];
+	 $price = $_POST['price'];
+	 $category = $_POST['category'];
+	 $date = date("d.m.Y");
+	 $result = PHP_EOL."$date,$name,$price,$category";
+	 $mytable = fopen("table.csv", "a");
+	 fwrite ($mytable, $result);
+	 fclose ($mytable);
+	 $success = "Въвеждането е успешно!";
+}
+?>
 
 </body>
 </html>

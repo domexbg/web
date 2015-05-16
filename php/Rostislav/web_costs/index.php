@@ -16,33 +16,24 @@ table#table1 td, th {
 }
 #btn_new {display: inline;}
 #filter_form {display: inline;}
+a:link { text-decoration: none; }
 </style>
 </head>
 <body>
 
-<form id="btn_new" action="new.php">
-    <input type="submit" value="Добави нов разход">
-</form>	
+<a id="btn_new" href="new.php"><input type="button" value="Добави нов разход"></a>
+
+<form id="filter_form" method="post" action="index.php">
 
 <select name="category" onchange="">
-<option value="all" selected="selected">Всички</option>
-<option value="food">Храна</option>
-<option value="transport">Транспорт</option>
-<option value="clothes">Дрехи</option>
-<option value="others">Други</option>
+<option value="Всички" selected="selected">Всички</option>
+<option value="Храна">Храна</option>
+<option value="Транспорт">Транспорт</option>
+<option value="Дрехи">Дрехи</option>
+<option value="Други">Други</option>
 </select>
 
-<form id="filter_form" method="post" action="
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-     $filter = $_POST['category'];
-	 $csvfile = file_get_contents("table.csv");
-	 // To be continued
-}
-?>
-">
 <input id="btn_filter" type="submit" value="Филтрирай">
-</form>
 
 <table id="table1">
 <th>Дата</th>
@@ -50,39 +41,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <th>Сума</th>
 <th>Вид</th>
 <?php
+$filter  = "Всички";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $filter = $_POST['category'];
+}
+$sum = 0;
 echo "<tr>";
 $csvfile = file_get_contents("table.csv");
 $csvline = explode(PHP_EOL, $csvfile);
-for ($i = 0; $i < count($csvline); $i++) {
-$csvcell = explode(',', $csvline[$i]);
-	for ($p = 0; $p < count($csvcell); $p++) {
-	echo "<td>".$csvcell[$p]."</td>";
+foreach ($csvline as $i) {
+	$csvrow = explode(',', $i);
+	if ($csvrow[3] !== $filter and $filter !== "Всички") { 
+	continue;
 	}
-echo "</tr>";
+    foreach ($csvrow as $csvcell) {
+        echo "<td>$csvcell</td>";
+    }
+    $sum += $csvrow[2];
+    echo "</tr>";
 }
+
 ?>
 <tr>
 <td>---</td>
 <td>ОБЩО:</td>
 <?php
-$row = 1;
-$sum = 0;
-if (($mytable = fopen("table.csv", "r")) !== FALSE) {
-    while (($data = fgetcsv($mytable, 1000, ",")) !== FALSE) {
-        $datalength = count($data);
-        $row++;
-        for ($i = 2; $i < $datalength; $i += 4) {
-            $sum += $data[$i];
-        }
-    }
-    fclose($mytable);
-}
 $total = number_format($sum, 2, '.', '');
-echo "<td>".$total."лв"."</td>";
+echo "<td>" . $total . "лв" . "</td>";
 ?>
 <td>---</td>
 </tr>
 </table>
-
+</form>
 </body>
 </html>
