@@ -14,9 +14,15 @@ table#table1 td, th {
 	border-collapse: collapse;
 	padding: 5px;
 }
-#btn_new {display: inline;}
-#filter_form {display: inline;}
-a:link { text-decoration: none; }
+#btn_new {
+	display: inline;
+}
+#filter_form {
+	display: inline;
+}
+a:link {
+	text-decoration: none;
+}
 </style>
 </head>
 <body>
@@ -25,12 +31,29 @@ a:link { text-decoration: none; }
 
 <form id="filter_form" method="post" action="index.php">
 
-<select name="category" onchange="">
-<option value="Всички" selected="selected">Всички</option>
-<option value="Храна">Храна</option>
-<option value="Транспорт">Транспорт</option>
-<option value="Дрехи">Дрехи</option>
-<option value="Други">Други</option>
+<select name="category">
+<?php
+$options = array(
+    "Всички",
+    "Храна",
+    "Транспорт",
+    "Дрехи",
+    "Други"
+);
+$sel     = "";
+$filter  = "";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $filter = $_POST['category'];
+}
+foreach ($options as $p) {
+    if ($filter == $p) {
+        $sel = "selected='selected'";
+        echo "<option $sel value='" . $p . "'>$p</option>";
+    } else {
+        echo "<option value='" . $p . "'>$p</option>";
+    }
+}
+?>
 </select>
 
 <input id="btn_filter" type="submit" value="Филтрирай">
@@ -41,19 +64,16 @@ a:link { text-decoration: none; }
 <th>Сума</th>
 <th>Вид</th>
 <?php
-$filter  = "Всички";
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $filter = $_POST['category'];
-}
+
 $sum = 0;
 echo "<tr>";
 $csvfile = file_get_contents("table.csv");
 $csvline = explode(PHP_EOL, $csvfile);
 foreach ($csvline as $i) {
-	$csvrow = explode(',', $i);
-	if ($csvrow[3] !== $filter and $filter !== "Всички") { 
-	continue;
-	}
+    $csvrow = explode(',', $i);
+    if ($csvrow[3] !== $filter and $filter !== "Всички" and $filter !== "") {
+        continue;
+    }
     foreach ($csvrow as $csvcell) {
         echo "<td>$csvcell</td>";
     }
