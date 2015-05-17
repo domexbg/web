@@ -92,5 +92,6 @@ echo "<td>" . $total . "лв" . "</td>";
 </tr>
 </table>
 </form>
+<a href="/index.html">Home</a>
 </body>
 </html>
