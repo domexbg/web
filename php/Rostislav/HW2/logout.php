@@ -1,10 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 <style>
 </style>
 </head>
 <body>
-<a href="/HW1/index.php">Homework 1</a>
 </body>
 </html>
