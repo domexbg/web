@@ -48,10 +48,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 foreach ($options as $p) {
     if ($filter == $p) {
         $sel = "selected='selected'";
-        echo "<option $sel value='" . $p . "'>$p</option>";
-    } else {
-        echo "<option value='" . $p . "'>$p</option>";
-    }
+    } 
+	else { $sel = ""; }
+	echo "<option $sel value='" . $p . "'>$p</option>";
 }
 ?>
 </select>

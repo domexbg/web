@@ -34,10 +34,6 @@ p { color: green; }
 <div>
     <input type="submit" value="Добави">
 </div>
-<div>
-<p><b><?php echo $success; ?></b><p>
-</div>
-</form>
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -53,5 +49,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
+<div>
+<p><b><?php echo $success; ?></b><p>
+</div>
+</form>
 </body>
 </html>
