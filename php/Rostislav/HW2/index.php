@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿<?php
+session_start();
+?>
+<!DOCTYPE html>
 <html>
 <head>
 <style>
@@ -43,8 +46,10 @@ p { color: red;
 </form>
 <?php
 $username = $password = $validatemsg = "";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SESSION and $_SESSION['username'] === 'user') { 
+header('Location: files.php'); 
+}
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
 	
 	function test_input($data) {
 		$data = trim($data);
@@ -55,10 +60,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$username = test_input($_POST["username"]);
 	$password = test_input($_POST["password"]);
 
-	if (($username == FALSE or $username !== "user") or ($password == FALSE or $password !== "qwerty")) {
+	if ($username !== "user" or $password !== "qwerty") {
 		$validatemsg = "Невалидно потребителско име или парола.";
 	}
 	else {
+	$_SESSION['username'] = $username;
+	$_SESSION['upload_dir'] = $username.".uploads";
 	header('Location: files.php');
 	}
 }
