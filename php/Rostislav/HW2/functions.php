@@ -14,9 +14,7 @@ function logincheck($username, $password) {
 			if ($username === $userpass[0] and $password === $userpass[1]) {
 				return true;
 			}
-			else {
-				return false;
-			}
 		}
-	}
+	return false;	
+}
 ?>
