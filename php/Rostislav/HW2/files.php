@@ -42,6 +42,7 @@ if (!$_SESSION) {
 <table id="table1">
 <th>Файл</th>
 <th>Име</th>
+<th>Размер</th>
 
 <?php
 
@@ -61,9 +62,13 @@ foreach ($dirlist as $file) {
 		continue;
 	}
 	$counter++;
+	$fpath = $_SESSION['upload_dir'] . "/" . $file;
+	$fsize = filesize($fpath) / 1024;
+	$fsize = floor($fsize);
 	echo "<tr>";
     echo "<td>$counter.</td>";
-	echo "<td><a href='".$_SESSION['upload_dir']."/$file'"." download target='_blank'>$file</a></td>";
+	echo "<td><a href='" . $_SESSION['upload_dir'] . "/$file'" . " download target='_blank'>$file</a></td>";
+	echo "<td>$fsize KB</td>";
 	echo "</tr>";
     }
 ?>
