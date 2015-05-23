@@ -4,42 +4,44 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 <style>
 #table1	{
-	border: 2px solid black;
-	border-collapse: collapse;
 	padding: 5px;
 	margin: 20px;
-	zoom: 200%;
+	zoom: 150%;
 }
 table#table1 td, th {
-	border: 2px solid black;
-	border-collapse: collapse;
 	padding: 5px;
 }
 div { margin: 20px; }
 form { zoom: 150%; }
-#none { color: red;}
+#none {
+	color: red;
+	font-size: 18px;
+}
 #logout { 
 margin-left: 13%;
 zoom: 150%;
 }
 #logged { zoom: 150%; }
+#choosefile { display: inline; }
+.hidden { display: none; }
 </style>
 </head>
 <body>
-
+<div class="col-md-4">
 <?php
 if (!$_SESSION) {
 	header ('Location: index.php');
 }
 ?>
-<div>
+<div class="container">
 <span id='logged'>Влезли сте като: <b><?php echo $_SESSION['username'] ?></b></span>
-<a href="logout.php"><button id="logout" type="button" name="logout">Изход</button></a>
+<a href="logout.php"><button id="logout" class="btn btn-default navbar-btn btn-primary" type="button" name="logout">Изход</button></a>
 </div>
-
-<table id="table1">
+<div>
+<table id="table1" class="table table-bordered">
 <th>Файл</th>
 <th>Име</th>
 <th>Размер</th>
@@ -47,6 +49,7 @@ if (!$_SESSION) {
 <?php
 
 $none = "";
+$nonediv = "<div class='alert alert-danger hidden'>";
 $dir = $_SESSION['upload_dir'];
 if (!is_dir($dir)) {
 	mkdir($dir);
@@ -56,6 +59,7 @@ $counter = 0;
 foreach ($dirlist as $file) {
 	if (empty($dirlist[2])) {
 		$none = "Не са открити файлове.";
+		$nonediv = "<div class='alert alert-danger'>";
 		break;
 	}
 	if ($file === "." or $file === "..") {
@@ -74,12 +78,13 @@ foreach ($dirlist as $file) {
 ?>
 
 </table>
-<div><p id="none"><?php echo $none; ?></p></div>
+</div>
+<?php echo $nonediv; ?><p id="none"><?php echo $none; ?></p></div>
 
-<div>
+<div class="container form-group">
 <form action="files.php" method="post" enctype="multipart/form-data">
-    <input type="file" name="fileToUpload">
-    <input type="submit" value="Качване на файл">
+	<span class="glyphicon glyphicon-upload" aria-hidden="true"></span><input id="choosefile" name="fileToUpload" type="file">
+    <button type="submit" class="btn btn-default navbar-btn btn-primary">Качване на файл</button>
 </form>
 </div>
 
@@ -91,6 +96,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 	header('Location: files.php');
 }
 ?>
-
+</div>
 </body>
 </html>
