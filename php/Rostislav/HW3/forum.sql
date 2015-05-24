@@ -9,7 +9,21 @@
 /*!40101 SET NAMES utf8 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
--- Data exporting was unselected.
+
+-- Dumping database structure for forum
+CREATE DATABASE IF NOT EXISTS `forum` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `forum`;
+
+
+-- Dumping structure for table forum.messages
+CREATE TABLE IF NOT EXISTS `messages` (
+  `Number` int(11) NOT NULL AUTO_INCREMENT,
+  `Datestamp` timestamp NULL DEFAULT NULL,
+  `Author` varchar(50) DEFAULT NULL,
+  `Topic` varchar(50) DEFAULT NULL,
+  `Content` varchar(250) DEFAULT NULL,
+  PRIMARY KEY (`Number`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
