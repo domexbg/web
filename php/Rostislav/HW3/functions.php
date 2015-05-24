@@ -1,20 +1,25 @@
 <?php
+require "config.php";
+
 function test_input($data) {
-		$data = trim($data);
-		$data = stripslashes($data);
-		$data = htmlspecialchars($data);
-		return $data;
-	}
+	$data = trim($data);
+	$data = stripslashes($data);
+	$data = htmlspecialchars($data);
+	return $data;
+}
 	
-function logincheck($username, $password) {
-		$passfile = file_get_contents("userpass.txt");
-		$passline = explode(PHP_EOL, $passfile);
-		foreach($passline as $i) {
-			$userpass = explode(",", $i);
-			if ($username === $userpass[0] and $password === $userpass[1]) {
-				return true;
-			}
+function logincheck($connection, $username, $password) {
+	if (!$connection) {
+		die("Connection to DB failed: " . mysqli_connect_error());
+	}
+	$sql = "SELECT * FROM userpass";
+	$result = mysqli_query($connection, $sql);
+	
+	while ($row = mysqli_fetch_assoc($result)) {
+		if ($row["user"] === $username and $row["password"] === $password){
+			return true;
 		}
-	return false;	
+	}
+return false;
 }
 ?>

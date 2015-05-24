@@ -1,6 +1,7 @@
 ﻿<?php
 session_start();
 require "functions.php";
+require "config.php"
 ?>
 <!DOCTYPE html>
 <html>
@@ -97,7 +98,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 	
 	$username = test_input($_POST["username"]);
 	$password = test_input($_POST["password"]);
-	$check = logincheck($username, $password);
+	$connection = mysqli_connect($db_host, $db_username, $db_password, $db_name);
+	$check = logincheck($connection, $username, $password);
 	if ( $check ) {
 		$_SESSION['username'] = $username;
 		header('Location: main.php');
@@ -106,6 +108,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 		$validatemsg = "Невалидно потребителско име или парола.";
 		$errordiv = "<div>";
 	}
+	mysql_close($connection);
 }
 ?>
   
