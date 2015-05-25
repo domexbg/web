@@ -11,6 +11,8 @@ PHP resources
 
 [PHP online tests](http://www.pskills.org/php.jsp)
 
+[PHP nau4i.me](http://nau4i.me/php/php-%D0%B7%D0%B0-%D0%BD%D0%B0%D1%87%D0%B8%D0%BD%D0%B0%D0%B5%D1%89%D0%B8)
+
 ### Online IDE
 
 [PHP Fiddle](http://phpfiddle.org)
