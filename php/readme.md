@@ -13,7 +13,7 @@ PHP resources
 
 ### Online IDE
 
-[PHP Fiddle](http://phpfiddle.com)
+[PHP Fiddle](http://phpfiddle.org)
 
 [Koding](http://koding.com)
 
