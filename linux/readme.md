@@ -10,5 +10,5 @@
 
 [Command line Git clent](https://help.github.com/articles/set-up-git)
 
-[Vido HOWTOs](https://my.pcloud.com/publink/show?code=kZcpEXZIUPxCtMiqkzwacpdrPdyBpVSpSIV#folder=11663531)
+[Video HOWTOs](https://my.pcloud.com/publink/show?code=kZcpEXZIUPxCtMiqkzwacpdrPdyBpVSpSIV#folder=11663531)
 
