@@ -17,12 +17,23 @@ USE `forum`;
 
 -- Dumping structure for table forum.messages
 CREATE TABLE IF NOT EXISTS `messages` (
-  `Number` int(11) NOT NULL AUTO_INCREMENT,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `Datestamp` timestamp NULL DEFAULT NULL,
   `Author` varchar(50) DEFAULT NULL,
   `Topic` varchar(50) DEFAULT NULL,
   `Content` varchar(250) DEFAULT NULL,
-  PRIMARY KEY (`Number`)
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Data exporting was unselected.
+
+
+-- Dumping structure for table forum.userpass
+CREATE TABLE IF NOT EXISTS `userpass` (
+  `⁯ID` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `user` varchar(50) DEFAULT NULL,
+  `password` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`⁯ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
