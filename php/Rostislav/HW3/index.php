@@ -95,7 +95,6 @@ header('Location: main.php');
 }
 	
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-	
 	$username = test_input($_POST["username"]);
 	$username = strtolower($username);
 	$password = md5(test_input($_POST["password"]));
@@ -108,8 +107,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 	else {
 		$validatemsg = "Невалидно потребителско име или парола.";
 		$errordiv = "<div>";
-	}
-	mysqli_close($connection);
+		}
 }
 ?>
   
