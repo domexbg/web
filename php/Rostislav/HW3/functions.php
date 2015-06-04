@@ -7,6 +7,12 @@ function test_input($data) {
 	$data = htmlspecialchars($data);
 	return $data;
 }
+
+function test_msg ($msg) {
+	$data = trim($msg);
+	$data = htmlspecialchars($msg);
+	return $msg;
+}
 	
 function logincheck($connection, $username, $password) {
 	if (!$connection) {
@@ -54,7 +60,7 @@ function regcheck($connection, $reguser, $regpass, $regpass2) {
 		mysqli_close($connection);
 		return 5;
 	}
-return 6;
+	return 6;
 }
 
 function getmsg($connection) {

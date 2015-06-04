@@ -40,13 +40,15 @@ body {
 
 #content {
 	resize: none;
-	width: 350px;
-	height: 165px;
+	width: 70%;
+	height: 120px;
 }
 p {
 	font-size: 10px;
 	font-weight: bold;
 }
+
+#topic { width: 45%}
 </style>
 </head>
 <body>
@@ -54,12 +56,12 @@ p {
 	<form id="new" class="form-control" method="post" action="new.php">
 		<div>
 			<label for="topic">Тема:</label><br>
-			<input type="text" name="topic" maxlength="50" size="30" required autofocus></input>
+			<input id="topic" type="text" name="topic" maxlength="50" size="30%" required autofocus></input>
 			<p>(макс. 50 символа)</p>
 		</div>
 		<div>
 			<label for="content">Съдържание:</label><br>
-			<textarea id="content" name="content" maxlength="250" required></textarea>
+			<textarea id="content" name="content" maxlength="250" required size="30%"></textarea>
 			<p>(макс. 250 символа)</p>
 		</div>
 		<div>
@@ -68,19 +70,19 @@ p {
 			</a>
 			<input type="submit" class="btn btn-primary" value="Публикувай"></input>
 		</div>
-</div>
 	</form>
+</div>
 <?php
 if (!$_SESSION) {
-			header ('Location: index.php');
+	header ('Location: index.php');
 	}
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 	$connection = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 	$new_author = $_SESSION['username'];
 	$new_author = ucfirst($new_author);
-	$new_topic = $_POST['topic'];
-	$new_content = $_POST['content'];
+	$new_topic = test_msg($_POST['topic']);
+	$new_content = test_msg($_POST['content']);
 	newmsg($connection, $new_author, $new_topic, $new_content);
 	header("location: main.php");
 }

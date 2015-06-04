@@ -29,7 +29,10 @@ table {
  	width: 100%;
 }
 
-div { border-radius: 20px; margin: 10px; }
+div { 
+	border-radius: 20px;
+	margin: 10px; 
+}
 
 #logout {
 	font-weight: bold; 
@@ -42,18 +45,17 @@ div { border-radius: 20px; margin: 10px; }
 #new {
 	margin-left: auto;
 	margin-left: auto;
-	width: 30%
 	text-align: center;
 	font-weight: bold; 
 }
 
-#div_new { text-align: center;}
+#div_new { text-align: center; }
 
 .msg_container {
 	background-color: white;
 	margin-left: auto;
 	margin-right: auto;
-	width: 700px;
+	width: 80%;
 
 }
 .container {
@@ -68,7 +70,7 @@ div { border-radius: 20px; margin: 10px; }
 </head>
 <body>
 	<div class="container">
-		<span id='logged'>Влезли сте като: <b><?php echo $_SESSION['username'] ?></b></span>
+		<span id='logged'>Влезли сте като: <b><?php echo ucfirst($_SESSION['username']); ?></b></span>
 		<a href="logout.php"><button id="logout" class="btn btn-default navbar-btn btn-primary" type="button" name="logout">Изход</button></a>
 		<?php
 		if (!$_SESSION) {
@@ -79,11 +81,11 @@ div { border-radius: 20px; margin: 10px; }
 		echo "<div class='msg_container'>";
 		$connection = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 		getmsg($connection);
-		
-		echo "<div id='div_new'>
-			<a href='new.php'><button id='new' class='btn btn-default navbar-btn btn-primary' type='button' name='new'>Ново съобщение</button></a>
-			</div></div>";
+		echo "</div>";
 		?>
+		<div id='div_new'>
+		<a href='new.php'><button id='new' class='btn btn-default navbar-btn btn-primary' type='button' name='new'>Ново съобщение</button></a>
+		</div>
 	</div>
 </body>
 </html>

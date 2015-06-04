@@ -99,8 +99,9 @@ form[role=login]>div {
 $reguser = $regpass= $regpass2 = $validatemsg = "";
 $errordiv = $successdiv = "<div class='hidden'>";
 $closediv = "</div>";
+
 if ($_SESSION and $_SESSION['username']) { 
-header('Location: main.php'); 
+	header('Location: main.php'); 
 }
 	
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -141,17 +142,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 			$successdiv = "<div class='centered'>";
 			echo "<script>
 				$(document).ready(function() {
-				var delay = 5;
-				function countdown() {
-				setTimeout(countdown, 1000) ;
-				$('#success').html('Регистрацията е успешна. Пренасочване към входа след '  + delay  + ' секунди.');
-				delay--;
+					var delay = 5;
 					
-				if (delay < 0 ) {
-				window.location = 'index.php';
-				}
-				}
-				countdown();
+					function countdown() {
+						setTimeout(countdown, 1000) ;
+						$('#success').html('Регистрацията е успешна. Пренасочване към входа след '  + delay  + ' секунди.');
+						delay--;
+						
+						if (delay < 0 ) {
+						window.location = 'index.php';
+						}
+					}
+					countdown();
 				});
 				</script>";	
 			break;
