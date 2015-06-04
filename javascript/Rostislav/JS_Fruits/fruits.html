@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<style>
+#fruitName {
+    text-align: left;
+    color: red;
+    text-transform: uppercase;
+    font-size:200%;
+}
+#fruitPic {
+    width: 150px;
+    height: 150px;
+}
+</style>
+
+<body onload="fruitSelect()">
+<script>
+function fruitSelect() {
+    var fruits = [];
+
+    fruits.orange = 'http://www.legalwebpro.com/images/user/801_900/842/orange1.jpg';
+    fruits.banana = 'https://www.organicfacts.net/wp-content/uploads/2013/05/Banana3.jpg';
+    fruits.mango = 'http://www.freshtexproduce.com/products/mango-lg2.jpg';
+    fruits.grapes = 'http://www.natureandmore.com/products/grapes/image_preview';
+    fruits.kiwi = 'http://assets.menshealth.co.uk/main/thumbs/32182/kiwi-fruit-sleepy-snacks-2706-de.jpg';
+
+    var x = document.getElementById("dropMenu").value;
+    document.getElementById("fruitName").innerHTML = x;
+    document.getElementById("fruitPic").src = fruits[x];
+}
+</script>
+
+<select id="dropMenu" onchange="fruitSelect()">
+    <option value="mango" selected="selected">mango</option>
+    <option value="orange">orange</option>
+    <option value="banana">banana</option>
+    <option value="grapes">grapes</option>
+    <option value="kiwi">kiwi</option>
+</select>
+<p id="fruitName"></p>
+<img id="fruitPic"></img>
+
+</body>
+</html>
