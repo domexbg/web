@@ -56,12 +56,12 @@ p {
 	<form id="new" class="form-control" method="post" action="new.php">
 		<div>
 			<label for="topic">Тема:</label><br>
-			<input id="topic" type="text" name="topic" maxlength="50" size="30%" required autofocus></input>
+			<input id="topic" type="text" name="topic" maxlength="50" required autofocus></input>
 			<p>(макс. 50 символа)</p>
 		</div>
 		<div>
 			<label for="content">Съдържание:</label><br>
-			<textarea id="content" name="content" maxlength="250" required size="30%"></textarea>
+			<textarea id="content" name="content" maxlength="250" required></textarea>
 			<p>(макс. 250 символа)</p>
 		</div>
 		<div>
