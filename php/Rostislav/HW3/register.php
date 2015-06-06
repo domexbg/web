@@ -112,7 +112,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 	$regpass2 = test_input($_POST["regpass2"]);
 	$connection = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 	$check = regcheck($connection, $reguser, $regpass, $regpass2);
-	
 	switch ($check) {
 		// If user is taken
 		case 1:
@@ -155,13 +154,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 					}
 					countdown();
 				});
-				</script>";	
+				</script>";
+			mysqli_close($connection);	
 			break;
 	}
-if ($validatemsg !== "") {
+	if ($validatemsg !== "") {
 	$errordiv = "<div class='centered'>";
-}
-mysqli_close($connection);
+	}
 }
 ?>
   
@@ -186,11 +185,11 @@ mysqli_close($connection);
 		<div class="col-md-4"></div>
 	
 <?php echo $errordiv; ?>
-	<span id="error" class="alert alert-danger" role="alert"><?php echo $validatemsg; ?></span>
+	<br><span id="error" class="alert alert-danger" role="alert"><?php echo $validatemsg; ?></span>
 <?php echo $closediv; ?>
 	
 <?php echo $successdiv; ?>
-	<span id="success" class="alert alert-success" role="alert"></span>
+	<br><span id="success" class="alert alert-success" role="alert"></span>
 <?php echo $closediv; ?>
 </div>
 
