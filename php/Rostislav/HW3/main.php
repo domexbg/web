@@ -90,13 +90,11 @@ div {
 		echo "</div>";
 		
 		if ($_SERVER["REQUEST_METHOD"] === "POST") {
-			foreach ($_POST as $key) {
-				$key = key($_POST);
-				if (strpos($key, "del") === 0) {
-					$key = str_replace("del", "", $key);
-					$connection = mysqli_connect($db_host, $db_username, $db_password, $db_name);
-					delmsg($connection, $key);
-				}
+			$key = key($_POST);
+			if (strpos($key, "del") === 0) {
+				$key = str_replace("del", "", $key);
+				$connection = mysqli_connect($db_host, $db_username, $db_password, $db_name);
+				delmsg($connection, $key);
 			}
 		}
 		?>
