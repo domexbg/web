@@ -81,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 	$connection = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 	$new_author = $_SESSION['username'];
 	$new_author = ucfirst($new_author);
-	$new_topic = test_msg($_POST['topic']);
+	$new_topic = test_input($_POST['topic']);
 	$new_content = test_msg($_POST['content']);
 	newmsg($connection, $new_author, $new_topic, $new_content);
 	header("location: main.php");
