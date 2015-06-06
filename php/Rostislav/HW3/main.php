@@ -66,6 +66,13 @@ div {
 }
 .darkred { color: darkred; }
 .darkblue { color: darkblue; }
+.del {
+	zoom: 65%;
+	width: 100%;
+}
+#deltd {
+	width: 10%;
+}
 </style>
 </head>
 <body>
@@ -76,12 +83,22 @@ div {
 		if (!$_SESSION) {
 			header ('Location: index.php');
 		}
-		?>
-		<?php
+		
 		echo "<div class='msg_container'>";
 		$connection = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 		getmsg($connection);
 		echo "</div>";
+		
+		if ($_SERVER["REQUEST_METHOD"] === "POST") {
+			foreach ($_POST as $key) {
+				$key = key($_POST);
+				if (strpos($key, "del") === 0) {
+					$key = str_replace("del", "", $key);
+					$connection = mysqli_connect($db_host, $db_username, $db_password, $db_name);
+					delmsg($connection, $key);
+				}
+			}
+		}
 		?>
 		<div id='div_new'>
 		<a href='new.php'><button id='new' class='btn btn-default navbar-btn btn-primary' type='button' name='new'>Ново съобщение</button></a>

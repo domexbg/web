@@ -8,12 +8,11 @@ function test_input($data) {
 	return $data;
 }
 
-function test_msg ($msg) {
-	$data = trim($msg);
-	$data = htmlspecialchars($msg);
-	return $msg;
+function test_msg($data) {
+	$data = nl2br($data);
+	return $data;
 }
-	
+
 function logincheck($connection, $username, $password) {
 	if (!$connection) {
 		die("Connection to DB failed: " . mysqli_connect_error());
@@ -68,23 +67,26 @@ function getmsg($connection) {
 		die("Connection to DB failed: " . mysqli_connect_error());
 	}
 	mysqli_query($connection, "SET NAMES utf8");
-	$sql = "SELECT COUNT(*) FROM messages";
+	$sql = "SELECT ID FROM messages";
 	$result = mysqli_query($connection, $sql);
-	$msgcount = mysqli_fetch_all($result);
 	
-	for ($i = 1; $i <= intval($msgcount[0][0]); $i++) {
-		$sql_date = mysqli_query($connection, "SELECT Datestamp FROM messages WHERE ID = $i");
+	while ($getid = mysqli_fetch_assoc($result)) {
+		if ($getid['ID']) {
+		$id = $getid['ID'];
+		$sql_date = mysqli_query($connection, "SELECT Datestamp FROM messages WHERE ID = $id");
 		$date = mysqli_fetch_all($sql_date);
-		$sql_author = mysqli_query($connection, "SELECT Author FROM messages WHERE ID = $i");
+		$sql_author = mysqli_query($connection, "SELECT Author FROM messages WHERE ID = $id");
 		$author = mysqli_fetch_all($sql_author);
-		$sql_topic = mysqli_query($connection, "SELECT Topic FROM messages WHERE ID = $i");
+		$sql_topic = mysqli_query($connection, "SELECT Topic FROM messages WHERE ID = $id");
 		$topic = mysqli_fetch_all($sql_topic);
-		$sql_content = mysqli_query($connection, "SELECT Content FROM messages WHERE ID = $i");
+		$sql_content = mysqli_query($connection, "SELECT Content FROM messages WHERE ID = $id");
 		$content = mysqli_fetch_all($sql_content);
-		
-		echo "<div><table><tr><td><b><span class='darkblue'>" . $author[0][0] . "</span></b> - <span class='darkred'>" . $date[0][0] . "</span> - <b>" . $topic[0][0] . "</b></td></tr>";
-		echo "<tr><td>" . $content[0][0] . "</td></tr></table></div>";
-		
+		echo "<div><table><tr><td><b><span class='darkblue'>" . $author[0][0] . "</span></b> - <span class='darkred'>" . $date[0][0] . "</span> - <b>" . $topic[0][0] . "</b></td>";
+		if ($_SESSION['username'] === "admin") {
+			echo "<td id='deltd'><form method='post' action='main.php'><input class='btn btn-danger del' name='del$id' type='submit' value='Изтрий'></form></td>";
+		}
+		echo "</tr><tr><td>" . $content[0][0] . "</td></tr></table></div>";
+		}
 	}
 	mysqli_close($connection);
 }
@@ -99,4 +101,10 @@ function newmsg($connection, $author, $topic, $content) {
 	mysqli_close($connection);
 }
 
+function delmsg($connection, $key) {
+	$sql = "DELETE FROM messages WHERE ID = $key;";
+	mysqli_query($connection, $sql);
+	mysqli_close($connection);
+	header("Location: main.php");
+}
 ?>
