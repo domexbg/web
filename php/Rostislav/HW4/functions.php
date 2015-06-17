@@ -32,12 +32,10 @@ function getauthors($connection) {
 		die("Connection to DB failed: " . mysqli_connect_error());
 	}
 	mysqli_query($connection, "SET NAMES utf8");
-	$sql = "SELECT author_name FROM authors;";
+	$sql = "SELECT * FROM authors;";
 	$result = mysqli_query($connection, $sql);
-	while ($authors = mysqli_fetch_row($result)) {
-		foreach ($authors as $author) {
-			echo "<tr><td>" . $author . "</td></tr>";
-		}
+	while ($authors = mysqli_fetch_assoc($result)) {
+		echo "<tr><td><a href='booksfromauthor.php?id=" . $authors['author_id'] . "'>" . $authors['author_name'] . "</a></td></tr>";
 	}
 }
 
@@ -67,6 +65,25 @@ function get_all_from_author($connection, $auth_id) {
 				echo implode(', ', $authors) . "</td></tr>";
 			}
 		}
+	}
+}
+function test_input($data) {
+	$data = trim($data);
+	$data = stripslashes($data);
+	$data = htmlspecialchars($data);
+	return $data;
+}
+function addauthor($connection, $newauthor) {
+	mysqli_query($connection, "SET NAMES utf8");
+	$sql = "SELECT * FROM authors WHERE author_name = '$newauthor';";
+	$result = mysqli_query($connection, $sql);
+	if (mysqli_num_rows($result) > 0) {
+		return false;
+	}
+	else {
+		$sql = "INSERT INTO authors (author_name) VALUES ('$newauthor');";
+		mysqli_query($connection, $sql);
+		return true;
 	}
 }
 ?>

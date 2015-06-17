@@ -26,7 +26,7 @@ body {
 table tr,td,th {
 	border: 1px solid black;
 	padding: 5px;
-	zoom: 150%;
+	zoom: 125%;
 }
 table {
 	border: 1px solid black;

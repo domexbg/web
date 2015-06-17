@@ -20,14 +20,13 @@ body {
 	margin-top: 15%;
 	width: 50%;
 	background-color: lightgrey;
-	opacity: 0.9;
 	padding: 5px;
 	border-radius: 10px;
 }
 table tr,td,th {
 	border: 1px solid black;
 	padding: 5px;
-	zoom: 150%;
+	zoom: 125%;
 }
 table {
 	border: 1px solid black;
