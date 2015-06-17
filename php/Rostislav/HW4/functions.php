@@ -15,14 +15,16 @@ function get_all($connection) {
 		$books[$row['book_id']]['title'] = $row['book_title'];
         $books[$row['book_id']]['authors'][$row['author_id']] = $row['author_name'];
 	}
+	
 	foreach ($books as $book) {
 		echo "<tr><td>" . $book['title'] . "</td><td>";
 		$authors = array();
-		foreach ($book['authors'] as $author_id) {
-			$authors[] = strval($author_id);
+		foreach ($book['authors'] as $key => $name) {
+			$authors[] = "<a href='booksfromauthor.php?id=$key'>" . $name . "</a>";
 		}
 		echo implode(', ', $authors) . "</td></tr>";
 	}
+	
 }
 
 function getauthors($connection) {
@@ -59,8 +61,8 @@ function get_all_from_author($connection, $auth_id) {
 			if (array_key_exists($auth_id, $key)) {			
 				echo "<tr><td>" . $book['title'] . "</td><td>";
 				$authors = array();
-				foreach ($book['authors'] as $author_id) {
-					$authors[] = strval($author_id);
+				foreach ($book['authors'] as $key => $name) {
+					$authors[] = "<a href='booksfromauthor.php?id=$key'>" . $name . "</a>";
 				}
 				echo implode(', ', $authors) . "</td></tr>";
 			}
