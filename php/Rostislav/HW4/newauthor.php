@@ -74,42 +74,42 @@ table {
 	$errordiv = "<div class='hidden'>";
 	$error = "";
 	if ($_SERVER["REQUEST_METHOD"] === "POST") {
-	$connection = mysqli_connect($db_host, $db_username, $db_password, $db_name);
-	$newauthor = $_POST['newauthor'];
-	if (strlen(utf8_decode($newauthor)) < 3) {
-		$error = "<span class='alert alert-danger' role='alert' autofocus>Името на автора трябва да съдържа поне 3 символа.</span>";
-		$errordiv = "<div class='centered'>";
-	}
-	else {
-	$newauthor = test_input($_POST['newauthor']);
-	$check = addauthor($connection, $newauthor);
-	mysqli_close($connection);
-		if ($check) {
+		$connection = mysqli_connect($db_host, $db_username, $db_password, $db_name);
+		$newauthor = $_POST['newauthor'];
+		if (strlen(utf8_decode($newauthor)) < 3) {
+			$error = "<span class='alert alert-danger' role='alert' autofocus>Името на автора трябва да съдържа поне 3 символа.</span>";
 			$errordiv = "<div class='centered'>";
-			$error = "<span id='success' class='alert alert-success' role='alert' autofocus></span>";
-			echo "<script>
-			$(document).ready(function() {
-			var delay = 3;
-			
-			function countdown() {
-				setTimeout(countdown, 1000) ;
-				$('#success').html('Авторът е въведен успешно.');
-				delay--;
-				
-				if (delay < 0 ) {
-				$('#success').addClass('hidden');	
-				}
-			}
-			countdown();
-			});
-			</script>";
 		}
 		else {
-			$errordiv = "<div class='centered'>";
-			$error = "<span class='alert alert-danger' role='alert' autofocus>Авторът вече съществува.</span>";
+		$newauthor = test_input($_POST['newauthor']);
+		$check = addauthor($connection, $newauthor);
+		mysqli_close($connection);
+			if ($check) {
+				$errordiv = "<div class='centered'>";
+				$error = "<span id='success' class='alert alert-success' role='alert' autofocus></span>";
+				echo "<script>
+				$(document).ready(function() {
+				var delay = 3;
+				
+				function countdown() {
+					setTimeout(countdown, 1000) ;
+					$('#success').html('Авторът е въведен успешно.');
+					delay--;
+					
+					if (delay < 0 ) {
+					$('#success').addClass('hidden');	
+					}
+				}
+				countdown();
+				});
+				</script>";
+			}
+			else {
+				$errordiv = "<div class='centered'>";
+				$error = "<span class='alert alert-danger' role='alert' autofocus>Авторът вече съществува.</span>";
+			}
 		}
 	}
-}
 	echo $errordiv;
 	echo $error;
 	echo "</div>";
