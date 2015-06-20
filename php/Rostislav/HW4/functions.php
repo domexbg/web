@@ -6,9 +6,7 @@ function get_all($connection) {
 		die("Connection to DB failed: " . mysqli_connect_error());
 	}
 	mysqli_query($connection, "SET NAMES utf8");
-	$sql = "SELECT * FROM books
-		JOIN books_authors ON books.book_id = books_authors.book_id
-		JOIN authors ON authors.author_id = books_authors.author_id";
+	$sql = "SELECT * FROM books JOIN books_authors ON books.book_id = books_authors.book_id	JOIN authors ON authors.author_id = books_authors.author_id";
 	$result = mysqli_query($connection, $sql);
 	$books = array();
 	while ($row = mysqli_fetch_assoc($result)) {
@@ -37,6 +35,18 @@ function getauthors($connection) {
 	}
 }
 
+function check_get_id($connection, $getid) {
+	if (!$connection) {
+		die("Connection to DB failed: " . mysqli_connect_error());
+	}
+	$sql = "SELECT * FROM authors WHERE author_id = '$getid';";
+	$result = mysqli_query($connection, $sql);
+	if (mysqli_num_rows($result) === 0) {
+		return 1;
+	}
+	return 0;
+}
+
 function get_all_from_author($connection, $auth_id) {
 	if (!$connection) {
 		die("Connection to DB failed: " . mysqli_connect_error());
@@ -54,7 +64,7 @@ function get_all_from_author($connection, $auth_id) {
 	foreach ($books as $book) {
 		$author_ids = array($book['authors']);
 		foreach ($author_ids as $key) {
-			if (array_key_exists($auth_id, $key)) {			
+			if (array_key_exists($auth_id, $key)) {
 				echo "<tr><td>" . $book['title'] . "</td><td>";
 				$authors = array();
 				foreach ($book['authors'] as $key => $name) {

@@ -79,26 +79,26 @@ p {
 			}
 			$check = addbook($connection, $newbook, $newauthors);
 			mysqli_close($connection);
-				if ($check) {
-					$errordiv = "<div class='centered'>";
-					$error = "<span id='success' class='alert alert-success' role='alert' autofocus></span>";
-					echo "<script>
-					$(document).ready(function() {
-					var delay = 3;
+			if ($check) {
+				$errordiv = "<div class='centered'>";
+				$error = "<span id='success' class='alert alert-success' role='alert' autofocus></span>";
+				echo "<script>
+				$(document).ready(function() {
+				var delay = 3;
+				
+				function countdown() {
+					setTimeout(countdown, 1000) ;
+					$('#success').html('Книгата е въведена успешно.');
+					delay--;
 					
-					function countdown() {
-						setTimeout(countdown, 1000) ;
-						$('#success').html('Книгата е въведена успешно.');
-						delay--;
-						
-						if (delay < 0 ) {
-						$('#success').addClass('hidden');	
-						}
+					if (delay < 0 ) {
+					$('#success').addClass('hidden');	
 					}
-					countdown();
-					});
-					</script>";
 				}
+				countdown();
+				});
+				</script>";
+			}
 			else {
 				$errordiv = "<div class='centered'>";
 				$error = "<span class='alert alert-danger' role='alert' autofocus>Книгата вече съществува.</span>";

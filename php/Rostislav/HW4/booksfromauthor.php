@@ -48,6 +48,18 @@ table {
 	float: left;
 	width: 130px;
 }
+.hidden {
+	display: none;
+}
+.centered {
+	position: absolute;
+	font-weight: bold;
+	text-align: center;
+	margin-left: 30%;
+    margin-right: 30%;
+	margin-top: 2%;
+	width: 40%;
+}
 </style>
 </head>
 <body>
@@ -59,14 +71,25 @@ table {
 			<th>Книга</th>
 			<th>Автор</th>
 <?php
-$connection = mysqli_connect($db_host, $db_username, $db_password, $db_name);
-$auth_id = $_GET['id'];
-$auth_id = intval($auth_id);
-get_all_from_author($connection, $auth_id);
-mysqli_close($connection);
+	$connection = mysqli_connect($db_host, $db_username, $db_password, $db_name);
+	$auth_id = $_GET['id'];
+	$auth_id = intval($auth_id);
+	$error = "";
+	$check = check_get_id($connection, $auth_id);
+	if ($check) {
+		mysqli_close($connection);
+		$error = "<div class='centered'><span class='alert alert-danger' role='alert' autofocus>Няма такъв автор.</span></div>";
+	}
+	else {
+		get_all_from_author($connection, $auth_id);
+		mysqli_close($connection);
+	}
 ?>
 		</table>
 	</div>
+<?php
+	echo $error;
+?>
 </div>
 </body>
 </html>
