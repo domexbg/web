@@ -10,6 +10,10 @@ int max2(int a, int b)
 {
 	/* Write your code here*/
 
+if ( a > b)
+return a;
+else return b;
+
 }
 
 int main() 
