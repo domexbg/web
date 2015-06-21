@@ -10,6 +10,12 @@ int max3(int a, int b, int c)
 {
 	/* Write your code here*/
 
+if (a > b)
+b = a;
+if (b > c)
+c = b;
+return c;	
+
 }
 
 int main(int argc, char** argv) 
