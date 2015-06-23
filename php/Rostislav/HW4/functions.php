@@ -23,12 +23,20 @@ function get_all($connection) {
 	}
 }
 
-function getauthors($connection) {
+function getauthors($connection, $sort) {
 	if (!$connection) {
 		die("Connection to DB failed: " . mysqli_connect_error());
 	}
 	mysqli_query($connection, "SET NAMES utf8");
-	$sql = "SELECT * FROM authors;";
+	if ($sort === "Възх. сортиране") {
+		$sql = "SELECT * FROM authors ORDER BY author_name;";
+	}
+	else if ($sort === "Низх. сортиране") {
+		$sql = "SELECT * FROM authors ORDER BY author_name DESC;";
+	}
+	else {
+		$sql = "SELECT * FROM authors;";
+	}
 	$result = mysqli_query($connection, $sql);
 	while ($authors = mysqli_fetch_assoc($result)) {
 		echo "<tr><td><a href='booksfromauthor.php?id=" . $authors['author_id'] . "'>" . $authors['author_name'] . "</a></td></tr>";

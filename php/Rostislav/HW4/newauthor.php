@@ -67,6 +67,12 @@ table {
 	margin-top: 10%;
 	width: 40%;
 }
+#sort_btn {
+	font-weight: bold; 
+	text-align: center;
+	float: left;
+	width: auto;
+}
 </style>
 </head>
 <body>
@@ -113,6 +119,24 @@ table {
 	echo $errordiv;
 	echo $error;
 	echo "</div>";
+	if (isset($_GET['sort'])) {
+		if ($_GET['sort'] === "Възх. сортиране") {
+			$sort = test_input($_GET['sort']);
+			$btn_name = "Низх. сортиране";
+		}
+		else if ($_GET['sort'] === "Низх. сортиране") {
+			$sort = test_input($_GET['sort']);
+			$btn_name = "Възх. сортиране";
+		}
+		else {
+			$sort = "";
+			$btn_name = "Възх. сортиране";
+		}
+	}
+	else {
+		$sort = "";
+		$btn_name = "Възх. сортиране";
+	}
 ?>
 <div class="container">
 	<div>
@@ -129,12 +153,17 @@ table {
 			</div>
 		</form>
 	</div>
+	<div>
+		<form id='sort' method='get' action='newauthor.php'>
+			<input form='sort' type='submit' id='sort_btn' name='sort' class="btn btn-primary" value="<?php echo $btn_name; ?>"></input>
+		</form>
+	</div>
 	<div class="form_div">
 		<table>
 		<th>Автори</th>
 			<?php
 				$connection = mysqli_connect($db_host, $db_username, $db_password, $db_name);
-				getauthors($connection);
+				getauthors($connection, $sort);
 				mysqli_close($connection);
 			?>
 		</table>
