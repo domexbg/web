@@ -55,6 +55,14 @@ table {
 	float: left;
 	width: 100px;
 }
+#form_search {
+	font-weight: bold; 
+	text-align: center;
+	float: right;
+}
+#btn_search {
+	font-weight: bold;
+}	
 </style>
 </head>
 <body>
@@ -63,15 +71,26 @@ table {
 		<div class="buttons">
 			<a href="newbook.php"><button id="newbook" class="btn btn-primary" type="button">Нова книга</button></a>
 			<a href="newauthor.php"><button id="newauthor" class="btn btn-primary" type="button">Нов автор</button></a>
+			<form id='form_search' method='post' action='index.php'>
+			<label for="search">Книга:</label>
+			<input type='text' name='search' maxlength='200'></input>
+			<input id='btn_search' type='submit' class="btn btn-primary" value='Търсене'></input>
+			</form>
 		</div>
 		<form method="get" action="booksfromauthor.php">
 		<table>
 			<th>Книга</th>
 			<th>Автор</th>
 <?php
-$connection = mysqli_connect($db_host, $db_username, $db_password, $db_name);
-get_all($connection);
-mysqli_close($connection);
+	if ($_SERVER["REQUEST_METHOD"] === "POST") {
+		$search = test_input($_POST['search']);
+	}
+	else {
+		$search = "";
+	}
+	$connection = mysqli_connect($db_host, $db_username, $db_password, $db_name);
+	get_books($connection, $search);
+	mysqli_close($connection);
 ?>
 		</table>
 		</form>
