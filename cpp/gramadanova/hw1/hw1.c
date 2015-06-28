@@ -17,10 +17,8 @@ int max2(int a, int b)
         (a>b)
         return a;
 
-
-
     else
-        a<b;
+
         return b;
     }
 }
