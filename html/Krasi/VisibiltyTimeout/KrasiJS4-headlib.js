@@ -11,4 +11,4 @@ function ChangeColor() { document.getElementById("demo").style.color = "blue"};
 function ChangeFontSize300() { document.getElementById("demo").style.fontSize = "300%"};
 function ChangeFontSize100() { document.getElementById("demo").style.fontSize = "100%"};
 function HideText() { document.getElementById("demo").style.visibility = "hidden" };
-function ShowText() { sleep(5000); document.getElementById("demo").style.visibility = "visible"};
+function ShowText() { document.getElementById("demo").style.visibility = "visible"};

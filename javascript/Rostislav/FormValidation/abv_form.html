@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>ABV Form Validation</title>
+  <script src="javascript.js"></script>
+</head>
+
+<body>
+
+<form role="form">
+    <div id="userdiv" class="form-group">
+        <label for="user">АБВ Потребител:</label>
+        <input type="text" class="form-control" id="user"></input>@abv.bg</div>
+    <br>
+    <div class="form-group">
+        <button type="button" onclick=validate() class="btn btn-default">Провери!</button>
+        <p id="validateMessage"></p>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="pwd">Парола:</label>
+        <input type="password" class="form-control" id="pwd"></input>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="pwd">Повтори парола:</label>
+        <input type="password" class="form-control" id="pwd2"></input>
+    </div>
+    <p id="pwdMessage"></p>
+    <br>
+    <div class="form-group">
+        <input type="checkbox" name="phone" value="cellphone">Възстановяване на забравена парола през мобилен телефон.</input>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="secret_q">Таен въпрос:</label>
+        <input type="text" class="form-control" id="secret_q"></input>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="secret_answ">Таен отговор:</label>
+        <input type="text" class="form-control" id="secret_answ"></input>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="alt_mail">Алтернативен имейл адрес:</label>
+        <input type="text" class="form-control" id="alt_mail"></input>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="firstname">Име:</label>
+        <input type="text" class="form-control" id="firstname"></input>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="lastname">Фамилия:</label>
+        <input type="text" class="form-control" id="lastname"></input>
+    </div>
+    <br>Пол:
+    <input type="radio" name="sex" value="male">Мъж</input>
+    <input type="radio" name="sex" value="male">Жена</input>
+    <br>
+    <br>
+    <div class="form-group">
+        <input type="submit" value="Създай профил!">
+    </div>
+</form>
+
+</body>
+
+</html>
