@@ -38,6 +38,7 @@ table tr,td,th {
 	border: 1px solid black;
 	padding: 5px;
 	zoom: 125%;
+	text-align: center;
 }
 table {
 	border: 1px solid black;
@@ -121,6 +122,7 @@ table {
 		<table>
 			<th>Книга</th>
 			<th>Автор</th>
+			<th>Коментари</th>
 <?php
 	$connection = mysqli_connect($db_host, $db_username, $db_password, $db_name);
 	get_books($connection, $search);

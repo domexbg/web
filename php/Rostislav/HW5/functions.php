@@ -6,10 +6,14 @@ function get_books($connection, $search) {
 		die("Connection to DB failed: " . mysqli_connect_error());
 	}
 	if ($search === "") {
-		$sql = "SELECT * FROM books JOIN books_authors ON books.book_id = books_authors.book_id	JOIN authors ON authors.author_id = books_authors.author_id;";
+		$sql = "SELECT *,(SELECT COUNT(*) FROM comments WHERE comments.book_id = books.book_id) AS 'comments' FROM books
+			JOIN books_authors ON books.book_id = books_authors.book_id	
+			JOIN authors ON authors.author_id = books_authors.author_id;";
 	}
 	else {
-		$sql = "SELECT * FROM books JOIN books_authors ON books.book_id = books_authors.book_id	JOIN authors ON authors.author_id = books_authors.author_id WHERE book_title LIKE '%$search%';";
+		$sql ="SELECT *,(SELECT COUNT(*) FROM comments WHERE comments.book_id = books.book_id) AS 'comments' FROM books
+			JOIN books_authors ON books.book_id = books_authors.book_id	
+			JOIN authors ON authors.author_id = books_authors.author_id WHERE book_title LIKE '%$search%';";
 	}
 		mysqli_query($connection, "SET NAMES utf8");
 		$result = mysqli_query($connection, $sql);
@@ -17,19 +21,20 @@ function get_books($connection, $search) {
 		while ($row = mysqli_fetch_assoc($result)) {
 			$books[$row['book_id']]['title'] = $row['book_title'];
 			$books[$row['book_id']]['authors'][$row['author_id']] = $row['author_name'];
+			$books[$row['book_id']]['comments'] = $row['comments'];
 		}
 		if (empty($books)) {
-			echo "<tr><td colspan='2'>Няма намерени резултати.</td></tr>";
+			echo "<tr><td colspan='3'>Няма намерени резултати.</td></tr>";
 		}
 		$_SESSION['books'] = array();
 		foreach ($books as $key => $book) {
 			$_SESSION['books'][$key] = $book;
 			echo "<tr><td><a href='book.php?id=" . $key . "'>" . $book['title'] . "</a></td><td>";
 			$authors = array();
-			foreach ($book['authors'] as $key => $name) {
-				$authors[] = "<a href='booksfromauthor.php?id=$key'>" . $name . "</a>";
+			foreach ($book['authors'] as $author_id => $name) {
+				$authors[] = "<a href='booksfromauthor.php?id=$author_id'>" . $name . "</a>";
 			}
-			echo implode(', ', $authors) . "</td></tr>";
+			echo implode(', ', $authors) . "</td><td><a href='book.php?id=" . $key . "'>" . $book['comments'] . "</a></td></tr>";
 		}
 	
 }
@@ -85,7 +90,7 @@ function get_all_from_author($connection, $auth_id) {
 	mysqli_query($connection, "SET NAMES utf8");
 	$sql = "SELECT * FROM books
 		JOIN books_authors ON books.book_id = books_authors.book_id
-		JOIN authors ON authors.author_id = books_authors.author_id";
+		JOIN authors ON authors.author_id = books_authors.author_id;";
 	$result = mysqli_query($connection, $sql);
 	$books = array();
 	while ($row = mysqli_fetch_assoc($result)) {
