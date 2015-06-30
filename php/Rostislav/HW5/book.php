@@ -56,9 +56,6 @@ div {
 	margin-right: auto;
 	width: 50%;
 }
-.darkblue {
-	color: darkblue;
-}
 .darkred {
 	color: darkred;
 }
@@ -129,6 +126,7 @@ h1 {
 	}
 	else {
 		$book_id = intval(test_input($_GET['id']));
+		$user = "";
 		$_SESSION['url_id'] = $book_id;
 		$title = $_SESSION['books'][$book_id]['title'];
 		echo "<div><h1>$title</h1></div>";
@@ -138,7 +136,10 @@ h1 {
 		}
 		echo "<p>Автори: " . implode(', ', $authors) . "</p>";
 		$connection = mysqli_connect($db_host, $db_username, $db_password, $db_name);
-		get_comments($connection, $book_id);
+		get_comments($connection, $book_id, $user);
+		if ($_SESSION and isset($_SESSION['username'])) {
+			echo "<div id='div_new'><a href='new.php'><button id='new' class='btn btn-default navbar-btn btn-primary' type='button' name='new'>Добави коментар</button></a></div>";
+		}
 		echo "</div>";
 	}
 	if ($_SERVER["REQUEST_METHOD"] === "POST") {

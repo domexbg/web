@@ -66,6 +66,18 @@ function check_get_id($connection, $getid) {
 	return 0;
 }
 
+function check_get_user($connection, $user) {
+	if (!$connection) {
+		die("Connection to DB failed: " . mysqli_connect_error());
+	}
+	$sql = "SELECT Author FROM comments WHERE Author = '$user';";
+	$result = mysqli_query($connection, $sql);
+	if (mysqli_num_rows($result) === 0) {
+		return 1;
+	}
+	return 0;
+}
+
 function get_all_from_author($connection, $auth_id) {
 	if (!$connection) {
 		die("Connection to DB failed: " . mysqli_connect_error());
@@ -203,34 +215,49 @@ function regcheck($connection, $reguser, $regpass, $regpass2) {
 	return 6;
 }
 
-function get_comments($connection, $book_id) {
+function get_comments($connection, $book_id, $user) {
 	if (!$connection) {
 		die("Connection to DB failed: " . mysqli_connect_error());
 	}
 	mysqli_query($connection, "SET NAMES utf8;");
-	$sql = "SELECT ID FROM comments WHERE book_id = $book_id;";
+	if ($user === "") {
+		$sql = "SELECT ID FROM comments WHERE book_id = $book_id;";
+	}
+	else {
+		$sql = "SELECT ID FROM comments WHERE Author = '$user';";
+	}
 	$result = mysqli_query($connection, $sql);
-	if (mysqli_num_rows($result) === 0) {
+	if (mysqli_num_rows($result) === 0 AND $user === "") {
 		echo "<div><table><tr><td>Няма коментари към тази книга.</td></tr></table></div>";
 	}
-	while ($getid = mysqli_fetch_assoc($result)) {
-		if ($getid['ID']) {
-			$id = $getid['ID'];
-			$sql_date = mysqli_query($connection, "SELECT Datestamp FROM comments WHERE ID = $id");
+	while ($get = mysqli_fetch_assoc($result)) {
+		$id = $get['ID'];
+		if ($user === "") {
+			$sql_date = mysqli_query($connection, "SELECT Datestamp FROM comments WHERE ID = $id;");
 			$date = mysqli_fetch_all($sql_date);
-			$sql_author = mysqli_query($connection, "SELECT Author FROM comments WHERE ID = $id");
+			$sql_author = mysqli_query($connection, "SELECT Author FROM comments WHERE ID = $id;");
 			$author = mysqli_fetch_all($sql_author);
-			$sql_content = mysqli_query($connection, "SELECT Content FROM comments WHERE ID = $id");
+			$sql_content = mysqli_query($connection, "SELECT Content FROM comments WHERE ID = $id;");
 			$content = mysqli_fetch_all($sql_content);
-			echo "<div><table><tr><td><b><span class='darkblue'>" . $author[0][0] . "</span></b> - <span class='darkred'>" . $date[0][0] . "</span></td>";
-			if (isset($_SESSION['username']) and $_SESSION['username'] === "admin") {
-				echo "<td id='deltd'><form method='post' action='book.php'><input class='btn btn-danger del' name='del$id' type='submit' value='Изтрий'></form></td>";
-			}
-			echo "</tr><tr><td>" . $content[0][0] . "</td></tr></table></div>";
+			echo "<div><table><tr><td><b><span><a href='profile.php?user=" . $author[0][0] . "'>" . $author[0][0] . "</a></span></b> - <span class='darkred'>" . $date[0][0] . "</span></td>";
+			
 		}
-	}
-	if ($_SESSION and isset($_SESSION['username'])) {
-		echo "<div id='div_new'><a href='new.php'><button id='new' class='btn btn-default navbar-btn btn-primary' type='button' name='new'>Добави коментар</button></a></div>";
+		else {
+			$sql_date = mysqli_query($connection, "SELECT Datestamp FROM comments WHERE Author = '$user' AND ID = $id;");
+			$date = mysqli_fetch_all($sql_date);
+			$sql_book = mysqli_query($connection, "SELECT books.book_id,book_title FROM books
+				JOIN comments
+				ON comments.book_id = books.book_id
+				WHERE comments.author = '$user' AND comments.ID = $id;");
+			$book = mysqli_fetch_assoc($sql_book);
+			$sql_content = mysqli_query($connection, "SELECT Content FROM comments WHERE Author = '$user' AND ID = $id;");
+			$content = mysqli_fetch_all($sql_content);
+			echo "<div><table><tr><td><b><span><a href='profile.php?user=$user'>$user</a></span></b> - <span class='darkred'>" . $date[0][0] . "</span> - <b>За книга: </b><a href='book.php?id=" . $book['book_id'] . "'><b>" . $book['book_title'] . "</b></a></td>";			
+		}
+		if (isset($_SESSION['username']) and $_SESSION['username'] === "admin") {
+			echo "<td id='deltd'><form method='post' action='book.php'><input class='btn btn-danger del' name='del$id' type='submit' value='Изтрий'></form></td>";
+		}
+		echo "</tr><tr><td>" . $content[0][0] . "</td></tr></table></div>";
 	}
 	mysqli_close($connection);
 }
