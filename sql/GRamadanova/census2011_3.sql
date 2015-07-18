@@ -1,0 +1,6 @@
+SELECT MUNICIPALITY, COUNT(PLACE) AS MIN_PEOPLE
+FROM census2011
+WHERE TOTAL=0
+GROUP BY MUNICIPALITY
+ORDER BY MIN_PEOPLE DESC;
+/*3. Koi sa obshtinite s nai-mnogo naseleni mesta s 0 jiteli?*/
