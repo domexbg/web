@@ -1,0 +1,24 @@
+.holiday {
+    color:red;
+    font-style:italic;
+}
+.textsizebig {
+    font-size:45px;
+font-weight:bold;
+text-align:center;
+}
+table {
+    border-collapse: collapse;
+     font-family: "Georgia", Times, serif;
+}
+table, th, td {
+    border:1px solid black;
+}
+td {
+    height:90px;
+width:90px;
+
+  }
+th {
+    height:40px;
+}

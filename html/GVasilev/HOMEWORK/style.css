@@ -1,0 +1,23 @@
+body {
+ // padding:30px;
+}
+header {
+  background: lightblue;
+}
+section {
+  background: lightgreen;
+  width: 73%;
+  float: left;
+}
+article {
+  background: white;
+  margin: 0 0 1rem 0;
+}
+aside {
+  background: pink;
+  width: 23%;
+  float: right;
+}
+header, article, section, .module {
+  padding: 2%;
+}
