@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+.flag-size
+{
+  width:100px;
+  height:100px;
+  display: block;
+  
+}
+
+.flag-color-white
+{
+  background-color:pink;
+  
+}
+
+.flag-color-green
+{
+  background-color:blue;
+  
+}
+
+.flag-color-red
+{
+  background-color:orange;
+ 
+}
+</style>
+</head>
+<body>
+  <div class="flag-size flag-color-white">pink</div>
+ <p><div class="flag-size flag-color-green">blue</div></p>
+<div class="flag-size flag-color-red">orange</div>
+</body>
+
+</html>
