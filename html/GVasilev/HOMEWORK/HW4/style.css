@@ -1,0 +1,68 @@
+html,head{background-color:#E3F6CE;
+font-family:"Verdana",sans-serif;
+}
+.leftpanel {
+    float:left;
+    text-align:left;
+    width:24%;
+    height:100%;
+    background-color:#E3F6CE;
+}
+.midpanel {
+    float:left;
+    width:50%;
+    height:100%;
+    background-color:#E3F6CE;
+}
+.rightpanel {
+    float:left;
+    text-align:right;
+    width:24%;
+    height:100%;
+    background-color:#E3F6CE;
+}
+div#logo {
+    margin:10px
+}
+div#address {
+    margin:10px;
+    font-weight:bold;
+}
+div#delivery {
+    margin:10px;
+    font-weight:bold;
+}
+div#workinghours {
+    margin:10px
+}
+div#heading {
+    margin:100px;
+	font-size:2em;
+    font-weight:bold;
+	text-align:center;
+}
+div#menutable {
+    margin:10px
+}
+div#clock {
+    margin:10px
+}
+div#date {
+    margin:10px;
+    font-weight:bold;
+}
+th {
+    width:90%;
+    text-align:left;
+    font-weight:bold;
+}
+td {
+    width:90%;
+    font-size:small;
+	
+}
+.leftorientation{text-align:left;}
+.rightorientation{text-align:right;}
+.centerorientation{text-align:center;}
+.italicfont{font-style:italic;}
+.boldfont{font-weight:bold;}
