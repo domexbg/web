@@ -3,20 +3,15 @@
 <head>
   <meta charset="utf-8">
   <title>JS Bin</title>
-<style id="jsbin-css">
-.error{
-  border: 2px solid red;
-}
-</style>
 </head>
 <body>
 <form name="myForm">
     Enter your names:<br>
-    <input id="MYname" type="text" name="Enter name" pattern=".{3,}" title="tree or more characters">
+    <input id="MYname" type="text" name="Enter name" value="Gergana" >
     <br>Enter e-mail:<br>
-    <input id="mail" type="email" name="e-mail">
+    <input id="mail" type="email" name="e-mail" value="gery@abv.bg">
     <br>Username: </br>
-    <input id="user" type="text" name="user">
+    <input id="username" type="text" name="user" value="G">
     <br>Enter password:</br>
     <input  id="PSW1" type="password" name ="Psw1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title= "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
     <br>Repeat password:</br>
@@ -29,97 +24,5 @@
 </br>
 </body>
 </html>
-<script id="jsbin-javascript">
-//funkcia koiato proveriava validnostta na id="MYname"
-//funkcia koiato vrashta true pri validni danni i vrrashta false pri nevalidni danni
-function validateName(){
-  var MName =document.getElementById("MYname").value;
-  document.getElementById("MYname").setAttribute("class", "");
-  
-  if (MName.length<3)
-  {
-    document.getElementById("MYname").setAttribute("class", "error");
-  
-    alert("Must contain min 3 letters");
-    return false;
-  }
-  
-  return true;
-}
-
-function validateMail(){
-  var MMail = document.getElementById("mail").value;
-  document.getElementById("mail").setAttribute("class","");
-  var i;
-  var br=0;
-  var dot=false;
-  var under=false;
-  var dash=false;
-for(i=0; i<MMail.length; i++)
-  {
-    if (MMail[i]==='@')
-    {
-      br+=1;    
-    }    
-    
-    if (MMail[i]==='.')
-    {
-       dot=true; 
-    }    
-    if (MMail[i]==='_')
-    {
-       under=true; 
-    } 
-    if (MMail[i]==='-')
-    {
-       dash=true; 
-    }    
-  }  
-  if (br===1 && dot===true && under===true && dash===true)
-    {
-      return true;
-    }  
-  
-  
-  document.getElementById("mail").setAttribute("class", "error");
-  alert("Must contain numbers, letters, @, dots and dash");
-  return false;
-}
-
-function myFunction() {
-  var valName=validateName();
-  alert(valName);
-  if (valName===false)
-    {
-      return;
-    }
-  
-  var valMail=validateMail();
-  alert(valMail);
-  if (valMail===false)
-    {
-      return;
-    }
-    
-    var MUser = document.getElementById("user").value;
-    var MPsw1 = document.getElementById("PSW1").value;
-    var MPsw2 = document.getElementById("PSW2").value;
-
-  //alert(MName);
-  
-  if(MPsw1.value != MPsw2.PSW2.value)
-  {
-    alert ("The Password and verified password does not match!");    
-  }
-
-} 
-</script>
-
-
-<script id="jsbin-source-css" type="text/css">.error{
-  border: 2px solid red;
-}</script>
-
-
 </body>
 </html>
