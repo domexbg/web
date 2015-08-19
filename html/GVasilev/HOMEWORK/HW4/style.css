@@ -37,7 +37,7 @@ div#workinghours {
 }
 div#heading {
     margin:100px;
-	font-size:2em;
+	font-size:1.5em;
     font-weight:bold;
 	text-align:center;
 }
@@ -53,6 +53,7 @@ div#date {
 }
 th {
     width:90%;
+	font-size:small;
     text-align:left;
     font-weight:bold;
 }
