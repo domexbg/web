@@ -1,0 +1,78 @@
+
+body {
+background-color: #ECF6CE;
+font-family: Philosopher;
+
+
+}
+h1{
+padding: 10% 30% 10% 35%;
+
+}
+table {
+width: 60%;
+margin-left: 20%;
+border-collapse: collapse;
+font-size:18px;
+}
+td {
+border-top: 2px solid white;
+border-bottom: 2px solid white;
+border-collapse: collapse;
+}
+
+#konteiner {
+
+width: 100%;
+height: 100%;
+float: left;
+}
+
+#left-div {
+
+margin-left: 10%;
+width: 15%;
+float: left;
+}
+
+#table-menu {
+
+width: 50%;
+height: 100%;
+text-align: left;
+float: left;	
+}
+
+#clock {
+
+width: 15%;
+float: left;
+display: block;
+}
+
+.vidove{
+font-size:30px;		
+}
+
+#chasovnik{
+margin-top:20%;
+margin-left:30%;
+}
+#day{
+margin-top:2%;
+margin-left:4.5%;
+position: absolute;
+border: 2px solid black;
+}
+.border2px{
+border: 2px solid;
+}
+.border-ladge{
+border: 5px solid;
+}
+.border-red{
+border-color: red;
+}
+.border-black{
+border-color: black;
+}
