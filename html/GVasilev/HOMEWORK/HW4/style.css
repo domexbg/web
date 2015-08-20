@@ -10,46 +10,60 @@ font-family:"Verdana",sans-serif;
 }
 .midpanel {
     float:left;
-    width:50%;
+    width:45%;
     height:100%;
     background-color:#E3F6CE;
 }
 .rightpanel {
     float:left;
     text-align:right;
-    width:24%;
+    width:15%;
     height:100%;
     background-color:#E3F6CE;
 }
-div#logo {
+#logo {
     margin:10px
 }
-div#address {
+#address {
     margin:10px;
     font-weight:bold;
+	font-size:12px;
 }
-div#delivery {
-    margin:10px;
+#delivery {
+	 margin:10px;
+	margin-top:20px;
+	font-size:12px;
+}
+#workinghours {
+    	 margin:10px;
+	margin-top:20px;
     font-weight:bold;
+	font-size:12px;
 }
-div#workinghours {
-    margin:10px
-}
-div#heading {
+#heading {
     margin:100px;
 	font-size:1.5em;
     font-weight:bold;
 	text-align:center;
 }
-div#menutable {
+#menutable {
     margin:10px
 }
-div#clock {
-    margin:10px
-}
-div#date {
+#clock {
+	text-align:center;
     margin:10px;
+	margin-top:100px;
+	font-weight:bold;
+	font-size:1.2em;
+}
+#date {padding:15px;
+	text-align:center;
+    margin:10px;
+	margin-top:20px;
+	border:2px solid gray;
+	color:red;
     font-weight:bold;
+	font-size:12px;
 }
 th {
     width:90%;
@@ -60,6 +74,7 @@ th {
 td {
     width:90%;
     font-size:small;
+	padding:5px;
 	
 }
 .leftorientation{text-align:left;}
