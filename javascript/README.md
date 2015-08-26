@@ -2,15 +2,15 @@ JavaScript resources
 =====================
 
 ## Tasks
-1. Enlarge text - (video demo)[https://vid.me/hAPv]
+1. Enlarge text - [video demo](https://vid.me/hAPv)
 
 ## Online coding IDEs
 
-* http://js.do
-* https://jsbin.com
-* https://jsfiddle.net
+* JS Do - [link](http://js.do)
+* JS Bin - [link](https://jsbin.com)
+* JS Fiddle - [link](https://jsfiddle.net)
 
 ## Study marerials/tutorials
 
-* W3Schoos Jsvascript - http://www.w3schools.com/js/default.asp
-* Code Academy Javascript - https://www.codecademy.com/tracks/javascript
+* W3Schoos Jsvascript - [link](http://www.w3schools.com/js/default.asp)
+* Code Academy Javascript - [link](https://www.codecademy.com/tracks/javascript)
