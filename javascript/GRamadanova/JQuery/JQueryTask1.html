@@ -1,0 +1,45 @@
+<style id="jsbin-css">
+p1{
+  background-color: yellow;
+}
+</style>
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+
+<button id="B1"> Yellow</button>
+
+<button id="B2">Clear</button>
+
+<p id="element">Hello </p>
+<script id="jsbin-javascript">
+//$("p").css("background-color", "yellow");
+$(document).ready(function(){
+    $("#B1").click(function(){
+        $("#element").css("background-color", "yellow");
+    });
+    $("#B2").click(function(){
+        $("#element").css("background-color", "");
+    });
+});
+</script>
+<script id="jsbin-source-html" type="text/html"><script src="https://code.jquery.com/jquery-2.1.4.js"><\/script>
+<button id="B1"> Yellow</button>
+<button id="B2">Clear</button>
+<p id="element">Hello </p>
+</script>
+
+<script id="jsbin-source-css" type="text/css">p1{
+  background-color: yellow;
+}
+
+
+</script>
+
+<script id="jsbin-source-javascript" type="text/javascript">//$("p").css("background-color", "yellow");
+$(document).ready(function(){
+    $("#B1").click(function(){
+        $("#element").css("background-color", "yellow");
+    });
+    $("#B2").click(function(){
+        $("#element").css("background-color", "");
+    });
+});</script>
