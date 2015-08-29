@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+.blue {
+  background-color: lightblue;
+}
+.white {
+  background-color: white;
+}
+.stripe {
+  width: 450px;
+  height: 30px;
+}
+#kvad {
+    position: fixed;
+    width: 150px;
+    height: 150px;
+    
+    background: lightblue;
+    
+  
+} 
+#horiz-stripe{
+  position: absolute;
+  width: 150px;
+  height: 30px;
+  
+  background: white;
+ 
+ }  
+#vert-stripe {
+    position: absolute;
+    left: 65px;
+    
+    width: 30px;
+    height: 150px;
+    background: white;
+    
+}
+</style>
+</head>
+<body>
+   <div id="kvad"></div>
+   <div class="blue stripe">
+     <div id="vert-stripe"></div>
+   </div>
+   <div class="white stripe"></div>
+   <div class="blue stripe"> 
+     <div id="horiz-stripe"></div>
+     //<div id="flag"></div>
+   </div>
+   <div class="white stripe"></div>
+   <div class="blue stripe"></div>
+   <div class="white stripe"></div>
+   <div class="blue stripe"></div>
+   <div class="white stripe"></div>
+   <div class="blue stripe"></div>
+
+
+<script id="jsbin-source-css" type="text/css">.blue {
+  background-color: lightblue;
+}
+.white {
+  background-color: white;
+}
+.stripe {
+  width: 450px;
+  height: 30px;
+}
+#kvad {
+    position: fixed;
+    width: 150px;
+    height: 150px;
+    
+    background: lightblue;
+    
+  
+} 
+#horiz-stripe{
+  position: absolute;
+  width: 150px;
+  height: 30px;
+  
+  background: white;
+ 
+ }  
+#vert-stripe {
+    position: absolute;
+    left: 65px;
+    
+    width: 30px;
+    height: 150px;
+    background: white;
+    
+} </script>
+</body>
+</html>
