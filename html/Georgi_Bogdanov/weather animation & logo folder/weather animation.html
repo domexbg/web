@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+
+    <head>
+        <title>weather animation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #sun {
+                width: 200px;
+                height: 200px;
+                color: yellow;
+                font-size: 15em;
+                margin-top:-280px;
+            }
+            #cloud {
+                position: absolute;
+                height: 150px;
+                width: 200px;
+                margin-top: -117px;
+                margin-left: 75px;
+                -webkit-animation: cloud 5s infinite;
+                animation: cloud 5s infinite;
+                color: blue;
+                font-size: 10em;
+            }
+            #drop1 {
+                color: blue;
+                font-size: 5em;
+                position: absolute;
+                margin-top: -17px;
+                margin-left: 40px;
+                -ms-transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+            #drop2 {
+                color: blue;
+                font-size: 5em;
+                position: absolute;
+                margin-top: -17px;
+                margin-left: 90px;
+                -ms-transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+            #drop3 {
+                color: blue;
+                font-size: 5em;
+                position: absolute;
+                margin-top: -17px;
+                margin-left: 140px;
+                -ms-transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);  
+            }
+            .rain {
+                -webkit-animation: rain 1s infinite;
+                animation: rain 2s infinite;
+            }
+            @-webkit-keyframes rain {
+                100% {opacity: 0;}
+            }
+            @keyframes rain {
+                100% {opacity: 0;}
+            }
+            -webkit-keyframes:drop1 drop2 drop3 {
+                from {background-color: blue;}
+                to {background-color: white;}
+            }
+            #name {
+                height: 25px;
+                width: 150px;
+                position: auto;
+                margin-top: -170px;
+                margin-left: 36px;
+                color: brown;
+                font-size: 1.2em;
+            }
+        </style>    
+    </head>
+    <body>
+        <div id="sun"><p><span>&#9728</span></p></div>
+        <div><span id="cloud">&#9729</span></div>
+        <div class="rain"><h5><span id="drop1">&#9866</span></h5></div>
+        <div class="rain"><h5><span id="drop2">&#9866</span></h5></div>
+        <div class="rain"><h5><span id="drop3">&#9866</span></h5></div>
+        <div><p id="name">weather animation</p></div>
+    </body>
+

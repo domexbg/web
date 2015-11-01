@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>LOGO</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #first,#second {
+                border: 10px solid red;
+                background-color: yellow;
+                height: 30px;
+                width: 375px;
+                margin-top: 110px;
+            }       
+            #second {
+                margin-top: 0px;
+                border-top: 0px;
+            }
+            #circle {
+                position: absolute;
+                width: 150px;
+                height: 150px;
+                background-color: blue; 
+                border-radius: 150px;
+                margin-top: -95px;
+                margin-left: 100px;
+                border: 10px solid red;   
+            }
+            #star{
+                position: absolute;
+                color: white;
+                font-size: 11em;
+                margin-top: -60px;
+                margin-left: 2px;
+                -webkit-animation: star 3.5s infinite;
+                animation: star 3.5s infinite;
+            }
+            @-webkit-keyframes star {
+                50% {opacity: 0;}
+            }
+            @keyframes star {
+                50% {opacity: 0;}
+            }
+            #logo {
+                height: 30px;
+                width: 393px;
+            }
+            p {
+                font-family: verdana;
+                color: blue;
+                margin-top: 0px;
+                margin-left: 280px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="first"></div>
+        <div id="second"><div id="circle"><p id="star"><span>&#9733</span></p></div></div>
+        <div id="star"></div>
+        <div id="logo"><p>logo from me</p></div>
+    </body>
+</html>
