@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main() {
+	
+int chslo1 = 1;
+
+fprintf(stdout, "\ \ \ \ \ %d\n", chslo1);
+
+int chslo2 = 21;
+fprintf(stdout, "\ \ \ \ %d\n",chslo2);
+
+int chslo3 = 321;
+fprintf(stdout, "\ \ \ %d\n",chslo3);
+
+int chslo4 = 4321;
+fprintf(stdout, "\ \ %d\n",chslo4);
+
+int chslo5 = 54321;
+fprintf(stdout, "\ %d",chslo5);
+
+return 0;
+}
